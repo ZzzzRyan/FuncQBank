@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image97.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image97.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 2,\n  \"points\": 1,\n  \"stem\": \"设 $\\\\{e_n\\\\}_{n=1}^N, N \\\\in \\\\mathbb{N}$ 是 Hilbert 空间 $X$ 中的正规正交集，则论断**未必**正确的是（ ）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$\\\\{e_n\\\\}_{n=1}^N$ 线性无关;\"},\n    {\"label\": \"B\", \"text\": \"对任何的 $x \\\\in X$，都有 $\\\\sum_{n=1}^{\\\\infty} |(x, e_n)|^2 = \\\\|x\\\\|^2$;\"},\n    {\"label\": \"C\", \"text\": \"任意两组实数 $a_1, a_2, \\\\cdots, a_N, b_1, b_2, \\\\cdots, b_N$ 有 $\\\\left(\\\\sum_{n=1}^N a_n e_n, \\\\sum_{n=1}^N b_n e_n\\\\right) = \\\\sum_{n=1}^N a_n b_n$\"},\n    {\"label\": \"D\", \"text\": \"$(e_i, e_j) = \\\\begin{cases} 1, i = j \\\\\\\\ 0, i \\\\neq j \\\\end{cases}, i, j = 1, 2, 3, \\\\cdots$\"}\n  ],\n  \"answer\": \"B\",\n  \"answer_raw\": \"B\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 2,
+  "points": 1,
+  "stem": "设 $\\{e_n\\}_{n=1}^N, N \\in \\mathbb{N}$ 是 Hilbert 空间 $X$ 中的正规正交集，则论断**未必**正确的是（ ）",
+  "options": [
+    {
+      "label": "A",
+      "text": "$\\{e_n\\}_{n=1}^N$ 线性无关;"
+    },
+    {
+      "label": "B",
+      "text": "对任何的 $x \\in X$，都有 $\\sum_{n=1}^{\\infty} |(x, e_n)|^2 = \\|x\\|^2$;"
+    },
+    {
+      "label": "C",
+      "text": "任意两组实数 $a_1, a_2, \\cdots, a_N, b_1, b_2, \\cdots, b_N$ 有 $\\left(\\sum_{n=1}^N a_n e_n, \\sum_{n=1}^N b_n e_n\\right) = \\sum_{n=1}^N a_n b_n$"
+    },
+    {
+      "label": "D",
+      "text": "$(e_i, e_j) = \\begin{cases} 1, i = j \\\\ 0, i \\neq j \\end{cases}, i, j = 1, 2, 3, \\cdots$"
+    }
+  ],
+  "answer": "B",
+  "answer_raw": "B",
+  "explanation": null,
+  "note": null
+}

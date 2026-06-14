@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image69.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image69.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 5,\n  \"points\": 1,\n  \"stem\": \"下列关于 $l^p(1 \\\\le p < \\\\infty)$ 的论述不正确的是（ ）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"若 $x = (x_1, x_2, ...) \\\\in l^p$，则 $\\\\sum_{i=1}^{\\\\infty} |x_i|^p < +\\\\infty$;\"},\n    {\"label\": \"B\", \"text\": \"$l^p$ 中存在不收敛的 Cauchy 列;\"},\n    {\"label\": \"C\", \"text\": \"设序列 $\\\\{x_n\\\\}_{n=1}^{\\\\infty} \\\\in l^p$ 且 $x_n \\\\to \\\\bar{x}$，则 $\\\\bar{x} \\\\in l^p$;\"},\n    {\"label\": \"D\", \"text\": \"$l^p$ 是 Banach 空间.\"}\n  ],\n  \"answer\": \"B\",\n  \"answer_raw\": \"B\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 5,
+  "points": 1,
+  "stem": "下列关于 $l^p(1 \\le p < \\infty)$ 的论述不正确的是（ ）",
+  "options": [
+    {
+      "label": "A",
+      "text": "若 $x = (x_1, x_2, ...) \\in l^p$，则 $\\sum_{i=1}^{\\infty} |x_i|^p < +\\infty$;"
+    },
+    {
+      "label": "B",
+      "text": "$l^p$ 中存在不收敛的 Cauchy 列;"
+    },
+    {
+      "label": "C",
+      "text": "设序列 $\\{x_n\\}_{n=1}^{\\infty} \\in l^p$ 且 $x_n \\to \\bar{x}$，则 $\\bar{x} \\in l^p$;"
+    },
+    {
+      "label": "D",
+      "text": "$l^p$ 是 Banach 空间."
+    }
+  ],
+  "answer": "B",
+  "answer_raw": "B",
+  "explanation": null,
+  "note": null
+}

@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image70.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image70.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 6,\n  \"points\": 1,\n  \"stem\": \"在 $C[a, b]$ 上定义 $\\\\|x\\\\| = \\\\int_a^b |x(t)| dt$, 则下列论述不正确的是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$(C[a, b], \\\\| \\\\cdot \\\\|)$ 是赋范线性空间;\"},\n    {\"label\": \"B\", \"text\": \"$(C[a, b], \\\\| \\\\cdot \\\\|)$ 中的 Cauchy 列均收敛;\"},\n    {\"label\": \"C\", \"text\": \"$(C[a, b], \\\\| \\\\cdot \\\\|)$ 是距离线性空间;\"},\n    {\"label\": \"D\", \"text\": \"$C[a, b]$ 是无限维的.\"}\n  ],\n  \"answer\": \"B\",\n  \"answer_raw\": \"B\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 6,
+  "points": 1,
+  "stem": "在 $C[a, b]$ 上定义 $\\|x\\| = \\int_a^b |x(t)| dt$, 则下列论述不正确的是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$(C[a, b], \\| \\cdot \\|)$ 是赋范线性空间;"
+    },
+    {
+      "label": "B",
+      "text": "$(C[a, b], \\| \\cdot \\|)$ 中的 Cauchy 列均收敛;"
+    },
+    {
+      "label": "C",
+      "text": "$(C[a, b], \\| \\cdot \\|)$ 是距离线性空间;"
+    },
+    {
+      "label": "D",
+      "text": "$C[a, b]$ 是无限维的."
+    }
+  ],
+  "answer": "B",
+  "answer_raw": "B",
+  "explanation": null,
+  "note": null
+}

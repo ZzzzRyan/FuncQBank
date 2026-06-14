@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image118.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image118.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 23,\n  \"points\": 1,\n  \"stem\": \"实可分 Hilbert 空间一定与实 $l^2$ 空间同构。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 23,
+  "points": 1,
+  "stem": "实可分 Hilbert 空间一定与实 $l^2$ 空间同构。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

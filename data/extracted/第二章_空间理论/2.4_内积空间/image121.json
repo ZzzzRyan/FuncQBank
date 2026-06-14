@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image121.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image121.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 26,\n  \"points\": 1,\n  \"stem\": \"设 $\\\\{e_n\\\\}_{n=1}^N$, $N \\\\in \\\\mathbb{N}$ 是内积空间 $X$ 上的一组正规正交集，则对任意的 $x \\\\in X$, 有 $\\\\|x\\\\|^2 \\\\geq \\\\left\\\\|x - \\\\sum_{n=1}^N (x, e_n) e_n\\\\right\\\\|^2$。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 26,
+  "points": 1,
+  "stem": "设 $\\{e_n\\}_{n=1}^N$, $N \\in \\mathbb{N}$ 是内积空间 $X$ 上的一组正规正交集，则对任意的 $x \\in X$, 有 $\\|x\\|^2 \\geq \\left\\|x - \\sum_{n=1}^N (x, e_n) e_n\\right\\|^2$。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

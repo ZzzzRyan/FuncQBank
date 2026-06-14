@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image100.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image100.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 5,\n  \"points\": 1,\n  \"stem\": \"设 $p$ ($1 < p < +\\\\infty$) 与 $q$ 是共轭数对，则 $\\\\frac{1}{p} + \\\\frac{1}{q}$ 的值为 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$-1$;\"},\n    {\"label\": \"B\", \"text\": \"$\\\\frac{1}{2}$;\"},\n    {\"label\": \"C\", \"text\": \"$1$;\"},\n    {\"label\": \"D\", \"text\": \"$-\\\\frac{1}{2}$.\"}\n  ],\n  \"answer\": \"C\",\n  \"answer_raw\": \"C\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 5,
+  "points": 1,
+  "stem": "设 $p$ ($1 < p < +\\infty$) 与 $q$ 是共轭数对，则 $\\frac{1}{p} + \\frac{1}{q}$ 的值为 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$-1$;"
+    },
+    {
+      "label": "B",
+      "text": "$\\frac{1}{2}$;"
+    },
+    {
+      "label": "C",
+      "text": "$1$;"
+    },
+    {
+      "label": "D",
+      "text": "$-\\frac{1}{2}$."
+    }
+  ],
+  "answer": "C",
+  "answer_raw": "C",
+  "explanation": null,
+  "note": null
+}

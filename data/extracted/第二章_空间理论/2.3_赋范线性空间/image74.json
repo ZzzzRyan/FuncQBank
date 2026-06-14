@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image74.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image74.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 10,\n  \"points\": 2,\n  \"stem\": \"设 $X$ 是赋范线性空间，则以下论断中与 “$X$ 是有限维空间” 等价的是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$X$ 中的有界集是列紧集；\"},\n    {\"label\": \"B\", \"text\": \"$X$ 中的有界闭集是紧集；\"},\n    {\"label\": \"C\", \"text\": \"$X$ 中的单位球面是列紧集；\"},\n    {\"label\": \"D\", \"text\": \"$X$ 中的单位闭球是紧集。\"}\n  ],\n  \"answer\": \"ABCD\",\n  \"answer_raw\": \"ABCD (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 10,
+  "points": 2,
+  "stem": "设 $X$ 是赋范线性空间，则以下论断中与 “$X$ 是有限维空间” 等价的是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$X$ 中的有界集是列紧集；"
+    },
+    {
+      "label": "B",
+      "text": "$X$ 中的有界闭集是紧集；"
+    },
+    {
+      "label": "C",
+      "text": "$X$ 中的单位球面是列紧集；"
+    },
+    {
+      "label": "D",
+      "text": "$X$ 中的单位闭球是紧集。"
+    }
+  ],
+  "answer": "ABCD",
+  "answer_raw": "ABCD (少选不得分)",
+  "explanation": null,
+  "note": null
+}

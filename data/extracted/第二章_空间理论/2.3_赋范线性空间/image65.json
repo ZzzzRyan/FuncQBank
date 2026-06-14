@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image65.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image65.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 1,\n  \"points\": 1,\n  \"stem\": \"设 $X$ 为赋范线性空间, $||\\\\cdot||$ 是它上面的范数, 则下面论断不正确的是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"任取 $x,y \\\\in X$, 都有 $||x|| + ||y|| \\\\geq ||x + y||$;\"},\n    {\"label\": \"B\", \"text\": \"任取 $x \\\\in X$ 和 $\\\\alpha \\\\in \\\\mathbb{R}$, 都有 $||\\\\alpha x|| = |\\\\alpha|||x||$;\"},\n    {\"label\": \"C\", \"text\": \"任取 $x,y \\\\in X$, 都有 $||x||^2 + ||y||^2 = ||x + y||^2$;\"},\n    {\"label\": \"D\", \"text\": \"任取 $x \\\\in X$, 都有 $||x|| \\\\geq 0$。\"}\n  ],\n  \"answer\": \"C\",\n  \"answer_raw\": \"C\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 1,
+  "points": 1,
+  "stem": "设 $X$ 为赋范线性空间, $||\\cdot||$ 是它上面的范数, 则下面论断不正确的是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "任取 $x,y \\in X$, 都有 $||x|| + ||y|| \\geq ||x + y||$;"
+    },
+    {
+      "label": "B",
+      "text": "任取 $x \\in X$ 和 $\\alpha \\in \\mathbb{R}$, 都有 $||\\alpha x|| = |\\alpha|||x||$;"
+    },
+    {
+      "label": "C",
+      "text": "任取 $x,y \\in X$, 都有 $||x||^2 + ||y||^2 = ||x + y||^2$;"
+    },
+    {
+      "label": "D",
+      "text": "任取 $x \\in X$, 都有 $||x|| \\geq 0$。"
+    }
+  ],
+  "answer": "C",
+  "answer_raw": "C",
+  "explanation": null,
+  "note": null
+}

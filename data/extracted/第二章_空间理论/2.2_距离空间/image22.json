@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image22.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image22.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 10,\n  \"points\": 1,\n  \"stem\": \"下列命题错误的是()\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"有理数集在 $\\\\mathbb{R}$ 中稠密;\"},\n    {\"label\": \"B\", \"text\": \"无理数集在 $\\\\mathbb{R}$ 中稠密;\"},\n    {\"label\": \"C\", \"text\": \"$[0,1]$ 上的有理系数多项式集合在 $C[0,1]$ 中稠密;\"},\n    {\"label\": \"D\", \"text\": \"整数集合在 $\\\\mathbb{R}$ 中稠密.\"}\n  ],\n  \"answer\": \"D\",\n  \"answer_raw\": \"D\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 10,
+  "points": 1,
+  "stem": "下列命题错误的是()",
+  "options": [
+    {
+      "label": "A",
+      "text": "有理数集在 $\\mathbb{R}$ 中稠密;"
+    },
+    {
+      "label": "B",
+      "text": "无理数集在 $\\mathbb{R}$ 中稠密;"
+    },
+    {
+      "label": "C",
+      "text": "$[0,1]$ 上的有理系数多项式集合在 $C[0,1]$ 中稠密;"
+    },
+    {
+      "label": "D",
+      "text": "整数集合在 $\\mathbb{R}$ 中稠密."
+    }
+  ],
+  "answer": "D",
+  "answer_raw": "D",
+  "explanation": null,
+  "note": null
+}

@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.3_基本定理及应用/image47.jpg",
+  "image_path": "docs/第三章_线性算子/3.3_基本定理及应用/image47.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 18,\n  \"points\": 1,\n  \"stem\": \"设 $X,Y$ 均为 Banach 空间, $T$ 是 $X$ 到 $Y$ 上的有界线性算子, 则 $T$ 一定是开映射.\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 18,
+  "points": 1,
+  "stem": "设 $X,Y$ 均为 Banach 空间, $T$ 是 $X$ 到 $Y$ 上的有界线性算子, 则 $T$ 一定是开映射.",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

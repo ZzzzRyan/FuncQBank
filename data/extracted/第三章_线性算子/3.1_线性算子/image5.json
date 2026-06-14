@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.1_线性算子/image5.jpg",
+  "image_path": "docs/第三章_线性算子/3.1_线性算子/image5.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 5,\n  \"points\": 1,\n  \"stem\": \"在选定 $\\\\mathbb{R}^n$ 和 $\\\\mathbb{R}^m$ 的基以后, 可建立线性算子与 $m \\\\times n$ 阶矩阵的一一对应关系.\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 5,
+  "points": 1,
+  "stem": "在选定 $\\mathbb{R}^n$ 和 $\\mathbb{R}^m$ 的基以后, 可建立线性算子与 $m \\times n$ 阶矩阵的一一对应关系.",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

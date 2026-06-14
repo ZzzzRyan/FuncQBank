@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image49.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image49.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 37,\n  \"points\": 1,\n  \"stem\": \"全体有理数集合在实数集合中稠密.\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 37,
+  "points": 1,
+  "stem": "全体有理数集合在实数集合中稠密.",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

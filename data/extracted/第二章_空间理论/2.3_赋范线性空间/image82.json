@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image82.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image82.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 18,\n  \"points\": 1,\n  \"stem\": \"设 $X$ 是赋范线性空间，$d$ 是由范数诱导的距离，则对任意的 $x, y \\\\in X, \\\\alpha \\\\in \\\\mathbb{K}$，有 $d(\\\\alpha x, \\\\alpha y) = \\\\alpha d(x, y)$。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": \"$d(\\\\alpha x, \\\\alpha y) = |\\\\alpha|d(x, y)$\",\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 18,
+  "points": 1,
+  "stem": "设 $X$ 是赋范线性空间，$d$ 是由范数诱导的距离，则对任意的 $x, y \\in X, \\alpha \\in \\mathbb{K}$，有 $d(\\alpha x, \\alpha y) = \\alpha d(x, y)$。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": "$d(\\alpha x, \\alpha y) = |\\alpha|d(x, y)$",
+  "note": null
+}

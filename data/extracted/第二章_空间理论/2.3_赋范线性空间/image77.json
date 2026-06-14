@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image77.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image77.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 13,\n  \"points\": 1,\n  \"stem\": \"以下空间中，属于有限维赋范线性空间的是（ ）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$l^\\\\infty$\"},\n    {\"label\": \"B\", \"text\": \"$C[a,b]$\"},\n    {\"label\": \"C\", \"text\": \"$l^2$\"},\n    {\"label\": \"D\", \"text\": \"$\\\\mathbb{R}^n$\"}\n  ],\n  \"answer\": \"D\",\n  \"answer_raw\": \"D\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 13,
+  "points": 1,
+  "stem": "以下空间中，属于有限维赋范线性空间的是（ ）",
+  "options": [
+    {
+      "label": "A",
+      "text": "$l^\\infty$"
+    },
+    {
+      "label": "B",
+      "text": "$C[a,b]$"
+    },
+    {
+      "label": "C",
+      "text": "$l^2$"
+    },
+    {
+      "label": "D",
+      "text": "$\\mathbb{R}^n$"
+    }
+  ],
+  "answer": "D",
+  "answer_raw": "D",
+  "explanation": null,
+  "note": null
+}

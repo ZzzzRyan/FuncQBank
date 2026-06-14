@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image98.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image98.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 3,\n  \"points\": 2,\n  \"stem\": \"设 X 是内积空间,则下列论述正确的是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"任取 $x, y \\\\in X, |(x, y)| \\\\leq \\\\|x\\\\|\\\\|y\\\\|;$\"},\n    {\"label\": \"B\", \"text\": \"若 $\\\\lim_{n \\\\to \\\\infty} x_n = x, \\\\lim_{n \\\\to \\\\infty} y_n = y$, 则 $\\\\lim_{n \\\\to \\\\infty} (x_n, y_n) = (x, y);$\"},\n    {\"label\": \"C\", \"text\": \"设 $x, y \\\\in X$, 则 $\\\\|x + y\\\\|^2 = \\\\|x\\\\|^2 + \\\\|y\\\\|^2;$\"},\n    {\"label\": \"D\", \"text\": \"任取 $x, y \\\\in X, \\\\|x + y\\\\|^2 + \\\\|x - y\\\\|^2 = 2\\\\|x\\\\|^2 + 2\\\\|y\\\\|^2.$\"}\n  ],\n  \"answer\": \"ABD\",\n  \"answer_raw\": \"ABD (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 3,
+  "points": 2,
+  "stem": "设 X 是内积空间,则下列论述正确的是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "任取 $x, y \\in X, |(x, y)| \\leq \\|x\\|\\|y\\|;$"
+    },
+    {
+      "label": "B",
+      "text": "若 $\\lim_{n \\to \\infty} x_n = x, \\lim_{n \\to \\infty} y_n = y$, 则 $\\lim_{n \\to \\infty} (x_n, y_n) = (x, y);$"
+    },
+    {
+      "label": "C",
+      "text": "设 $x, y \\in X$, 则 $\\|x + y\\|^2 = \\|x\\|^2 + \\|y\\|^2;$"
+    },
+    {
+      "label": "D",
+      "text": "任取 $x, y \\in X, \\|x + y\\|^2 + \\|x - y\\|^2 = 2\\|x\\|^2 + 2\\|y\\|^2.$"
+    }
+  ],
+  "answer": "ABD",
+  "answer_raw": "ABD (少选不得分)",
+  "explanation": null,
+  "note": null
+}

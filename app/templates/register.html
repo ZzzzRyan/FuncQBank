@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block chrome %}{% endblock %}
+{% block title %}注册 · {{ app_name }}{% endblock %}
+{% block body %}
+<div class="auth-wrap"><div class="auth-card sheet">
+  <div class="brand"><span class="glyph"></span>{{ app_name }}</div>
+  <div class="tag">泛函分析 · 考前刷题与记忆</div>
+  {% if closed %}
+    <div class="alert info">当前未开放注册，请联系管理员开通账号。</div>
+    <a class="btn btn-block" href="/login">返回登录</a>
+  {% else %}
+    {% if error %}<div class="alert err">{{ error }}</div>{% endif %}
+    <form method="post" action="/register">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <div class="field"><label>用户名</label>
+        <input type="text" name="username" value="{{ values.username or '' }}" autocomplete="username" autofocus required>
+        <div class="hint">3–32 位，字母 / 数字 / 下划线 / 连字符</div>
+      </div>
+      <div class="field"><label>昵称（可选）</label><input type="text" name="display_name" value="{{ values.display_name or '' }}"></div>
+      <div class="field"><label>密码</label><input type="password" name="password" autocomplete="new-password" required>
+        <div class="hint">至少 6 位</div></div>
+      <div class="field"><label>确认密码</label><input type="password" name="password2" autocomplete="new-password" required></div>
+      <button class="btn btn-primary btn-block" type="submit">创建账号</button>
+    </form>
+    <p class="tag" style="margin-top:18px">已有账号？<a href="/login">去登录</a></p>
+  {% endif %}
+</div></div>
+{% endblock %}

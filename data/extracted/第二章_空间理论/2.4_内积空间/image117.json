@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image117.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image117.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 22,\n  \"points\": 1,\n  \"stem\": \"Hilbert 空间不一定是 Banach 空间。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 22,
+  "points": 1,
+  "stem": "Hilbert 空间不一定是 Banach 空间。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

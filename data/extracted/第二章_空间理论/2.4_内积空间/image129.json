@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image129.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image129.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 34,\n  \"points\": 1,\n  \"stem\": \"任何有限维内积空间必是可分的 Hilbert 空间。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 34,
+  "points": 1,
+  "stem": "任何有限维内积空间必是可分的 Hilbert 空间。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

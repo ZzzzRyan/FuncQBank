@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image89.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image89.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 25,\n  \"points\": 1,\n  \"stem\": \"在赋范线性空间中，向量列依范数收敛等价于向量列按范数诱导的距离收敛。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 25,
+  "points": 1,
+  "stem": "在赋范线性空间中，向量列依范数收敛等价于向量列按范数诱导的距离收敛。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image109.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image109.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 14,\n  \"points\": 2,\n  \"stem\": \"设 $M$ 是内积空间 $X$ 子集, $x \\\\in X$. 若 $x \\\\perp M$, 则 (    )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$M \\\\subset \\\\{x\\\\}^{\\\\perp}$;\"},\n    {\"label\": \"B\", \"text\": \"$\\\\text{span } M \\\\subset \\\\{x\\\\}^{\\\\perp}$;\"},\n    {\"label\": \"C\", \"text\": \"$x \\\\in M^{\\\\perp}$;\"},\n    {\"label\": \"D\", \"text\": \"$\\\\text{span}\\\\{x\\\\} \\\\subset M^{\\\\perp}$.\"}\n  ],\n  \"answer\": \"ABCD\",\n  \"answer_raw\": \"ABCD (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 14,
+  "points": 2,
+  "stem": "设 $M$ 是内积空间 $X$ 子集, $x \\in X$. 若 $x \\perp M$, 则 (    )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$M \\subset \\{x\\}^{\\perp}$;"
+    },
+    {
+      "label": "B",
+      "text": "$\\text{span } M \\subset \\{x\\}^{\\perp}$;"
+    },
+    {
+      "label": "C",
+      "text": "$x \\in M^{\\perp}$;"
+    },
+    {
+      "label": "D",
+      "text": "$\\text{span}\\{x\\} \\subset M^{\\perp}$."
+    }
+  ],
+  "answer": "ABCD",
+  "answer_raw": "ABCD (少选不得分)",
+  "explanation": null,
+  "note": null
+}

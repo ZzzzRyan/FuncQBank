@@ -1,0 +1,30 @@
+{
+  "rel_path": "第二章_空间理论/2.1_线性空间/image2.jpg",
+  "image_path": "docs/第二章_空间理论/2.1_线性空间/image2.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 2,\n  \"points\": 1,\n  \"stem\": \"下面子空间**不是**极大线性子空间的是( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$\\\\mathbb{R}^3$ 中过原点的直线;\"},\n    {\"label\": \"B\", \"text\": \"$\\\\mathbb{R}^3$ 中过原点的平面;\"},\n    {\"label\": \"C\", \"text\": \"$\\\\mathbb{R}^2$ 中过原点的直线.\"}\n  ],\n  \"answer\": \"A\",\n  \"answer_raw\": \"A\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 2,
+  "points": 1,
+  "stem": "下面子空间**不是**极大线性子空间的是( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$\\mathbb{R}^3$ 中过原点的直线;"
+    },
+    {
+      "label": "B",
+      "text": "$\\mathbb{R}^3$ 中过原点的平面;"
+    },
+    {
+      "label": "C",
+      "text": "$\\mathbb{R}^2$ 中过原点的直线."
+    }
+  ],
+  "answer": "A",
+  "answer_raw": "A",
+  "explanation": null,
+  "note": null
+}

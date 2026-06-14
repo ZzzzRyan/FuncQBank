@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image13.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image13.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 1,\n  \"points\": 1,\n  \"stem\": \"欧氏空间$\\\\mathbb{R}^n$中点列按距离收敛等价于（）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"点态收敛;\"},\n    {\"label\": \"B\", \"text\": \"几乎处处收敛;\"},\n    {\"label\": \"C\", \"text\": \"按坐标收敛;\"},\n    {\"label\": \"D\", \"text\": \"一致收敛.\"}\n  ],\n  \"answer\": \"C\",\n  \"answer_raw\": \"C\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 1,
+  "points": 1,
+  "stem": "欧氏空间$\\mathbb{R}^n$中点列按距离收敛等价于（）",
+  "options": [
+    {
+      "label": "A",
+      "text": "点态收敛;"
+    },
+    {
+      "label": "B",
+      "text": "几乎处处收敛;"
+    },
+    {
+      "label": "C",
+      "text": "按坐标收敛;"
+    },
+    {
+      "label": "D",
+      "text": "一致收敛."
+    }
+  ],
+  "answer": "C",
+  "answer_raw": "C",
+  "explanation": null,
+  "note": null
+}

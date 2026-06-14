@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image19.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image19.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 7,\n  \"points\": 1,\n  \"stem\": \"下列命题错误的是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"任何距离空间均可完备化;\"},\n    {\"label\": \"B\", \"text\": \"$C[0,1]$ 按照 max 距离是完备的距离空间;\"},\n    {\"label\": \"C\", \"text\": \"$\\\\{(1+\\\\frac{1}{n})^n\\\\}_{n=1}^{\\\\infty}$ 是 $(\\\\mathbb{R},|x-y|)$ 中 Cauchy 列，且在距离空间 $(\\\\mathbb{R},|x-y|)$ 中收敛;\"},\n    {\"label\": \"D\", \"text\": \"$\\\\{(1+\\\\frac{1}{n})^n\\\\}_{n=1}^{\\\\infty}$ 是 $(\\\\mathbb{Q},|x-y|)$ 中 Cauchy 列，且在距离空间 $(\\\\mathbb{Q},|x-y|)$ 中收敛.\"}\n  ],\n  \"answer\": \"D\",\n  \"answer_raw\": \"D\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 7,
+  "points": 1,
+  "stem": "下列命题错误的是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "任何距离空间均可完备化;"
+    },
+    {
+      "label": "B",
+      "text": "$C[0,1]$ 按照 max 距离是完备的距离空间;"
+    },
+    {
+      "label": "C",
+      "text": "$\\{(1+\\frac{1}{n})^n\\}_{n=1}^{\\infty}$ 是 $(\\mathbb{R},|x-y|)$ 中 Cauchy 列，且在距离空间 $(\\mathbb{R},|x-y|)$ 中收敛;"
+    },
+    {
+      "label": "D",
+      "text": "$\\{(1+\\frac{1}{n})^n\\}_{n=1}^{\\infty}$ 是 $(\\mathbb{Q},|x-y|)$ 中 Cauchy 列，且在距离空间 $(\\mathbb{Q},|x-y|)$ 中收敛."
+    }
+  ],
+  "answer": "D",
+  "answer_raw": "D",
+  "explanation": null,
+  "note": null
+}

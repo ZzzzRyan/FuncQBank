@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image111.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image111.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 16,\n  \"points\": 2,\n  \"stem\": \"设 $\\\\{e_n\\\\}_{n=1}^{\\\\infty}$ 是内积空间 $X$ 的标准正交集, $x \\\\in X$. 则以下命题正确的是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$\\\\sum_{n=1}^{\\\\infty} |(x, e_n)|^2 \\\\le \\\\|x\\\\|^2;$\"},\n    {\"label\": \"B\", \"text\": \"$\\\\left\\\\| x - \\\\sum_{n=1}^{\\\\infty} (x, e_n) e_n \\\\right\\\\|^2 = \\\\|x\\\\|^2 - \\\\sum_{n=1}^{\\\\infty} |(x, e_n)|^2;$\"},\n    {\"label\": \"C\", \"text\": \"$x = \\\\sum_{n=1}^{\\\\infty} (x, e_n) e_n \\\\Leftrightarrow \\\\|x\\\\|^2 = \\\\sum_{n=1}^{\\\\infty} |(x, e_n)|^2;$\"},\n    {\"label\": \"D\", \"text\": \"$\\\\{(x, e_n)\\\\}_{n=1}^{\\\\infty} \\\\in l^2.$\"}\n  ],\n  \"answer\": \"ABCD\",\n  \"answer_raw\": \"ABCD (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 16,
+  "points": 2,
+  "stem": "设 $\\{e_n\\}_{n=1}^{\\infty}$ 是内积空间 $X$ 的标准正交集, $x \\in X$. 则以下命题正确的是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$\\sum_{n=1}^{\\infty} |(x, e_n)|^2 \\le \\|x\\|^2;$"
+    },
+    {
+      "label": "B",
+      "text": "$\\left\\| x - \\sum_{n=1}^{\\infty} (x, e_n) e_n \\right\\|^2 = \\|x\\|^2 - \\sum_{n=1}^{\\infty} |(x, e_n)|^2;$"
+    },
+    {
+      "label": "C",
+      "text": "$x = \\sum_{n=1}^{\\infty} (x, e_n) e_n \\Leftrightarrow \\|x\\|^2 = \\sum_{n=1}^{\\infty} |(x, e_n)|^2;$"
+    },
+    {
+      "label": "D",
+      "text": "$\\{(x, e_n)\\}_{n=1}^{\\infty} \\in l^2.$"
+    }
+  ],
+  "answer": "ABCD",
+  "answer_raw": "ABCD (少选不得分)",
+  "explanation": null,
+  "note": null
+}

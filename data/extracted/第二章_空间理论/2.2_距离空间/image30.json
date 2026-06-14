@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image30.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image30.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 18,\n  \"points\": 1,\n  \"stem\": \"下列命题错误的是（　　）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"完备的距离空间是第二纲集；\"},\n    {\"label\": \"B\", \"text\": \"有理数集是第一纲集；\"},\n    {\"label\": \"C\", \"text\": \"无理数集是第一纲集；\"},\n    {\"label\": \"D\", \"text\": \"处处连续处处不可微的函数是存在的．\"}\n  ],\n  \"answer\": \"C\",\n  \"answer_raw\": \"C\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 18,
+  "points": 1,
+  "stem": "下列命题错误的是（　　）",
+  "options": [
+    {
+      "label": "A",
+      "text": "完备的距离空间是第二纲集；"
+    },
+    {
+      "label": "B",
+      "text": "有理数集是第一纲集；"
+    },
+    {
+      "label": "C",
+      "text": "无理数集是第一纲集；"
+    },
+    {
+      "label": "D",
+      "text": "处处连续处处不可微的函数是存在的．"
+    }
+  ],
+  "answer": "C",
+  "answer_raw": "C",
+  "explanation": null,
+  "note": null
+}

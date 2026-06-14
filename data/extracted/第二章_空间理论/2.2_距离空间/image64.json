@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image64.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image64.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 52,\n  \"points\": 2,\n  \"stem\": \"以下线性空间中，具有可分性的是(　　)\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"连续函数空间；\"},\n    {\"label\": \"B\", \"text\": \"实数空间；\"},\n    {\"label\": \"C\", \"text\": \"有界序列空间；\"},\n    {\"label\": \"D\", \"text\": \"离散距离空间。\"}\n  ],\n  \"answer\": \"AB\",\n  \"answer_raw\": \"AB (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 52,
+  "points": 2,
+  "stem": "以下线性空间中，具有可分性的是(　　)",
+  "options": [
+    {
+      "label": "A",
+      "text": "连续函数空间；"
+    },
+    {
+      "label": "B",
+      "text": "实数空间；"
+    },
+    {
+      "label": "C",
+      "text": "有界序列空间；"
+    },
+    {
+      "label": "D",
+      "text": "离散距离空间。"
+    }
+  ],
+  "answer": "AB",
+  "answer_raw": "AB (少选不得分)",
+  "explanation": null,
+  "note": null
+}

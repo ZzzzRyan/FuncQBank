@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image42.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image42.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 30,\n  \"points\": 1,\n  \"stem\": \"$C[0,1]$ 是完备距离空间。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 30,
+  "points": 1,
+  "stem": "$C[0,1]$ 是完备距离空间。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

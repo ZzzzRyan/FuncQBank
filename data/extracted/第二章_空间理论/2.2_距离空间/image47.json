@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image47.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image47.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 35,\n  \"points\": 1,\n  \"stem\": \"$[0,1]$ 上有理系数多项式集合在 $C[0,1]$ 中稠密。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 35,
+  "points": 1,
+  "stem": "$[0,1]$ 上有理系数多项式集合在 $C[0,1]$ 中稠密。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

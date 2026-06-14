@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image108.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image108.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 13,\n  \"points\": 1,\n  \"stem\": \"设 $M$ 是内积空间 $X$ 的子集，则以下选项中错误的是（ ）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$M^\\\\perp = (\\\\text{span } M)^\\\\perp;$\"},\n    {\"label\": \"B\", \"text\": \"$M^\\\\perp = (\\\\overline{\\\\text{span } M})^\\\\perp;$\"},\n    {\"label\": \"C\", \"text\": \"$M^\\\\perp \\\\cap \\\\text{span } M = \\\\emptyset;$\"},\n    {\"label\": \"D\", \"text\": \"$M^\\\\perp \\\\cap \\\\text{span } M = \\\\{0\\\\}.$\"}\n  ],\n  \"answer\": \"C\",\n  \"answer_raw\": \"C\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 13,
+  "points": 1,
+  "stem": "设 $M$ 是内积空间 $X$ 的子集，则以下选项中错误的是（ ）",
+  "options": [
+    {
+      "label": "A",
+      "text": "$M^\\perp = (\\text{span } M)^\\perp;$"
+    },
+    {
+      "label": "B",
+      "text": "$M^\\perp = (\\overline{\\text{span } M})^\\perp;$"
+    },
+    {
+      "label": "C",
+      "text": "$M^\\perp \\cap \\text{span } M = \\emptyset;$"
+    },
+    {
+      "label": "D",
+      "text": "$M^\\perp \\cap \\text{span } M = \\{0\\}.$"
+    }
+  ],
+  "answer": "C",
+  "answer_raw": "C",
+  "explanation": null,
+  "note": null
+}

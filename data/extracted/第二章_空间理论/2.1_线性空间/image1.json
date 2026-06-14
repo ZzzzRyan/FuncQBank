@@ -1,0 +1,30 @@
+{
+  "rel_path": "第二章_空间理论/2.1_线性空间/image1.jpg",
+  "image_path": "docs/第二章_空间理论/2.1_线性空间/image1.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 1,\n  \"points\": 1,\n  \"stem\": \"下面集合的和**不是**直接和的是( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$\\\\mathbb{R}^3$ 中过原点的直线与平面 (直线不在平面上);\"},\n    {\"label\": \"B\", \"text\": \"$\\\\mathbb{R}^3$ 中过原点的两个平面;\"},\n    {\"label\": \"C\", \"text\": \"$\\\\mathbb{R}^3$ 中过原点的两条直线.\"}\n  ],\n  \"answer\": \"B\",\n  \"answer_raw\": \"B\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 1,
+  "points": 1,
+  "stem": "下面集合的和**不是**直接和的是( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$\\mathbb{R}^3$ 中过原点的直线与平面 (直线不在平面上);"
+    },
+    {
+      "label": "B",
+      "text": "$\\mathbb{R}^3$ 中过原点的两个平面;"
+    },
+    {
+      "label": "C",
+      "text": "$\\mathbb{R}^3$ 中过原点的两条直线."
+    }
+  ],
+  "answer": "B",
+  "answer_raw": "B",
+  "explanation": null,
+  "note": null
+}

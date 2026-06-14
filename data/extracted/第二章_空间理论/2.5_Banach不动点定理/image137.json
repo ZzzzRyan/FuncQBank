@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.5_Banach不动点定理/image137.jpg",
+  "image_path": "docs/第二章_空间理论/2.5_Banach不动点定理/image137.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 2,\n  \"points\": 2,\n  \"stem\": \"设 $X$ 是距离空间, $T$ 是 $X$ 到 $X$ 中的映射. 映射 $T$ 存在不动点的充分条件是（ ）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$X$ 是完备空间;\"},\n    {\"label\": \"B\", \"text\": \"$T$ 是严格压缩映射;\"},\n    {\"label\": \"C\", \"text\": \"$T$ 是连续映射;\"},\n    {\"label\": \"D\", \"text\": \"$X$ 是可分空间.\"}\n  ],\n  \"answer\": \"AB\",\n  \"answer_raw\": \"AB (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 2,
+  "points": 2,
+  "stem": "设 $X$ 是距离空间, $T$ 是 $X$ 到 $X$ 中的映射. 映射 $T$ 存在不动点的充分条件是（ ）",
+  "options": [
+    {
+      "label": "A",
+      "text": "$X$ 是完备空间;"
+    },
+    {
+      "label": "B",
+      "text": "$T$ 是严格压缩映射;"
+    },
+    {
+      "label": "C",
+      "text": "$T$ 是连续映射;"
+    },
+    {
+      "label": "D",
+      "text": "$X$ 是可分空间."
+    }
+  ],
+  "answer": "AB",
+  "answer_raw": "AB (少选不得分)",
+  "explanation": null,
+  "note": null
+}

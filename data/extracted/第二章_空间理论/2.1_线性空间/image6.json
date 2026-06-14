@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.1_线性空间/image6.jpg",
+  "image_path": "docs/第二章_空间理论/2.1_线性空间/image6.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 6,\n  \"points\": 1,\n  \"stem\": \"下列命题**错误**的是（ ）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"零空间是有限维空间;\"},\n    {\"label\": \"B\", \"text\": \"实算术空间 $\\\\mathbb{R}^n$ 是 $n$ 维空间;\"},\n    {\"label\": \"C\", \"text\": \"复算术空间 $\\\\mathbb{C}^n$ 是 $2n$ 维空间;\"},\n    {\"label\": \"D\", \"text\": \"$C[0,1]$ 是无穷维空间.\"}\n  ],\n  \"answer\": \"C\",\n  \"answer_raw\": \"C\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 6,
+  "points": 1,
+  "stem": "下列命题**错误**的是（ ）",
+  "options": [
+    {
+      "label": "A",
+      "text": "零空间是有限维空间;"
+    },
+    {
+      "label": "B",
+      "text": "实算术空间 $\\mathbb{R}^n$ 是 $n$ 维空间;"
+    },
+    {
+      "label": "C",
+      "text": "复算术空间 $\\mathbb{C}^n$ 是 $2n$ 维空间;"
+    },
+    {
+      "label": "D",
+      "text": "$C[0,1]$ 是无穷维空间."
+    }
+  ],
+  "answer": "C",
+  "answer_raw": "C",
+  "explanation": null,
+  "note": null
+}

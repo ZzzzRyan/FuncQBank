@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image21.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image21.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 9,\n  \"points\": 1,\n  \"stem\": \"下述论断不成立的是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$l^1$ 是可分的;\"},\n    {\"label\": \"B\", \"text\": \"$l^\\\\infty$ 是可分的;\"},\n    {\"label\": \"C\", \"text\": \"$s$ 是可分的;\"},\n    {\"label\": \"D\", \"text\": \"$l^2$ 是可分的.\"}\n  ],\n  \"answer\": \"B\",\n  \"answer_raw\": \"B\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 9,
+  "points": 1,
+  "stem": "下述论断不成立的是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$l^1$ 是可分的;"
+    },
+    {
+      "label": "B",
+      "text": "$l^\\infty$ 是可分的;"
+    },
+    {
+      "label": "C",
+      "text": "$s$ 是可分的;"
+    },
+    {
+      "label": "D",
+      "text": "$l^2$ 是可分的."
+    }
+  ],
+  "answer": "B",
+  "answer_raw": "B",
+  "explanation": null,
+  "note": null
+}

@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.3_基本定理及应用/image41.jpg",
+  "image_path": "docs/第三章_线性算子/3.3_基本定理及应用/image41.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 12,\n  \"points\": 1,\n  \"stem\": \"设$X$为赋范线性空间，$M \\\\subset X$是闭的超平面当且仅当存在$0 \\\\neq f \\\\in X'$及实数$r$，使得$M = \\\\{x \\\\in X \\\\mid f(x) = r\\\\}$。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 12,
+  "points": 1,
+  "stem": "设$X$为赋范线性空间，$M \\subset X$是闭的超平面当且仅当存在$0 \\neq f \\in X'$及实数$r$，使得$M = \\{x \\in X \\mid f(x) = r\\}$。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

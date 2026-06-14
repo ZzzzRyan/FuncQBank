@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image20.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image20.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 8,\n  \"points\": 1,\n  \"stem\": \"设距离空间 $\\\\widetilde{X}$ 是距离空间 $X$ 的完备化空间，则下列命题正确的是( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"距离空间 $X$ 是距离空间 $\\\\widetilde{X}$ 的开子空间\"},\n    {\"label\": \"B\", \"text\": \"距离空间 $X$ 是距离空间 $\\\\widetilde{X}$ 的闭子空间\"},\n    {\"label\": \"C\", \"text\": \"距离空间 $X$ 是距离空间 $\\\\widetilde{X}$ 的真子空间\"},\n    {\"label\": \"D\", \"text\": \"距离空间 $X$ 是距离空间 $\\\\widetilde{X}$ 的稠子空间\"}\n  ],\n  \"answer\": \"D\",\n  \"answer_raw\": \"D\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 8,
+  "points": 1,
+  "stem": "设距离空间 $\\widetilde{X}$ 是距离空间 $X$ 的完备化空间，则下列命题正确的是( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "距离空间 $X$ 是距离空间 $\\widetilde{X}$ 的开子空间"
+    },
+    {
+      "label": "B",
+      "text": "距离空间 $X$ 是距离空间 $\\widetilde{X}$ 的闭子空间"
+    },
+    {
+      "label": "C",
+      "text": "距离空间 $X$ 是距离空间 $\\widetilde{X}$ 的真子空间"
+    },
+    {
+      "label": "D",
+      "text": "距离空间 $X$ 是距离空间 $\\widetilde{X}$ 的稠子空间"
+    }
+  ],
+  "answer": "D",
+  "answer_raw": "D",
+  "explanation": null,
+  "note": null
+}

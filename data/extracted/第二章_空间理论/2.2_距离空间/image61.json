@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image61.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image61.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 49,\n  \"points\": 2,\n  \"stem\": \"非空集合上的距离满足（    ）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"非负性；\"},\n    {\"label\": \"B\", \"text\": \"正齐次性；\"},\n    {\"label\": \"C\", \"text\": \"三角不等式；\"},\n    {\"label\": \"D\", \"text\": \"对称性.\"}\n  ],\n  \"answer\": \"ACD\",\n  \"answer_raw\": \"ACD (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 49,
+  "points": 2,
+  "stem": "非空集合上的距离满足（    ）",
+  "options": [
+    {
+      "label": "A",
+      "text": "非负性；"
+    },
+    {
+      "label": "B",
+      "text": "正齐次性；"
+    },
+    {
+      "label": "C",
+      "text": "三角不等式；"
+    },
+    {
+      "label": "D",
+      "text": "对称性."
+    }
+  ],
+  "answer": "ACD",
+  "answer_raw": "ACD (少选不得分)",
+  "explanation": null,
+  "note": null
+}

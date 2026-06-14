@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image86.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image86.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 22,\n  \"points\": 1,\n  \"stem\": \"设 $X$ 是 Banach 空间, $M$ 是 $X$ 的闭子空间, 则 $M$ 是 Banach 空间。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 22,
+  "points": 1,
+  "stem": "设 $X$ 是 Banach 空间, $M$ 是 $X$ 的闭子空间, 则 $M$ 是 Banach 空间。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

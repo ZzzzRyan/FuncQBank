@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.5_Banach不动点定理/image142.jpg",
+  "image_path": "docs/第二章_空间理论/2.5_Banach不动点定理/image142.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 7,\n  \"points\": 1,\n  \"stem\": \"求方程 $x^3 - x^2 - 1 = 0$ 在区间 [1.3, 1.6] 上的根的 Newton 迭代格式为 $x_{k+1} = \\\\frac{2x_k^3 - x_k^2 + 1}{3x_k^2 - 2x_k}$。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 7,
+  "points": 1,
+  "stem": "求方程 $x^3 - x^2 - 1 = 0$ 在区间 [1.3, 1.6] 上的根的 Newton 迭代格式为 $x_{k+1} = \\frac{2x_k^3 - x_k^2 + 1}{3x_k^2 - 2x_k}$。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

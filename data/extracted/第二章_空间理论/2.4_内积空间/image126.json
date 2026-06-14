@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image126.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image126.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 31,\n  \"points\": 1,\n  \"stem\": \"无限维 Hilbert 空间都与 $l^2$ 同构。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 31,
+  "points": 1,
+  "stem": "无限维 Hilbert 空间都与 $l^2$ 同构。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image123.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image123.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 28,\n  \"points\": 1,\n  \"stem\": \"$Banach$ 空间必为 $Hilbert$ 空间, 但反之不成立.\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 28,
+  "points": 1,
+  "stem": "$Banach$ 空间必为 $Hilbert$ 空间, 但反之不成立.",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

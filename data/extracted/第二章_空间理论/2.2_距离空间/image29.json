@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image29.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image29.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 17,\n  \"points\": 2,\n  \"stem\": \"在距离空间中，关于列紧集性质的描述，正确的是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"单点集是列紧集；\"},\n    {\"label\": \"B\", \"text\": \"有界闭集是列紧集；\"},\n    {\"label\": \"C\", \"text\": \"有限点集是列紧集；\"},\n    {\"label\": \"D\", \"text\": \"可列点集未必是列紧集 .\"}\n  ],\n  \"answer\": \"ACD\",\n  \"answer_raw\": \"ACD (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 17,
+  "points": 2,
+  "stem": "在距离空间中，关于列紧集性质的描述，正确的是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "单点集是列紧集；"
+    },
+    {
+      "label": "B",
+      "text": "有界闭集是列紧集；"
+    },
+    {
+      "label": "C",
+      "text": "有限点集是列紧集；"
+    },
+    {
+      "label": "D",
+      "text": "可列点集未必是列紧集 ."
+    }
+  ],
+  "answer": "ACD",
+  "answer_raw": "ACD (少选不得分)",
+  "explanation": null,
+  "note": null
+}

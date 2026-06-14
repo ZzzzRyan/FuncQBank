@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}校对 · {{ q.rel_path.split('/')[-1] }}{% endblock %}
+{% block body %}
+<div class="wrap wide page">
+  <div class="practice-head">
+    <div>
+      <div class="title">校对题目</div>
+      <div class="sub">{{ ch.title if ch }} · {{ sec.code }} {{ sec.title }} · {{ q.rel_path.split('/')[-1] }}
+        · <span class="badge {{ q.status }}" id="status-badge">{{ {'flagged':'需复核','pending':'待校对','verified':'已校对'}.get(q.status, q.status) }}</span></div>
+    </div>
+    <div class="toolbar"><a class="btn btn-sm" href="/admin">← 返回列表</a></div>
+  </div>
+
+  {% if q.auto_flags %}<div class="alert err"><b>自动检查：</b> {{ q.auto_flags|join('；') }}</div>{% endif %}
+  {% if q.note %}<div class="alert info"><b>模型备注：</b> {{ q.note }}</div>{% endif %}
+  <div id="reextract-notice"></div>
+
+  <div class="edit-grid">
+    <!-- 1) original image -->
+    <div class="imgpane">
+      <div class="pane-label">原图</div>
+      <img src="/admin/image/{{ q.id }}" alt="题目原图" loading="lazy">
+      <button class="btn btn-sm btn-block" type="button" id="reextract-btn" data-url="/admin/question/{{ q.id }}/reextract" style="margin-top:12px">用大模型重新识别此图</button>
+      <div class="hint" style="margin-top:6px">仅把新识别结果填入右侧表单供你检查，<b>不会自动保存</b>。</div>
+    </div>
+
+    <!-- 2) live preview of the whole question -->
+    <div class="qpreview-pane">
+      <div class="pane-label">实时预览（与刷题页一致）</div>
+      <div class="sheet qpreview" id="q-preview"></div>
+    </div>
+
+    <!-- 3) editable form -->
+    <form method="post" action="/admin/question/{{ q.id }}" id="edit-form">
+      <div class="pane-label">编辑</div>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <div class="field">
+        <label>题型</label>
+        <select name="type" id="type">
+          {% for t in types %}<option value="{{ t }}" {{ 'selected' if q.type == t }}>{{ type_labels.get(t, t) }}</option>{% endfor %}
+        </select>
+      </div>
+
+      <div class="field">
+        <label>题干（数学用 $...$，强调用 **加粗**）</label>
+        <textarea name="stem" id="stem" rows="3">{{ q.stem }}</textarea>
+      </div>
+
+      <div class="field" id="opts-field">
+        <label>选项</label>
+        <div class="opt-editor" id="opts">
+          {% for o in q.options %}
+          <div class="opt-row">
+            <input class="lab" type="text" name="opt_label" value="{{ o.label }}">
+            <input type="text" name="opt_text" value="{{ o.text }}">
+            <button class="btn btn-sm btn-danger opt-del" type="button">×</button>
+          </div>
+          {% endfor %}
+        </div>
+        <button class="btn btn-sm" type="button" id="add-opt" style="margin-top:8px">+ 添加选项</button>
+      </div>
+
+      <div class="field">
+        <label>正确答案</label>
+        <input type="text" name="answer" id="answer" value="{{ q.answer|join('') }}">
+        <div class="hint">单选：单个字母（如 B）· 多选：字母连写（如 ABCD）· 判断：正确 或 错误</div>
+      </div>
+      <div class="field">
+        <label>答案原文（可选，如「ABCD (少选不得分)」）</label>
+        <input type="text" name="answer_raw" id="answer_raw" value="{{ q.answer_raw or '' }}">
+      </div>
+      <div class="field">
+        <label>分值</label>
+        <input type="number" name="points" id="points" step="0.5" value="{{ q.points if q.points is not none else '' }}">
+      </div>
+      <div class="field">
+        <label>解析（可选）</label>
+        <textarea name="explanation" id="explanation" rows="2">{{ q.explanation or '' }}</textarea>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" type="submit" name="action" value="save">保存并标记已校对</button>
+        <button class="btn" type="submit" name="action" value="save_next">保存并下一道{% if next_id %} →{% endif %}</button>
+      </div>
+
+      {% if q.extraction_raw %}
+      <details style="margin-top:18px">
+        <summary>查看模型原始输出（上次提取）</summary>
+        <div class="raw-dump">{{ q.extraction_raw }}</div>
+      </details>
+      {% endif %}
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image133.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image133.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 38,\n  \"points\": 1,\n  \"stem\": \"设 $p(x) = \\\\sum_{j=1}^{n} a_j \\\\varphi_j(x)$ 是 $f(x) \\\\in L^2[0,1]$ 在 $\\\\text{span} \\\\{\\\\varphi_1, \\\\varphi_2, \\\\ldots, \\\\varphi_n\\\\}$ 中的最佳逼近元，则 $(f-p, f-p) = (f,f) - \\\\sum_{j=1}^{n} a_j (\\\\varphi_j, f)$。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 38,
+  "points": 1,
+  "stem": "设 $p(x) = \\sum_{j=1}^{n} a_j \\varphi_j(x)$ 是 $f(x) \\in L^2[0,1]$ 在 $\\text{span} \\{\\varphi_1, \\varphi_2, \\ldots, \\varphi_n\\}$ 中的最佳逼近元，则 $(f-p, f-p) = (f,f) - \\sum_{j=1}^{n} a_j (\\varphi_j, f)$。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image33.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image33.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 21,\n  \"points\": 1,\n  \"stem\": \"所有 $n$ 维复向量构成的集合 $\\\\mathbb{C}^n$ 中可定义多种距离，使之成为距离空间。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 21,
+  "points": 1,
+  "stem": "所有 $n$ 维复向量构成的集合 $\\mathbb{C}^n$ 中可定义多种距离，使之成为距离空间。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

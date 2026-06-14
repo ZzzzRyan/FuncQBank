@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image71.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image71.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 7,\n  \"points\": 1,\n  \"stem\": \"下列空间为不可分空间的是（ ）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$L^\\\\infty[a,b]$\"},\n    {\"label\": \"B\", \"text\": \"$L^p[a,b] (1 \\\\le p < \\\\infty)$\"},\n    {\"label\": \"C\", \"text\": \"$C[a,b]$\"},\n    {\"label\": \"D\", \"text\": \"$\\\\mathbb{C}^n$\"}\n  ],\n  \"answer\": \"A\",\n  \"answer_raw\": \"A\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 7,
+  "points": 1,
+  "stem": "下列空间为不可分空间的是（ ）",
+  "options": [
+    {
+      "label": "A",
+      "text": "$L^\\infty[a,b]$"
+    },
+    {
+      "label": "B",
+      "text": "$L^p[a,b] (1 \\le p < \\infty)$"
+    },
+    {
+      "label": "C",
+      "text": "$C[a,b]$"
+    },
+    {
+      "label": "D",
+      "text": "$\\mathbb{C}^n$"
+    }
+  ],
+  "answer": "A",
+  "answer_raw": "A",
+  "explanation": null,
+  "note": null
+}

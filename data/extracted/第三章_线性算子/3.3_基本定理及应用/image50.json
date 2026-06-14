@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.3_基本定理及应用/image50.jpg",
+  "image_path": "docs/第三章_线性算子/3.3_基本定理及应用/image50.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 21,\n  \"points\": 1,\n  \"stem\": \"赋予范数 $\\\\|x\\\\| = \\\\int_{0}^{1} |x(t)| dt$ 的 $C[0,1]$ 空间是 Banach 空间。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 21,
+  "points": 1,
+  "stem": "赋予范数 $\\|x\\| = \\int_{0}^{1} |x(t)| dt$ 的 $C[0,1]$ 空间是 Banach 空间。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

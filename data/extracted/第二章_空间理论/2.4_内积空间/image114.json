@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image114.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image114.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 19,\n  \"points\": 2,\n  \"stem\": \"设 $M,N$ 是线性空间 $X$ 的子空间, 当满足 ( ) 时, $X$ 为 $M$ 与 $N$的直和。\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$M \\\\cup N = X$;\"},\n    {\"label\": \"B\", \"text\": \"$M \\\\cap N = \\\\emptyset$;\"},\n    {\"label\": \"C\", \"text\": \"$X = M + N$;\"},\n    {\"label\": \"D\", \"text\": \"$M \\\\cap N = \\\\{0\\\\}$.\"}\n  ],\n  \"answer\": \"CD\",\n  \"answer_raw\": \"CD (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 19,
+  "points": 2,
+  "stem": "设 $M,N$ 是线性空间 $X$ 的子空间, 当满足 ( ) 时, $X$ 为 $M$ 与 $N$的直和。",
+  "options": [
+    {
+      "label": "A",
+      "text": "$M \\cup N = X$;"
+    },
+    {
+      "label": "B",
+      "text": "$M \\cap N = \\emptyset$;"
+    },
+    {
+      "label": "C",
+      "text": "$X = M + N$;"
+    },
+    {
+      "label": "D",
+      "text": "$M \\cap N = \\{0\\}$."
+    }
+  ],
+  "answer": "CD",
+  "answer_raw": "CD (少选不得分)",
+  "explanation": null,
+  "note": null
+}

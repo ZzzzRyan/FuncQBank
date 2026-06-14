@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image95.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image95.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 31,\n  \"points\": 1,\n  \"stem\": \"任何两个有限维赋范空间都是线性同胚的。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 31,
+  "points": 1,
+  "stem": "任何两个有限维赋范空间都是线性同胚的。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

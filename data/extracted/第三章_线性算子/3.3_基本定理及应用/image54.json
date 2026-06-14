@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.3_基本定理及应用/image54.jpg",
+  "image_path": "docs/第三章_线性算子/3.3_基本定理及应用/image54.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 25,\n  \"points\": 1,\n  \"stem\": \"设 $(X, \\\\|\\\\cdot\\\\|_1)$, $(X, \\\\|\\\\cdot\\\\|_2)$ 都是 Banach 空间, 则 $\\\\|\\\\cdot\\\\|_1$, $\\\\|\\\\cdot\\\\|_2$ 等价.\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 25,
+  "points": 1,
+  "stem": "设 $(X, \\|\\cdot\\|_1)$, $(X, \\|\\cdot\\|_2)$ 都是 Banach 空间, 则 $\\|\\cdot\\|_1$, $\\|\\cdot\\|_2$ 等价.",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

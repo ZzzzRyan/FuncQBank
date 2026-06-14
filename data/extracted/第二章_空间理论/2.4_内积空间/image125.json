@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image125.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image125.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 30,\n  \"points\": 1,\n  \"stem\": \"设 $\\\\{e_n\\\\}_{n=1}^{\\\\infty}$ 是内积空间 $X$ 的正规正交基, $x \\\\in X$. 则 $x$ 的 Fourier 级数 $\\\\sum_{n=1}^{\\\\infty} (x, e_n) e_n$ 必收敛于 $x$.\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 30,
+  "points": 1,
+  "stem": "设 $\\{e_n\\}_{n=1}^{\\infty}$ 是内积空间 $X$ 的正规正交基, $x \\in X$. 则 $x$ 的 Fourier 级数 $\\sum_{n=1}^{\\infty} (x, e_n) e_n$ 必收敛于 $x$.",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.1_线性空间/image3.jpg",
+  "image_path": "docs/第二章_空间理论/2.1_线性空间/image3.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 3,\n  \"points\": 1,\n  \"stem\": \"子空间 $M,N$ 的和为直和的非充分必要条件是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$M,N$ 的交集只有零元;\"},\n    {\"label\": \"B\", \"text\": \"$M$ 中非零元与 $N$ 中非零元线性无关;\"},\n    {\"label\": \"C\", \"text\": \"$M + N$ 的中任意元的分解式是唯一的;\"},\n    {\"label\": \"D\", \"text\": \"$M + N$ 的中任意元可以表示为 $x + y$ 的形式, 其中 $x \\\\in M, y \\\\in N$.\"}\n  ],\n  \"answer\": \"D\",\n  \"answer_raw\": \"D\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 3,
+  "points": 1,
+  "stem": "子空间 $M,N$ 的和为直和的非充分必要条件是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$M,N$ 的交集只有零元;"
+    },
+    {
+      "label": "B",
+      "text": "$M$ 中非零元与 $N$ 中非零元线性无关;"
+    },
+    {
+      "label": "C",
+      "text": "$M + N$ 的中任意元的分解式是唯一的;"
+    },
+    {
+      "label": "D",
+      "text": "$M + N$ 的中任意元可以表示为 $x + y$ 的形式, 其中 $x \\in M, y \\in N$."
+    }
+  ],
+  "answer": "D",
+  "answer_raw": "D",
+  "explanation": null,
+  "note": null
+}

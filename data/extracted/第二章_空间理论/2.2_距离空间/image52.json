@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image52.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image52.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 40,\n  \"points\": 1,\n  \"stem\": \"在 $C[a,b]$ 中，完全有界集和列紧集是等价的。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 40,
+  "points": 1,
+  "stem": "在 $C[a,b]$ 中，完全有界集和列紧集是等价的。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

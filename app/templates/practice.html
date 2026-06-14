@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ scope_title }} · {{ app_name }}{% endblock %}
+{% block body %}
+<div class="wrap page" data-count="{{ count }}">
+  <div class="practice-head">
+    <div>
+      <div class="title">{{ scope_title }}</div>
+      <div class="sub">{{ scope_subtitle }}</div>
+    </div>
+  </div>
+
+  {% if count == 0 %}
+    <div class="sheet" style="text-align:center; color:var(--ink-3)">
+      <p>这里还没有题目。</p>
+      {% if path == '/practice/wrong' %}<p class="sans" style="font-size:.9rem">做错的题会自动收进错题本。</p>{% endif %}
+      <div style="margin-top:16px"><a class="btn" href="/">返回题库</a></div>
+    </div>
+  {% else %}
+    {% include "_practice_body.html" %}
+  {% endif %}
+</div>
+{% endblock %}

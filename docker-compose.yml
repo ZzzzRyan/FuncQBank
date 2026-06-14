@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    image: funcqbank
+    container_name: funcqbank
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      # DB lives on the volume below (kept separate from the baked-in data/extracted content)
+      DB_PATH: /app/var/app.db
+      # Enable when this service sits behind an HTTPS-terminating reverse proxy:
+      # COOKIE_SECURE: "true"
+    volumes:
+      - funcqbank-data:/app/var
+    restart: unless-stopped
+
+volumes:
+  funcqbank-data:

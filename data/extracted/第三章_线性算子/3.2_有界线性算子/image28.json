@@ -1,0 +1,34 @@
+{
+  "rel_path": "第三章_线性算子/3.2_有界线性算子/image28.jpg",
+  "image_path": "docs/第三章_线性算子/3.2_有界线性算子/image28.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 20,\n  \"points\": 1,\n  \"stem\": \"设线性算子 $T : C[0,1] \\\\rightarrow \\\\mathbb{C}$ 定义为 $T(x) = 2x(1)$, 则 $\\\\|T\\\\|$ 等于 （ ）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"1；\"},\n    {\"label\": \"B\", \"text\": \"2；\"},\n    {\"label\": \"C\", \"text\": \"4；\"},\n    {\"label\": \"D\", \"text\": \"8.\"}\n  ],\n  \"answer\": \"B\",\n  \"answer_raw\": \"B\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 20,
+  "points": 1,
+  "stem": "设线性算子 $T : C[0,1] \\rightarrow \\mathbb{C}$ 定义为 $T(x) = 2x(1)$, 则 $\\|T\\|$ 等于 （ ）",
+  "options": [
+    {
+      "label": "A",
+      "text": "1；"
+    },
+    {
+      "label": "B",
+      "text": "2；"
+    },
+    {
+      "label": "C",
+      "text": "4；"
+    },
+    {
+      "label": "D",
+      "text": "8."
+    }
+  ],
+  "answer": "B",
+  "answer_raw": "B",
+  "explanation": null,
+  "note": null
+}

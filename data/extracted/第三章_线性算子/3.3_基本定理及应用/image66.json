@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.3_基本定理及应用/image66.jpg",
+  "image_path": "docs/第三章_线性算子/3.3_基本定理及应用/image66.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 37,\n  \"points\": 1,\n  \"stem\": \"设 $X$ 为 Banach 空间，$Y$ 为赋范线性空间，$\\\\{T_\\\\lambda \\\\mid \\\\lambda \\\\in \\\\Lambda\\\\} \\\\subset L(X,Y)$，则 $\\\\{T_\\\\lambda \\\\mid \\\\lambda \\\\in \\\\Lambda\\\\}$ 在 $X$ 上点点有界当且仅当 $\\\\{T_\\\\lambda \\\\mid \\\\lambda \\\\in \\\\Lambda\\\\}$ 一致有界。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 37,
+  "points": 1,
+  "stem": "设 $X$ 为 Banach 空间，$Y$ 为赋范线性空间，$\\{T_\\lambda \\mid \\lambda \\in \\Lambda\\} \\subset L(X,Y)$，则 $\\{T_\\lambda \\mid \\lambda \\in \\Lambda\\}$ 在 $X$ 上点点有界当且仅当 $\\{T_\\lambda \\mid \\lambda \\in \\Lambda\\}$ 一致有界。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

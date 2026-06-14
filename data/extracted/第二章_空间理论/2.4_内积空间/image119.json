@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image119.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image119.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 24,\n  \"points\": 1,\n  \"stem\": \"可分Hilbert空间的正规正交基中最多含有可数个向量.\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 24,
+  "points": 1,
+  "stem": "可分Hilbert空间的正规正交基中最多含有可数个向量.",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

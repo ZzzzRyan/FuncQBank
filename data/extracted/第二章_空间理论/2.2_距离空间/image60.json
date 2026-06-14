@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image60.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image60.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 48,\n  \"points\": 1,\n  \"stem\": \"无理数集是$\\\\mathbb{R}$中的无处稠密集.\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 48,
+  "points": 1,
+  "stem": "无理数集是$\\mathbb{R}$中的无处稠密集.",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

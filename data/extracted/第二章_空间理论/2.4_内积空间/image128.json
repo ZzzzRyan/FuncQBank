@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image128.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image128.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 33,\n  \"points\": 1,\n  \"stem\": \"任何 Hilbert 空间都具有可数的标准正交基。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 33,
+  "points": 1,
+  "stem": "任何 Hilbert 空间都具有可数的标准正交基。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

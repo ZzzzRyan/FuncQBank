@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image87.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image87.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 23,\n  \"points\": 1,\n  \"stem\": \"设 $P[0,1]$ 是 $[0,1]$ 上多项式全体，则 $P[0,1]$ 作为 $C[0,1]$ 的子空间是 Banach 空间。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 23,
+  "points": 1,
+  "stem": "设 $P[0,1]$ 是 $[0,1]$ 上多项式全体，则 $P[0,1]$ 作为 $C[0,1]$ 的子空间是 Banach 空间。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

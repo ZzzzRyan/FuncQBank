@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}题库 · {{ app_name }}{% endblock %}
+{% block body %}
+<div class="wrap page">
+  <div class="hero">
+    <div>
+      <h1>泛函分析题库</h1>
+      <div class="lead">考前刷题 · 先看题再揭示答案 · 错题自动归集</div>
+    </div>
+    <div class="stat-strip">
+      <div class="stat"><div class="n">{{ grand_total }}</div><div class="k">题目</div></div>
+      <div class="stat"><div class="n blue">{{ grand_done }}</div><div class="k">已练习</div></div>
+      <div class="stat"><div class="n red">{{ grand_wrong }}</div><div class="k">待复习错题</div></div>
+    </div>
+  </div>
+
+  <div class="quick">
+    <a class="btn btn-primary" href="/practice/all?shuffle=1">随机练习</a>
+    <a class="btn" href="/practice/wrong">错题本{% if grand_wrong %} · {{ grand_wrong }}{% endif %}</a>
+    <a class="btn" href="/search">搜索题目</a>
+  </div>
+
+  {% for c in chapters_data %}
+  <section class="chapter">
+    <h2>{{ c.chapter.title }}</h2>
+    <div class="sec-grid">
+      {% for s in c.sections %}
+      <a class="sec-card" href="/practice/section/{{ s.sec.id }}">
+        <div class="row">
+          <span class="code">{{ s.sec.code }}</span>
+          {% if s.wrong %}<span class="badge flagged">错 {{ s.wrong }}</span>{% endif %}
+        </div>
+        <div class="name">{{ s.sec.title }}</div>
+        <div class="bar"><i style="width: {{ ((100 * s.done / s.total) if s.total else 0)|round|int }}%"></i></div>
+        <div class="meta"><span>{{ s.done }} / {{ s.total }} 已练</span></div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

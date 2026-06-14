@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image107.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image107.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 12,\n  \"points\": 2,\n  \"stem\": \"无穷维可分 Hilbert 空间与空间（ ）同构。\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$\\\\mathbb{R}^n$;\"},\n    {\"label\": \"B\", \"text\": \"$l^2$;\"},\n    {\"label\": \"C\", \"text\": \"$L^2[0,1]$;\"},\n    {\"label\": \"D\", \"text\": \"$\\\\mathbb{C}^n$.\"}\n  ],\n  \"answer\": \"BC\",\n  \"answer_raw\": \"BC (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 12,
+  "points": 2,
+  "stem": "无穷维可分 Hilbert 空间与空间（ ）同构。",
+  "options": [
+    {
+      "label": "A",
+      "text": "$\\mathbb{R}^n$;"
+    },
+    {
+      "label": "B",
+      "text": "$l^2$;"
+    },
+    {
+      "label": "C",
+      "text": "$L^2[0,1]$;"
+    },
+    {
+      "label": "D",
+      "text": "$\\mathbb{C}^n$."
+    }
+  ],
+  "answer": "BC",
+  "answer_raw": "BC (少选不得分)",
+  "explanation": null,
+  "note": null
+}

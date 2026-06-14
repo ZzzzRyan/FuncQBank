@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image91.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image91.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 27,\n  \"points\": 1,\n  \"stem\": \"设 $\\\\{(x_1^{(n)}, x_2^{(n)})\\\\}$ 是积空间 $X_1 \\\\times X_2$ 中的 Cauchy 列，则 $\\\\{x_1^{(n)}\\\\}$ 是 $X_1$ 中的Cauchy列。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 27,
+  "points": 1,
+  "stem": "设 $\\{(x_1^{(n)}, x_2^{(n)})\\}$ 是积空间 $X_1 \\times X_2$ 中的 Cauchy 列，则 $\\{x_1^{(n)}\\}$ 是 $X_1$ 中的Cauchy列。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image39.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image39.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 27,\n  \"points\": 1,\n  \"stem\": \"$C[a,b]$中函数列收敛是点态收敛但非一致收敛。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 27,
+  "points": 1,
+  "stem": "$C[a,b]$中函数列收敛是点态收敛但非一致收敛。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

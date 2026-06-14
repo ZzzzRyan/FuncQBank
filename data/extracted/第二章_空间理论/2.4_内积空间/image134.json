@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image134.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image134.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 39,\n  \"points\": 1,\n  \"stem\": \"设 $S$ 是 Hilbert 空间 $X$ 中的正规正交集, 若对任意的 $x \\\\perp S$ 必有 $x = 0$, 则 $S$ 是 $X$ 的正规正交基。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 39,
+  "points": 1,
+  "stem": "设 $S$ 是 Hilbert 空间 $X$ 中的正规正交集, 若对任意的 $x \\perp S$ 必有 $x = 0$, 则 $S$ 是 $X$ 的正规正交基。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

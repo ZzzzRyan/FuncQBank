@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image81.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image81.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 17,\n  \"points\": 1,\n  \"stem\": \"设 $X$ 是赋范线性空间, $d$ 是由范数诱导的距离, 则对任意的 $x,y,z \\\\in X$, 有 $d(x+z, y+z) = d(x,y)$。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 17,
+  "points": 1,
+  "stem": "设 $X$ 是赋范线性空间, $d$ 是由范数诱导的距离, 则对任意的 $x,y,z \\in X$, 有 $d(x+z, y+z) = d(x,y)$。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

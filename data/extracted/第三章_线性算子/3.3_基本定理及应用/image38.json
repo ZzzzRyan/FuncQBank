@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.3_基本定理及应用/image38.jpg",
+  "image_path": "docs/第三章_线性算子/3.3_基本定理及应用/image38.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 9,\n  \"points\": 1,\n  \"stem\": \"设 $X$ 为赋范线性空间， $x_1, x_2 \\\\in X$ ， $x_1 \\\\neq x_2$ ，则必存在 $f \\\\in X'$ ，使得 $f(x_1) \\\\neq f(x_2)$ 。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 9,
+  "points": 1,
+  "stem": "设 $X$ 为赋范线性空间， $x_1, x_2 \\in X$ ， $x_1 \\neq x_2$ ，则必存在 $f \\in X'$ ，使得 $f(x_1) \\neq f(x_2)$ 。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}搜索 · {{ app_name }}{% endblock %}
+{% block body %}
+<div class="wrap page">
+  <div class="practice-head">
+    <div><div class="title">搜索题目</div><div class="sub">{{ scope_subtitle }}</div></div>
+  </div>
+
+  <form class="search-form" method="get" action="/search">
+    <input type="search" name="q" value="{{ q }}" placeholder="输入题干关键词，例如：完备 / 内积 / 算子…" autofocus>
+    <select name="type">
+      <option value="">全部题型</option>
+      <option value="single" {{ 'selected' if type == 'single' }}>单选题</option>
+      <option value="multiple" {{ 'selected' if type == 'multiple' }}>多选题</option>
+      <option value="judge" {{ 'selected' if type == 'judge' }}>判断题</option>
+    </select>
+    <button class="btn btn-primary" type="submit">搜索</button>
+  </form>
+
+  {% if searched %}
+    {% if count %}
+      {% include "_practice_body.html" %}
+    {% else %}
+      <div class="sheet muted" style="text-align:center">未找到匹配的题目，换个关键词试试。</div>
+    {% endif %}
+  {% else %}
+    <div class="sheet muted" style="text-align:center">输入关键词后点「搜索」（可叠加题型筛选）。结果会进入刷题模式，先看题、再揭示答案。</div>
+  {% endif %}
+</div>
+{% endblock %}

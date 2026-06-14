@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image106.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image106.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 11,\n  \"points\": 1,\n  \"stem\": \"内积空间中的线性无关集，通过 Schmidt正交化, 可得到 (    )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"正规正交集；\"},\n    {\"label\": \"B\", \"text\": \"正规正交基；\"},\n    {\"label\": \"C\", \"text\": \"正交基；\"},\n    {\"label\": \"D\", \"text\": \"完备的正交集.\"}\n  ],\n  \"answer\": \"A\",\n  \"answer_raw\": \"A\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 11,
+  "points": 1,
+  "stem": "内积空间中的线性无关集，通过 Schmidt正交化, 可得到 (    )",
+  "options": [
+    {
+      "label": "A",
+      "text": "正规正交集；"
+    },
+    {
+      "label": "B",
+      "text": "正规正交基；"
+    },
+    {
+      "label": "C",
+      "text": "正交基；"
+    },
+    {
+      "label": "D",
+      "text": "完备的正交集."
+    }
+  ],
+  "answer": "A",
+  "answer_raw": "A",
+  "explanation": null,
+  "note": null
+}

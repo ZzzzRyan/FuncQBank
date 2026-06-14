@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image15.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image15.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 3,\n  \"points\": 1,\n  \"stem\": \"连续函数空间 $C[a,b]$ 中函数列按max距离收敛等价于函数列的（ ）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"点态收敛;\"},\n    {\"label\": \"B\", \"text\": \"几乎处处收敛;\"},\n    {\"label\": \"C\", \"text\": \"按坐标收敛;\"},\n    {\"label\": \"D\", \"text\": \"一致收敛\"}\n  ],\n  \"answer\": \"D\",\n  \"answer_raw\": \"D\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 3,
+  "points": 1,
+  "stem": "连续函数空间 $C[a,b]$ 中函数列按max距离收敛等价于函数列的（ ）",
+  "options": [
+    {
+      "label": "A",
+      "text": "点态收敛;"
+    },
+    {
+      "label": "B",
+      "text": "几乎处处收敛;"
+    },
+    {
+      "label": "C",
+      "text": "按坐标收敛;"
+    },
+    {
+      "label": "D",
+      "text": "一致收敛"
+    }
+  ],
+  "answer": "D",
+  "answer_raw": "D",
+  "explanation": null,
+  "note": null
+}

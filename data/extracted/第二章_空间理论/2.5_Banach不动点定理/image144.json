@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.5_Banach不动点定理/image144.jpg",
+  "image_path": "docs/第二章_空间理论/2.5_Banach不动点定理/image144.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 9,\n  \"points\": 1,\n  \"stem\": \"设 $(X, d)$ 是完备的距离空间, $T$ 是 $X$ 到自身的严格压缩映射, 则映射 $T$ 的不动点存在但与迭代初始点选择有关。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 9,
+  "points": 1,
+  "stem": "设 $(X, d)$ 是完备的距离空间, $T$ 是 $X$ 到自身的严格压缩映射, 则映射 $T$ 的不动点存在但与迭代初始点选择有关。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

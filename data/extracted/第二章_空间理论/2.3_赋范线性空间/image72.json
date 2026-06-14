@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image72.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image72.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 8,\n  \"points\": 2,\n  \"stem\": \"设 $T: X \\\\to Y$ 是等距线性同构映射, 下列论述不正确的是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$T$ 是单射;\"},\n    {\"label\": \"B\", \"text\": \"$T$ 是满射;\"},\n    {\"label\": \"C\", \"text\": \"当 $X$ 是有限维空间时, $Y$ 有可能为无穷维空间;\"},\n    {\"label\": \"D\", \"text\": \"任取 $x, y \\\\in X, \\\\alpha, \\\\beta \\\\in \\\\mathbb{K}$, 有 $\\\\|T(\\\\alpha x + \\\\beta y)\\\\| = |\\\\alpha| \\\\|x\\\\| + |\\\\beta| \\\\|y\\\\|.$\"}\n  ],\n  \"answer\": \"CD\",\n  \"answer_raw\": \"CD (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 8,
+  "points": 2,
+  "stem": "设 $T: X \\to Y$ 是等距线性同构映射, 下列论述不正确的是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$T$ 是单射;"
+    },
+    {
+      "label": "B",
+      "text": "$T$ 是满射;"
+    },
+    {
+      "label": "C",
+      "text": "当 $X$ 是有限维空间时, $Y$ 有可能为无穷维空间;"
+    },
+    {
+      "label": "D",
+      "text": "任取 $x, y \\in X, \\alpha, \\beta \\in \\mathbb{K}$, 有 $\\|T(\\alpha x + \\beta y)\\| = |\\alpha| \\|x\\| + |\\beta| \\|y\\|.$"
+    }
+  ],
+  "answer": "CD",
+  "answer_raw": "CD (少选不得分)",
+  "explanation": null,
+  "note": null
+}

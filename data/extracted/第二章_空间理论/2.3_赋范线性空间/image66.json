@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image66.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image66.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 2,\n  \"points\": 1,\n  \"stem\": \"设 $X$ 是赋范线性空间，$\\\\{x_n\\\\}_{n=1}^{\\\\infty}$，$\\\\{y_n\\\\}_{n=1}^{\\\\infty}$ 是 $X$ 中的向量列，$\\\\alpha_n, \\\\alpha \\\\in \\\\mathbb{K}$，则下面陈述**不正确**的是（）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"若 $\\\\lim_{n \\\\to \\\\infty} x_n = x$, 则 $\\\\lim_{n \\\\to \\\\infty} \\\\|x_n\\\\| = \\\\|x\\\\|$;\"},\n    {\"label\": \"B\", \"text\": \"若 $\\\\lim_{n \\\\to \\\\infty} x_n = x$, 则 $\\\\lim_{n \\\\to \\\\infty} \\\\alpha_n x_n = \\\\alpha x$;\"},\n    {\"label\": \"C\", \"text\": \"若 $\\\\lim_{n \\\\to \\\\infty} x_n = x$, $\\\\lim_{n \\\\to \\\\infty} y_n = y$, 则 $\\\\lim_{n \\\\to \\\\infty} (x_n + y_n) = x + y$;\"},\n    {\"label\": \"D\", \"text\": \"若 $\\\\lim_{n \\\\to \\\\infty} x_n = x$, 则 $\\\\{\\\\|x_n\\\\|\\\\}_{n=1}^{\\\\infty}$ 有界。\"}\n  ],\n  \"answer\": \"B\",\n  \"answer_raw\": \"B\",\n  \"explanation\": \"若 $\\\\alpha_n \\\\to \\\\alpha$, 则选项成立。\",\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 2,
+  "points": 1,
+  "stem": "设 $X$ 是赋范线性空间，$\\{x_n\\}_{n=1}^{\\infty}$，$\\{y_n\\}_{n=1}^{\\infty}$ 是 $X$ 中的向量列，$\\alpha_n, \\alpha \\in \\mathbb{K}$，则下面陈述**不正确**的是（）",
+  "options": [
+    {
+      "label": "A",
+      "text": "若 $\\lim_{n \\to \\infty} x_n = x$, 则 $\\lim_{n \\to \\infty} \\|x_n\\| = \\|x\\|$;"
+    },
+    {
+      "label": "B",
+      "text": "若 $\\lim_{n \\to \\infty} x_n = x$, 则 $\\lim_{n \\to \\infty} \\alpha_n x_n = \\alpha x$;"
+    },
+    {
+      "label": "C",
+      "text": "若 $\\lim_{n \\to \\infty} x_n = x$, $\\lim_{n \\to \\infty} y_n = y$, 则 $\\lim_{n \\to \\infty} (x_n + y_n) = x + y$;"
+    },
+    {
+      "label": "D",
+      "text": "若 $\\lim_{n \\to \\infty} x_n = x$, 则 $\\{\\|x_n\\|\\}_{n=1}^{\\infty}$ 有界。"
+    }
+  ],
+  "answer": "B",
+  "answer_raw": "B",
+  "explanation": "若 $\\alpha_n \\to \\alpha$, 则选项成立。",
+  "note": null
+}

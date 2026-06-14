@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image93.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image93.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 29,\n  \"points\": 1,\n  \"stem\": \"设 $\\\\left\\\\{\\\\left(x_1^{(n)}, x_2^{(n)}\\\\right)\\\\right\\\\}$ 是积空间 $x_1 \\\\times X_2$ 中的序列，若 $\\\\left\\\\{\\\\left(x_1^{(n)}, x_2^{(n)}\\\\right)\\\\right\\\\}$ 收敛于 $(x_1, x_2)$，则 $\\\\left\\\\{x_1^{(n)}\\\\right\\\\}$ 必收敛于 $x_1$。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 29,
+  "points": 1,
+  "stem": "设 $\\left\\{\\left(x_1^{(n)}, x_2^{(n)}\\right)\\right\\}$ 是积空间 $x_1 \\times X_2$ 中的序列，若 $\\left\\{\\left(x_1^{(n)}, x_2^{(n)}\\right)\\right\\}$ 收敛于 $(x_1, x_2)$，则 $\\left\\{x_1^{(n)}\\right\\}$ 必收敛于 $x_1$。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

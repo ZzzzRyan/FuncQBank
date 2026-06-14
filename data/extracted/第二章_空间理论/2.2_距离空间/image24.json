@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image24.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image24.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 12,\n  \"points\": 1,\n  \"stem\": \"在距离空间中，下面论述正确的是( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"紧集一定是有界集;\"},\n    {\"label\": \"B\", \"text\": \"紧集的子集一定是紧集;\"},\n    {\"label\": \"C\", \"text\": \"紧集不一定是闭集;\"},\n    {\"label\": \"D\", \"text\": \"连续映射可以将紧集映为非紧集.\"}\n  ],\n  \"answer\": \"A\",\n  \"answer_raw\": \"A\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 12,
+  "points": 1,
+  "stem": "在距离空间中，下面论述正确的是( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "紧集一定是有界集;"
+    },
+    {
+      "label": "B",
+      "text": "紧集的子集一定是紧集;"
+    },
+    {
+      "label": "C",
+      "text": "紧集不一定是闭集;"
+    },
+    {
+      "label": "D",
+      "text": "连续映射可以将紧集映为非紧集."
+    }
+  ],
+  "answer": "A",
+  "answer_raw": "A",
+  "explanation": null,
+  "note": null
+}

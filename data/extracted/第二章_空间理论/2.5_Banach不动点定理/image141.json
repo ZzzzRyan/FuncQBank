@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.5_Banach不动点定理/image141.jpg",
+  "image_path": "docs/第二章_空间理论/2.5_Banach不动点定理/image141.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 6,\n  \"points\": 1,\n  \"stem\": \"设 $f$ 为 $\\mathbb{R}$ 上的可导函数, 且存在 $\\\\alpha \\\\in [0, 1)$, 使得 $|f'(x)| \\\\leq \\\\alpha$, 则方程 $f(x) - x = 0$ 在 $\\mathbb{R}$ 上有解.\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 6,
+  "points": 1,
+  "stem": "设 $f$ 为 $\\mathbb{R}$ 上的可导函数, 且存在 $\\alpha \\in [0, 1)$, 使得 $|f'(x)| \\leq \\alpha$, 则方程 $f(x) - x = 0$ 在 $\\mathbb{R}$ 上有解.",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

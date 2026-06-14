@@ -1,0 +1,36 @@
+# --- Python ---
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# --- Secrets ---
+.env
+
+# --- Runtime data (SQLite DB + exports are generated, not source) ---
+data/app.db
+data/app.db-shm
+data/app.db-wal
+data/app.db-journal
+data/export/
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+
+# Tracked on purpose (do NOT ignore):
+#   data/extracted/  -> extracted question content (source of truth)
+#   docs/            -> original question images
+#   uv.lock, .python-version, .env.example

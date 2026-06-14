@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.5_Banach不动点定理/image145.jpg",
+  "image_path": "docs/第二章_空间理论/2.5_Banach不动点定理/image145.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 10,\n  \"points\": 1,\n  \"stem\": \"设 $X = [0,1], d(x,y) = |x - y|, \\\\forall x, y \\\\in X$，则 $(X,d)$ 是完备的距离空间。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 10,
+  "points": 1,
+  "stem": "设 $X = [0,1], d(x,y) = |x - y|, \\forall x, y \\in X$，则 $(X,d)$ 是完备的距离空间。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.1_线性空间/image5.jpg",
+  "image_path": "docs/第二章_空间理论/2.1_线性空间/image5.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 5,\n  \"points\": 1,\n  \"stem\": \"集合( )是所在空间的极大线性子空间。\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$\\\\mathbb{R}^2$ 中任意直线;\"},\n    {\"label\": \"B\", \"text\": \"$\\\\mathbb{R}^3$ 中任意直线;\"},\n    {\"label\": \"C\", \"text\": \"$\\\\mathbb{R}^3$ 中任意平面;\"},\n    {\"label\": \"D\", \"text\": \"$\\\\mathbb{R}^3$ 中过原点任意平面.\"}\n  ],\n  \"answer\": \"D\",\n  \"answer_raw\": \"D\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 5,
+  "points": 1,
+  "stem": "集合( )是所在空间的极大线性子空间。",
+  "options": [
+    {
+      "label": "A",
+      "text": "$\\mathbb{R}^2$ 中任意直线;"
+    },
+    {
+      "label": "B",
+      "text": "$\\mathbb{R}^3$ 中任意直线;"
+    },
+    {
+      "label": "C",
+      "text": "$\\mathbb{R}^3$ 中任意平面;"
+    },
+    {
+      "label": "D",
+      "text": "$\\mathbb{R}^3$ 中过原点任意平面."
+    }
+  ],
+  "answer": "D",
+  "answer_raw": "D",
+  "explanation": null,
+  "note": null
+}

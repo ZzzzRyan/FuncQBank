@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image110.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image110.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 15,\n  \"points\": 2,\n  \"stem\": \"设 $E$ 是 Hilbert 空间 $X$ 的子空间, 则以下结论中正确的是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$E^\\\\perp = (\\\\overline{E})^\\\\perp;$\"},\n    {\"label\": \"B\", \"text\": \"$X = \\\\overline{E} \\\\oplus E^\\\\perp;$\"},\n    {\"label\": \"C\", \"text\": \"$X = E^\\\\perp \\\\oplus (E^\\\\perp)^\\\\perp;$\"},\n    {\"label\": \"D\", \"text\": \"$(E^\\\\perp)^\\\\perp = \\\\overline{E}.$\"}\n  ],\n  \"answer\": \"ABCD\",\n  \"answer_raw\": \"ABCD (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 15,
+  "points": 2,
+  "stem": "设 $E$ 是 Hilbert 空间 $X$ 的子空间, 则以下结论中正确的是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$E^\\perp = (\\overline{E})^\\perp;$"
+    },
+    {
+      "label": "B",
+      "text": "$X = \\overline{E} \\oplus E^\\perp;$"
+    },
+    {
+      "label": "C",
+      "text": "$X = E^\\perp \\oplus (E^\\perp)^\\perp;$"
+    },
+    {
+      "label": "D",
+      "text": "$(E^\\perp)^\\perp = \\overline{E}.$"
+    }
+  ],
+  "answer": "ABCD",
+  "answer_raw": "ABCD (少选不得分)",
+  "explanation": null,
+  "note": null
+}

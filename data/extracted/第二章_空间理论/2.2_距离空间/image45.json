@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image45.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image45.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 33,\n  \"points\": 1,\n  \"stem\": \"$l^{\\\\infty}$ 是可分的距离空间。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 33,
+  "points": 1,
+  "stem": "$l^{\\infty}$ 是可分的距离空间。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

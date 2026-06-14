@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image105.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image105.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 10,\n  \"points\": 1,\n  \"stem\": \"$n$ 维实内积空间与（ ）拓扑同构。\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$\\\\mathbb{C}^n$;\"},\n    {\"label\": \"B\", \"text\": \"$l^2$;\"},\n    {\"label\": \"C\", \"text\": \"$\\\\mathbb{K}^n$;\"},\n    {\"label\": \"D\", \"text\": \"$\\\\mathbb{R}^n$\"}\n  ],\n  \"answer\": \"D\",\n  \"answer_raw\": \"D\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 10,
+  "points": 1,
+  "stem": "$n$ 维实内积空间与（ ）拓扑同构。",
+  "options": [
+    {
+      "label": "A",
+      "text": "$\\mathbb{C}^n$;"
+    },
+    {
+      "label": "B",
+      "text": "$l^2$;"
+    },
+    {
+      "label": "C",
+      "text": "$\\mathbb{K}^n$;"
+    },
+    {
+      "label": "D",
+      "text": "$\\mathbb{R}^n$"
+    }
+  ],
+  "answer": "D",
+  "answer_raw": "D",
+  "explanation": null,
+  "note": null
+}

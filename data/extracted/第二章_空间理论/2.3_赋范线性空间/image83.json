@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image83.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image83.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 19,\n  \"points\": 1,\n  \"stem\": \"设 $(X, \\\\| \\\\cdot \\\\|)$ 是赋范线性空间，则对任意的 $x, y \\\\in X$，有 $| \\\\| x \\\\| - \\\\| y \\\\| | \\\\leq \\\\| x - y \\\\|$。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 19,
+  "points": 1,
+  "stem": "设 $(X, \\| \\cdot \\|)$ 是赋范线性空间，则对任意的 $x, y \\in X$，有 $| \\| x \\| - \\| y \\| | \\leq \\| x - y \\|$。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

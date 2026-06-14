@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image56.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image56.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 44,\n  \"points\": 1,\n  \"stem\": \"若 $E$ 为无处稠密集，则对 $X$ 中任一球 $B(x,\\\\varepsilon)$，必存在另一球 $\\\\overline{B(x_0,\\\\delta)} \\\\subset B(x,\\\\varepsilon)$，使得 $B(x_0,\\\\delta) \\\\cap \\\\bar{E}$ 是空集。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 44,
+  "points": 1,
+  "stem": "若 $E$ 为无处稠密集，则对 $X$ 中任一球 $B(x,\\varepsilon)$，必存在另一球 $\\overline{B(x_0,\\delta)} \\subset B(x,\\varepsilon)$，使得 $B(x_0,\\delta) \\cap \\bar{E}$ 是空集。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

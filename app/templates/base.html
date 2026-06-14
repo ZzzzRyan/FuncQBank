@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{% block title %}{{ app_name }}{% endblock %}</title>
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="/static/app.css?v={{ asset_v }}">
+</head>
+<body>
+{% set path = request.url.path %}
+{% block chrome %}
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="/"><span class="glyph"></span>{{ app_name }}</a>
+  {% if user %}
+  <nav class="nav">
+    <a href="/" class="{{ 'active' if path == '/' }}">题库</a>
+    <a href="/practice/wrong" class="{{ 'active' if path == '/practice/wrong' }}">错题本</a>
+    <a href="/search" class="{{ 'active' if path == '/search' }}">搜索</a>
+    {% if user.role == 'admin' %}<a href="/admin" class="{{ 'active' if path.startswith('/admin') }}">后台</a>{% endif %}
+    <span class="who">{{ user.display_name }}</span>
+    <form method="post" action="/logout" style="display:inline">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <button class="btn-ghost btn-sm" type="submit">退出</button>
+    </form>
+  </nav>
+  {% endif %}
+</div></header>
+{% endblock %}
+
+<main>{% block body %}{% endblock %}</main>
+
+<script src="/static/vendor/katex/katex.min.js" defer></script>
+<script src="/static/vendor/katex/contrib/auto-render.min.js" defer></script>
+<script src="/static/app.js?v={{ asset_v }}" defer></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.5_Banach不动点定理/image140.jpg",
+  "image_path": "docs/第二章_空间理论/2.5_Banach不动点定理/image140.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 5,\n  \"points\": 1,\n  \"stem\": \"距离空间上的严格压缩映射必存在不动点.\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 5,
+  "points": 1,
+  "stem": "距离空间上的严格压缩映射必存在不动点.",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

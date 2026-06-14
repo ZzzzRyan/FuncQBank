@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image84.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image84.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 20,\n  \"points\": 1,\n  \"stem\": \"$l^p(n)$ 完备，但 $l^\\\\infty(n)$ 不完备.\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": \"均完备\",\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 20,
+  "points": 1,
+  "stem": "$l^p(n)$ 完备，但 $l^\\infty(n)$ 不完备.",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": "均完备",
+  "note": null
+}

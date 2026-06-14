@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.2_有界线性算子/image10.jpg",
+  "image_path": "docs/第三章_线性算子/3.2_有界线性算子/image10.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 2,\n  \"points\": 1,\n  \"stem\": \"设 $X,Y$ 为赋范线性空间，如果线性算子 $T$ 把 $X$ 中的任何有界集都映成 $Y$ 中有界集，则 $T$ 为有界线性算子。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 2,
+  "points": 1,
+  "stem": "设 $X,Y$ 为赋范线性空间，如果线性算子 $T$ 把 $X$ 中的任何有界集都映成 $Y$ 中有界集，则 $T$ 为有界线性算子。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

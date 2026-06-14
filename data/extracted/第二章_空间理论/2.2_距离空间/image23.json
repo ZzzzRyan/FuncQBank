@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image23.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image23.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 11,\n  \"points\": 2,\n  \"stem\": \"在可分的距离空间中, 一定包括 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"可数子集;\"},\n    {\"label\": \"B\", \"text\": \"不可数子集;\"},\n    {\"label\": \"C\", \"text\": \"稠密子集;\"},\n    {\"label\": \"D\", \"text\": \"有限子集.\"}\n  ],\n  \"answer\": \"ACD\",\n  \"answer_raw\": \"ACD (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 11,
+  "points": 2,
+  "stem": "在可分的距离空间中, 一定包括 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "可数子集;"
+    },
+    {
+      "label": "B",
+      "text": "不可数子集;"
+    },
+    {
+      "label": "C",
+      "text": "稠密子集;"
+    },
+    {
+      "label": "D",
+      "text": "有限子集."
+    }
+  ],
+  "answer": "ACD",
+  "answer_raw": "ACD (少选不得分)",
+  "explanation": null,
+  "note": null
+}

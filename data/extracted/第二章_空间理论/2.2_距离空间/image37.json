@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image37.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image37.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 25,\n  \"points\": 1,\n  \"stem\": \"设 $x = (x_1, x_2), y = (y_1, y_2) \\\\in \\\\mathbb{R}^2$, 定义 $d(x, y) = \\\\max \\\\{ |x_1 - y_1|, |x_2 - y_2| \\\\}$, 则 $d$ 是一个距离。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 25,
+  "points": 1,
+  "stem": "设 $x = (x_1, x_2), y = (y_1, y_2) \\in \\mathbb{R}^2$, 定义 $d(x, y) = \\max \\{ |x_1 - y_1|, |x_2 - y_2| \\}$, 则 $d$ 是一个距离。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

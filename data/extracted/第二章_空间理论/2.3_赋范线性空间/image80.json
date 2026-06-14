@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image80.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image80.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 16,\n  \"points\": 1,\n  \"stem\": \"任取 $x = (x_1, \\\\dots, x_n) \\\\in \\\\mathbb{R}^n$ 和 $0 < p < \\\\infty$, 定义 $\\\\|x\\\\|_p = \\\\left( \\\\sum_{i=1}^n |x_i|^p \\\\right)^{\\\\frac{1}{p}}$, 则 $\\\\| \\\\cdot \\\\|_p$ 是 $\\\\mathbb{R}^n$ 中的范数。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": \"$0 < p < 1$ 时不是范数。\",\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 16,
+  "points": 1,
+  "stem": "任取 $x = (x_1, \\dots, x_n) \\in \\mathbb{R}^n$ 和 $0 < p < \\infty$, 定义 $\\|x\\|_p = \\left( \\sum_{i=1}^n |x_i|^p \\right)^{\\frac{1}{p}}$, 则 $\\| \\cdot \\|_p$ 是 $\\mathbb{R}^n$ 中的范数。",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": "$0 < p < 1$ 时不是范数。",
+  "note": null
+}

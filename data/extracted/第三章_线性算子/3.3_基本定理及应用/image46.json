@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.3_基本定理及应用/image46.jpg",
+  "image_path": "docs/第三章_线性算子/3.3_基本定理及应用/image46.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 17,\n  \"points\": 1,\n  \"stem\": \"设 $X,Y$ 为赋范线性空间, $T$ 是 $X$ 到 $Y$ 中的线性算子, 则 $T$ 连续当且仅当对 $Y$ 中任意的开集 $V$, 其原像 $T^{-1}\\\\{V\\\\}$ 为 $X$ 中的开集.\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 17,
+  "points": 1,
+  "stem": "设 $X,Y$ 为赋范线性空间, $T$ 是 $X$ 到 $Y$ 中的线性算子, 则 $T$ 连续当且仅当对 $Y$ 中任意的开集 $V$, 其原像 $T^{-1}\\{V\\}$ 为 $X$ 中的开集.",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

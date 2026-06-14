@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.3_基本定理及应用/image34.jpg",
+  "image_path": "docs/第三章_线性算子/3.3_基本定理及应用/image34.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 5,\n  \"points\": 1,\n  \"stem\": \"设 $X$ 为复赋范线性空间, 则 $X$ 上任一复连续线性泛函必可以由其实部唯一确定。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 5,
+  "points": 1,
+  "stem": "设 $X$ 为复赋范线性空间, 则 $X$ 上任一复连续线性泛函必可以由其实部唯一确定。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

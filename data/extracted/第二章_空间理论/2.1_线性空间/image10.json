@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.1_线性空间/image10.jpg",
+  "image_path": "docs/第二章_空间理论/2.1_线性空间/image10.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 10,\n  \"points\": 1,\n  \"stem\": \"无限集合中若有一个有限子集是线性相关的，则该集合线性相关。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 10,
+  "points": 1,
+  "stem": "无限集合中若有一个有限子集是线性相关的，则该集合线性相关。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

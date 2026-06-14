@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.3_基本定理及应用/image36.jpg",
+  "image_path": "docs/第三章_线性算子/3.3_基本定理及应用/image36.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 7,\n  \"points\": 1,\n  \"stem\": \"设 $X$ 为赋范线性空间, 对任意的 $x \\\\in X$, 必存在 $X$ 上的连续线性泛函 $f$, 满足 $\\\\|f\\\\| = 1$, $f(x) = \\\\|x\\\\|$.\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 7,
+  "points": 1,
+  "stem": "设 $X$ 为赋范线性空间, 对任意的 $x \\in X$, 必存在 $X$ 上的连续线性泛函 $f$, 满足 $\\|f\\| = 1$, $f(x) = \\|x\\|$.",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

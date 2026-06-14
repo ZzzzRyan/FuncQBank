@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image115.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image115.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 20,\n  \"points\": 1,\n  \"stem\": \"赋范线性空间 $l^p$ 的范数 $\\\\|x\\\\| = \\\\left( \\\\sum_{k=1}^{\\\\infty} |x_k|^p \\\\right)^{\\\\frac{1}{p}}$ 可由内积导出的充要条件是 (  )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$p = 2;$\"},\n    {\"label\": \"B\", \"text\": \"$p > 1;$\"},\n    {\"label\": \"C\", \"text\": \"$p = 1;$\"},\n    {\"label\": \"D\", \"text\": \"$p > 2.$\"}\n  ],\n  \"answer\": \"A\",\n  \"answer_raw\": \"A\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 20,
+  "points": 1,
+  "stem": "赋范线性空间 $l^p$ 的范数 $\\|x\\| = \\left( \\sum_{k=1}^{\\infty} |x_k|^p \\right)^{\\frac{1}{p}}$ 可由内积导出的充要条件是 (  )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$p = 2;$"
+    },
+    {
+      "label": "B",
+      "text": "$p > 1;$"
+    },
+    {
+      "label": "C",
+      "text": "$p = 1;$"
+    },
+    {
+      "label": "D",
+      "text": "$p > 2.$"
+    }
+  ],
+  "answer": "A",
+  "answer_raw": "A",
+  "explanation": null,
+  "note": null
+}

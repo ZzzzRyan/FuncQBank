@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.3_赋范线性空间/image85.jpg",
+  "image_path": "docs/第二章_空间理论/2.3_赋范线性空间/image85.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 21,\n  \"points\": 1,\n  \"stem\": \"$l^\\\\infty$ 是 Banach 空间.\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 21,
+  "points": 1,
+  "stem": "$l^\\infty$ 是 Banach 空间.",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

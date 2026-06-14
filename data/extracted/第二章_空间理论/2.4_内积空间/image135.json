@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image135.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image135.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 40,\n  \"points\": 1,\n  \"stem\": \"正规正交集与正规正交基的区别在于能否张成整个内积空间.\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 40,
+  "points": 1,
+  "stem": "正规正交集与正规正交基的区别在于能否张成整个内积空间.",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

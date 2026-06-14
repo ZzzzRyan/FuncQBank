@@ -1,0 +1,34 @@
+{
+  "rel_path": "第二章_空间理论/2.4_内积空间/image112.jpg",
+  "image_path": "docs/第二章_空间理论/2.4_内积空间/image112.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"multiple\",\n  \"seq\": 17,\n  \"points\": 2,\n  \"stem\": \"设 $X$ 是数域 $\\\\mathbb{K}$ 上的内积空间, $x,y\\\\in X$. 则以下命题中与 “ $x\\\\perp y$ ” 等价的是 ( )\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"$\\\\|x+y\\\\|^2 = \\\\|x\\\\|^2 + \\\\|y\\\\|^2;$\"},\n    {\"label\": \"B\", \"text\": \"对任意的 $k\\\\in\\\\mathbb{K}$, 有 $\\\\|x+ky\\\\|^2 = \\\\|x\\\\|^2 + \\\\|ky\\\\|^2;$\"},\n    {\"label\": \"C\", \"text\": \"对任意的 $k\\\\in\\\\mathbb{K}$, 有 $\\\\|x+ky\\\\| = \\\\|x-ky\\\\|$;\"},\n    {\"label\": \"D\", \"text\": \"对任意的 $k\\\\in\\\\mathbb{K}$, 有 $\\\\|x+ky\\\\| \\\\ge \\\\|x\\\\|.$\"}\n  ],\n  \"answer\": \"BCD\",\n  \"answer_raw\": \"BCD (少选不得分)\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "multiple",
+  "seq": 17,
+  "points": 2,
+  "stem": "设 $X$ 是数域 $\\mathbb{K}$ 上的内积空间, $x,y\\in X$. 则以下命题中与 “ $x\\perp y$ ” 等价的是 ( )",
+  "options": [
+    {
+      "label": "A",
+      "text": "$\\|x+y\\|^2 = \\|x\\|^2 + \\|y\\|^2;$"
+    },
+    {
+      "label": "B",
+      "text": "对任意的 $k\\in\\mathbb{K}$, 有 $\\|x+ky\\|^2 = \\|x\\|^2 + \\|ky\\|^2;$"
+    },
+    {
+      "label": "C",
+      "text": "对任意的 $k\\in\\mathbb{K}$, 有 $\\|x+ky\\| = \\|x-ky\\|$;"
+    },
+    {
+      "label": "D",
+      "text": "对任意的 $k\\in\\mathbb{K}$, 有 $\\|x+ky\\| \\ge \\|x\\|.$"
+    }
+  ],
+  "answer": "BCD",
+  "answer_raw": "BCD (少选不得分)",
+  "explanation": null,
+  "note": null
+}

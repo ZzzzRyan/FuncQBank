@@ -1,0 +1,17 @@
+{
+  "rel_path": "第三章_线性算子/3.1_线性算子/image4.jpg",
+  "image_path": "docs/第三章_线性算子/3.1_线性算子/image4.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 4,\n  \"points\": 1,\n  \"stem\": \"若线性算子 $T$ 在 $x_0$ 点连续，则当 $x_n \\\\rightarrow x_0$ 时，有 $Tx_n \\\\rightarrow Tx_0$。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 4,
+  "points": 1,
+  "stem": "若线性算子 $T$ 在 $x_0$ 点连续，则当 $x_n \\rightarrow x_0$ 时，有 $Tx_n \\rightarrow Tx_0$。",
+  "options": [],
+  "answer": "正确",
+  "answer_raw": "正确",
+  "explanation": null,
+  "note": null
+}

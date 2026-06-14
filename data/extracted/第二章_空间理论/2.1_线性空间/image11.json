@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.1_线性空间/image11.jpg",
+  "image_path": "docs/第二章_空间理论/2.1_线性空间/image11.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 11,\n  \"points\": 1,\n  \"stem\": \"有限闭区间 $[a,b]$ 上的连续函数是有界变差函数.\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 11,
+  "points": 1,
+  "stem": "有限闭区间 $[a,b]$ 上的连续函数是有界变差函数.",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}

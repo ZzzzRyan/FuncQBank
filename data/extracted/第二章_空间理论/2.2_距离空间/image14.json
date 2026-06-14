@@ -1,0 +1,30 @@
+{
+  "rel_path": "第二章_空间理论/2.2_距离空间/image14.jpg",
+  "image_path": "docs/第二章_空间理论/2.2_距离空间/image14.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"single\",\n  \"seq\": 2,\n  \"points\": 1,\n  \"stem\": \"有界序列空间中点列按距离收敛等价于（ ）\",\n  \"options\": [\n    {\"label\": \"A\", \"text\": \"按坐标的一致收敛;\"},\n    {\"label\": \"B\", \"text\": \"按坐标收敛;\"},\n    {\"label\": \"C\", \"text\": \"都不对\"}\n  ],\n  \"answer\": \"A\",\n  \"answer_raw\": \"A\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "single",
+  "seq": 2,
+  "points": 1,
+  "stem": "有界序列空间中点列按距离收敛等价于（ ）",
+  "options": [
+    {
+      "label": "A",
+      "text": "按坐标的一致收敛;"
+    },
+    {
+      "label": "B",
+      "text": "按坐标收敛;"
+    },
+    {
+      "label": "C",
+      "text": "都不对"
+    }
+  ],
+  "answer": "A",
+  "answer_raw": "A",
+  "explanation": null,
+  "note": null
+}

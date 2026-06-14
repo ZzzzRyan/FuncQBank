@@ -1,0 +1,17 @@
+{
+  "rel_path": "第二章_空间理论/2.5_Banach不动点定理/image143.jpg",
+  "image_path": "docs/第二章_空间理论/2.5_Banach不动点定理/image143.jpg",
+  "model": "mimo-v2.5",
+  "status": "pending",
+  "auto_flags": [],
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 8,\n  \"points\": 1,\n  \"stem\": \"设 $(X, d)$ 是距离空间, $T$ 是 $X$ 到自身的映射, 满足 $d(Tx, Ty) < d(x, y)$, $\\\\forall x, y \\\\in X$, 则 $T$ 为严格压缩映射.\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "type": "judge",
+  "seq": 8,
+  "points": 1,
+  "stem": "设 $(X, d)$ 是距离空间, $T$ 是 $X$ 到自身的映射, 满足 $d(Tx, Ty) < d(x, y)$, $\\forall x, y \\in X$, 则 $T$ 为严格压缩映射.",
+  "options": [],
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": null,
+  "note": null
+}
