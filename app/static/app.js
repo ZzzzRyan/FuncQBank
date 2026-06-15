@@ -28,6 +28,66 @@
     }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
   }
 
+  var THEME_ICONS = {
+    light: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-linecap="round"><path d="M12 2.5v3"/><path d="M12 18.5v3"/><path d="M2.5 12h3"/><path d="M18.5 12h3"/><path d="M4.9 4.9l2.1 2.1"/><path d="M17 17l2.1 2.1"/><path d="M19.1 4.9L17 7"/><path d="M7 17l-2.1 2.1"/></g></svg>',
+    dark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13.2A8 8 0 1 1 10.8 4a6.4 6.4 0 0 0 9.2 9.2z"/></svg>',
+    system: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.2" fill="none"/><path d="M12 3.8a8.2 8.2 0 0 0 0 16.4z" stroke="none"/></svg>',
+  };
+  var THEME_LABELS = { light: "浅色", dark: "深色", system: "跟随系统" };
+
+  function preferredTheme() {
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+
+  function applyTheme(mode) {
+    var resolved = mode === "dark" || (mode === "system" && preferredTheme() === "dark") ? "dark" : "light";
+    document.documentElement.dataset.themeMode = mode;
+    document.documentElement.dataset.theme = resolved;
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.innerHTML = THEME_ICONS[mode] || THEME_ICONS.system;
+      btn.title = "主题：" + (THEME_LABELS[mode] || "跟随系统") + "（点击切换）";
+      btn.setAttribute("aria-label", "主题：" + (THEME_LABELS[mode] || "跟随系统"));
+      btn.dataset.mode = mode;
+    }
+  }
+
+  function initThemeToggle() {
+    var btn = document.getElementById("theme-toggle");
+    var mode = localStorage.getItem("theme-mode") || "system";
+    applyTheme(mode);
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var current = localStorage.getItem("theme-mode") || "system";
+      var next = current === "system" ? "light" : (current === "light" ? "dark" : "system");
+      localStorage.setItem("theme-mode", next);
+      applyTheme(next);
+    });
+    if (window.matchMedia) {
+      var mq = window.matchMedia("(prefers-color-scheme: dark)");
+      var sync = function () {
+        var current = localStorage.getItem("theme-mode") || "system";
+        if (current === "system") applyTheme(current);
+      };
+      if (mq.addEventListener) mq.addEventListener("change", sync);
+      else if (mq.addListener) mq.addListener(sync);
+    }
+  }
+
+  function initUserMenu() {
+    var menu = document.getElementById("usermenu");
+    var btn = document.getElementById("usermenu-btn");
+    if (!menu || !btn) return;
+    function close() { menu.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); }
+    function toggle() {
+      var open = menu.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+    btn.addEventListener("click", function (e) { e.stopPropagation(); toggle(); });
+    document.addEventListener("click", function (e) { if (!menu.contains(e.target)) close(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+  }
+
   function setEq(a, b) {
     if (a.size !== b.size) return false;
     var ok = true;
@@ -42,6 +102,10 @@
     var questions = JSON.parse(dataEl.textContent || "[]");
     if (!questions.length) return;
     var states = JSON.parse((document.getElementById("sdata") || {}).textContent || "{}");
+    var pageData = JSON.parse((document.getElementById("pdata") || {}).textContent || "{}");
+    var isWrongBook = !!pageData.is_wrong_book;
+    var masterThreshold = pageData.master_threshold || 2;
+    var nextScopeUrl = pageData.next_scope_url || "";
 
     var sheet = document.getElementById("qsheet");
     var gridnav = document.getElementById("gridnav");
@@ -74,9 +138,9 @@
     }
 
     function updateProgress() {
-      posEl.textContent = (idx + 1) + " / " + questions.length;
+      posEl.textContent = "第 " + (idx + 1) + " 题 / 共 " + questions.length + " 题";
       var a = answeredCount();
-      answeredEl.textContent = "已答 " + a;
+      answeredEl.textContent = "已答 " + a + " / " + questions.length;
       if (wrongEl) { var w = wrongCount(); wrongEl.textContent = "本次错 " + w; wrongEl.classList.toggle("has", w > 0); }
       progbar.style.width = Math.round((a / questions.length) * 100) + "%";
     }
@@ -95,9 +159,19 @@
       });
     }
 
+    function activeWrongOf(q) {
+      var s = states[q.id];
+      return s && s.wrong && !s.mastered;
+    }
+
     function masteredOf(q) {
       var s = states[q.id];
       return s && s.mastered;
+    }
+
+    function correctStreakOf(q) {
+      var s = states[q.id];
+      return s ? (s.correct_count || 0) : 0;
     }
 
     function render() {
@@ -112,8 +186,12 @@
       h += '<span class="badge ' + q.type + '">' + typeLabel + "</span>";
       if (q.points) h += '<span class="points">' + q.points + " 分</span>";
       if (q.section_code) h += '<span class="points">· ' + q.section_code + " " + q.section_title + "</span>";
-      h += '<span class="spacer"></span>';
-      h += '<button class="star ' + (masteredOf(q) ? "on" : "") + '" id="star" title="标记掌握">★</button>';
+      if (isWrongBook) {
+        h += st.pendingRemoval
+          ? '<span class="master-progress done">自动移出错题本</span>'
+          : '<span class="master-progress">连续答对 ' + correctStreakOf(q) + ' / ' + masterThreshold + '</span>';
+        h += '<button class="btn btn-sm btn-mastered" id="mark-mastered" type="button">移出错题</button>';
+      }
       h += "</div>";
 
       h += '<div class="stem">' + q.stem_html + "</div>";
@@ -140,7 +218,10 @@
       // restore selection visuals
       if (!isJudge) {
         sheet.querySelectorAll(".option").forEach(function (el) {
-          if (st.sel.has(el.dataset.label)) el.classList.add("selected");
+          if (st.sel.has(el.dataset.label)) {
+            el.classList.add("selected");
+            if (q.type === "multiple") el.querySelector(".lab").textContent = "✓";
+          }
           el.addEventListener("click", function () { if (!st.revealed) toggleOption(el); });
         });
       } else {
@@ -150,12 +231,19 @@
         });
       }
 
-      document.getElementById("star").addEventListener("click", toggleMaster);
+      var masterBtn = document.getElementById("mark-mastered");
+      if (masterBtn) masterBtn.addEventListener("click", markMastered);
       renderActions();
       if (st.revealed) applyReveal();
       typeset(sheet);
       updateProgress();
       buildGrid();
+    }
+
+    function setMultipleSelected(el, selected) {
+      el.classList.toggle("selected", selected);
+      var labEl = el.querySelector(".lab");
+      if (labEl) labEl.textContent = selected ? "✓" : el.dataset.label;
     }
 
     function toggleOption(el) {
@@ -164,8 +252,8 @@
         st.sel = new Set([lab]);
         sheet.querySelectorAll(".option").forEach(function (o) { o.classList.toggle("selected", o.dataset.label === lab); });
       } else {
-        if (st.sel.has(lab)) { st.sel.delete(lab); el.classList.remove("selected"); }
-        else { st.sel.add(lab); el.classList.add("selected"); }
+        if (st.sel.has(lab)) { st.sel.delete(lab); setMultipleSelected(el, false); }
+        else { st.sel.add(lab); setMultipleSelected(el, true); }
       }
       renderActions();
     }
@@ -173,7 +261,13 @@
     function renderActions() {
       var st = rt[idx], q = questions[idx], a = document.getElementById("actions");
       if (!a) return;
-      if (st.revealed) { a.innerHTML = '<button class="btn btn-primary" id="act-next" type="button">下一题 →</button>'; var n = document.getElementById("act-next"); if (n) n.addEventListener("click", next); return; }
+      if (st.revealed) {
+        var isLast = idx >= questions.length - 1;
+        var label = isLast && nextScopeUrl ? "下一章 →" : "下一题 →";
+        a.innerHTML = '<button class="btn btn-primary" id="act-next" type="button">' + label + '</button>';
+        var n = document.getElementById("act-next"); if (n) n.addEventListener("click", next);
+        return;
+      }
       if (q.type === "judge") { a.innerHTML = '<button class="btn btn-ghost btn-sm" id="act-reveal" type="button">直接看答案</button>'; }
       else {
         var dis = st.sel.size === 0 ? "disabled" : "";
@@ -193,8 +287,20 @@
       st.result = correct ? "correct" : "incorrect";
       st.revealed = true;
       post("/api/attempt", { question_id: q.id, result: st.result }).then(function (res) {
-        if (res) { states[q.id] = states[q.id] || {}; states[q.id].wrong = res.wrong; states[q.id].last_result = st.result; states[q.id].seen = 1; }
-        buildGrid();
+        if (res) {
+          states[q.id] = states[q.id] || {};
+          states[q.id].wrong = res.wrong;
+          states[q.id].mastered = res.mastered;
+          states[q.id].correct_count = res.correct_count || 0;
+          states[q.id].last_result = st.result;
+          states[q.id].seen = 1;
+          if (isWrongBook && st.result === "correct") {
+            if (!activeWrongOf(q)) st.pendingRemoval = true;
+            render();
+          } else {
+            buildGrid();
+          }
+        }
       });
       applyReveal();
       renderActions();
@@ -230,6 +336,10 @@
           var mk = el.querySelector(".mark");
           if (ans.has(lab)) { el.classList.add("correct"); if (mk) mk.textContent = "✓"; }
           else if (st.sel.has(lab)) { el.classList.add("wrong"); if (mk) mk.textContent = "✗"; }
+          if (q.type === "multiple") {
+            var labEl = el.querySelector(".lab");
+            if (labEl) labEl.textContent = lab;
+          }
         });
         var op = document.getElementById("options"); if (op) op.style.pointerEvents = "none";
       }
@@ -245,16 +355,38 @@
       typeset(rv);
     }
 
-    function toggleMaster() {
+    function markMastered() {
       var q = questions[idx];
-      var now = !(states[q.id] && states[q.id].mastered);
-      states[q.id] = states[q.id] || {}; states[q.id].mastered = now;
-      var star = document.getElementById("star"); if (star) star.classList.toggle("on", now);
-      post("/api/state", { question_id: q.id, mastered: now });
+      states[q.id] = states[q.id] || {};
+      states[q.id].mastered = true;
+      states[q.id].wrong = false;
+      states[q.id].correct_count = masterThreshold;
+      post("/api/state", { question_id: q.id, mastered: true }).then(function () {
+        if (isWrongBook) removeCurrentWrong();
+      });
     }
 
-    function next() { if (idx < questions.length - 1) { idx++; render(); } }
-    function prev() { if (idx > 0) { idx--; render(); } }
+    function removeCurrentWrong() {
+      questions.splice(idx, 1);
+      rt.splice(idx, 1);
+      if (idx >= questions.length) idx = Math.max(0, questions.length - 1);
+      if (!questions.length) {
+        window.location.reload();
+        return;
+      }
+      render();
+    }
+
+    function next() {
+      if (isWrongBook && rt[idx] && rt[idx].pendingRemoval) { removeCurrentWrong(); return; }
+      if (idx < questions.length - 1) { idx++; render(); }
+      else if (nextScopeUrl) { window.location.href = nextScopeUrl; }
+    }
+
+    function prev() {
+      if (isWrongBook && rt[idx] && rt[idx].pendingRemoval) { removeCurrentWrong(); return; }
+      if (idx > 0) { idx--; render(); }
+    }
 
     document.getElementById("btn-next").addEventListener("click", next);
     document.getElementById("btn-prev").addEventListener("click", prev);
@@ -270,7 +402,7 @@
         else if (q.type !== "judge" && st.sel.size) grade();
         else revealOnly();
         e.preventDefault();
-      } else if (e.key === "m" || e.key === "M") { toggleMaster(); }
+      } else if ((e.key === "m" || e.key === "M") && isWrongBook) { markMastered(); }
       else if (/^[1-9]$/.test(e.key) && !st.revealed) {
         if (q.type === "judge") { var v = e.key === "1" ? "正确" : (e.key === "2" ? "错误" : null); if (v) { st.sel = new Set([v]); grade(); } }
         else { var i = parseInt(e.key, 10) - 1; if (i < q.options.length) { var el = sheet.querySelectorAll(".option")[i]; if (el) toggleOption(el); } }
@@ -391,6 +523,8 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    initThemeToggle();
+    initUserMenu();
     if (document.getElementById("qdata")) initPractice();
     else typeset(document.body);
     initAdminPreview();

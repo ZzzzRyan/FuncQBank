@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{% block title %}{{ app_name }}{% endblock %}</title>
   <meta name="csrf-token" content="{{ csrf_token }}">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function () {
+      var mode = localStorage.getItem("theme-mode") || "system";
+      var dark = mode === "dark" || (mode === "system" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      document.documentElement.dataset.themeMode = mode;
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+    })();
+  </script>
   <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,11 +32,18 @@
     <a href="/practice/wrong" class="{{ 'active' if path == '/practice/wrong' }}">错题本</a>
     <a href="/search" class="{{ 'active' if path == '/search' }}">搜索</a>
     {% if user.role == 'admin' %}<a href="/admin" class="{{ 'active' if path.startswith('/admin') }}">后台</a>{% endif %}
-    <span class="who">{{ user.display_name }}</span>
-    <form method="post" action="/logout" style="display:inline">
-      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-      <button class="btn-ghost btn-sm" type="submit">退出</button>
-    </form>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换主题" title="切换主题"></button>
+    <div class="usermenu" id="usermenu">
+      <button class="who" id="usermenu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        {{ user.display_name }}<span class="caret" aria-hidden="true"></span>
+      </button>
+      <div class="usermenu-pop" id="usermenu-pop" role="menu">
+        <form method="post" action="/logout">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+          <button class="usermenu-item" type="submit" role="menuitem">退出登录</button>
+        </form>
+      </div>
+    </div>
   </nav>
   {% endif %}
 </div></header>

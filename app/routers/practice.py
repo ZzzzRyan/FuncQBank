@@ -27,6 +27,7 @@ from app.templating import page
 router = APIRouter()
 
 VISIBLE = Question.status != STATUS_FLAGGED
+MASTER_THRESHOLD = 2
 
 
 def question_payload(q: Question) -> dict[str, Any]:
@@ -63,15 +64,25 @@ def state_map(session: Session, user: User, qids: list[int]) -> dict[int, dict]:
             "mastered": r.mastered,
             "last_result": r.last_result,
             "seen": r.seen_count,
+            "correct_count": r.correct_count,
         }
         for r in rows
     }
 
 
-def render_practice(request: Request, session: Session, user: User, title: str, subtitle: str, questions: list[Question]):
+def render_practice(
+    request: Request,
+    session: Session,
+    user: User,
+    title: str,
+    subtitle: str,
+    questions: list[Question],
+    next_scope_url: str | None = None,
+):
     return page(
         request, session, "practice.html",
         scope_title=title, scope_subtitle=subtitle,
+        master_threshold=MASTER_THRESHOLD, next_scope_url=next_scope_url,
         **_payload_ctx(session, user, questions),
     )
 
@@ -159,11 +170,21 @@ def practice_section(
         questions = list(questions)
         random.shuffle(questions)
     ch = session.get(Chapter, sec.chapter_id)
+    next_sec = session.exec(
+        select(Section)
+        .join(Chapter, Chapter.id == Section.chapter_id)
+        .where(
+            (Chapter.order_index > (ch.order_index if ch else 0))
+            | ((Chapter.order_index == (ch.order_index if ch else 0)) & (Section.order_index > sec.order_index))
+        )
+        .order_by(Chapter.order_index, Section.order_index)
+    ).first()
     return render_practice(
         request, session, user,
         title=f"{sec.code} {sec.title}",
         subtitle=ch.title if ch else "",
         questions=questions,
+        next_scope_url=f"/practice/section/{next_sec.id}" if next_sec else None,
     )
 
 
@@ -245,7 +266,7 @@ def search(
         subtitle = "按题干关键词搜索，可叠加题型筛选"
 
     return page(
-        request, session, "search.html",
+        request, session, "search.html", master_threshold=MASTER_THRESHOLD,
         q=q, type=type, searched=searched, scope_subtitle=subtitle,
         **_payload_ctx(session, user, questions),
     )
@@ -287,14 +308,26 @@ async def api_attempt(request: Request, session: Session = Depends(get_session),
     st.seen_count += 1
     st.last_result = result
     if result == "correct":
-        st.correct_count += 1
+        if st.wrong and not st.mastered:
+            st.correct_count += 1
+            if st.correct_count >= MASTER_THRESHOLD:
+                st.wrong = False
+                st.mastered = True
     elif result == "incorrect":
         st.wrong_count += 1
         st.wrong = True
+        st.mastered = False
+        st.correct_count = 0
     st.updated_at = datetime.utcnow()
     session.add(st)
     session.commit()
-    return {"ok": True, "wrong": st.wrong, "mastered": st.mastered}
+    return {
+        "ok": True,
+        "wrong": st.wrong,
+        "mastered": st.mastered,
+        "correct_count": st.correct_count,
+        "master_threshold": MASTER_THRESHOLD,
+    }
 
 
 @router.post("/api/state")
@@ -311,9 +344,12 @@ async def api_state(request: Request, session: Session = Depends(get_session), u
     st = _get_or_create_state(session, user, q.id)
     if "mastered" in body:
         st.mastered = bool(body["mastered"])
+        if st.mastered:
+            st.wrong = False
+            st.correct_count = MASTER_THRESHOLD
     if body.get("remove_wrong"):
         st.wrong = False
     st.updated_at = datetime.utcnow()
     session.add(st)
     session.commit()
-    return {"ok": True, "wrong": st.wrong, "mastered": st.mastered}
+    return {"ok": True, "wrong": st.wrong, "mastered": st.mastered, "correct_count": st.correct_count}

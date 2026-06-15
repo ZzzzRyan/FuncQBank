@@ -1,9 +1,13 @@
 {# Shared practice runner — included by practice.html and search.html.
    Requires: count, questions_json, states_json in context. #}
+<div class="practice-tools">
+  <a class="btn btn-sm" href="/">← 返回主页</a>
+</div>
+
 <div class="progress-line">
-  <span id="pos">1 / {{ count }}</span>
+  <span id="answered" class="progress-main">已答 0 / {{ count }}</span>
   <div class="bar"><i id="progbar" style="width:0%"></i></div>
-  <span id="answered">已答 0</span>
+  <span id="pos" class="pos">第 1 题</span>
   <span id="wrongcount" class="wrongcount">本次错 0</span>
   <button class="btn btn-sm" id="btn-grid" type="button">答题卡</button>
 </div>
@@ -19,3 +23,4 @@
 
 <script id="qdata" type="application/json">{{ questions_json|safe }}</script>
 <script id="sdata" type="application/json">{{ states_json|safe }}</script>
+<script id="pdata" type="application/json">{"is_wrong_book": {{ 'true' if path == '/practice/wrong' else 'false' }}, "master_threshold": {{ master_threshold|default(2) }}, "next_scope_url": {{ (next_scope_url or '')|tojson }} }</script>
