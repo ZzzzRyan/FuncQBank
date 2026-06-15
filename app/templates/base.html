@@ -28,11 +28,13 @@
   <a class="brand" href="/"><span class="glyph"></span>{{ app_name }}</a>
   {% if user %}
   <nav class="nav">
-    <a href="/" class="{{ 'active' if path == '/' }}">题库</a>
-    <a href="/practice/wrong" class="{{ 'active' if path == '/practice/wrong' }}">错题本</a>
-    <a href="/search" class="{{ 'active' if path == '/search' }}">搜索</a>
-    {% if user.role == 'admin' %}<a href="/admin" class="{{ 'active' if path.startswith('/admin') }}">后台</a>{% endif %}
-    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换主题" title="切换主题"></button>
+    <div class="nav-scroll">
+      <a href="/" class="{{ 'active' if path == '/' }}">题库</a>
+      <a href="/practice/wrong" class="{{ 'active' if path == '/practice/wrong' }}">错题本</a>
+      <a href="/search" class="{{ 'active' if path == '/search' }}">搜索</a>
+      {% if user.role == 'admin' %}<a href="/admin" class="{{ 'active' if path.startswith('/admin') }}">后台</a>{% endif %}
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换主题" title="切换主题"></button>
+    </div>
     <div class="usermenu" id="usermenu">
       <button class="who" id="usermenu-btn" type="button" aria-haspopup="true" aria-expanded="false">
         {{ user.display_name }}<span class="caret" aria-hidden="true"></span>
