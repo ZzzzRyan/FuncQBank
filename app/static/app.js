@@ -47,24 +47,29 @@
     var gridnav = document.getElementById("gridnav");
     var posEl = document.getElementById("pos");
     var answeredEl = document.getElementById("answered");
+    var wrongEl = document.getElementById("wrongcount");
     var progbar = document.getElementById("progbar");
 
     var idx = 0;
     var rt = questions.map(function () { return { sel: new Set(), revealed: false, result: null }; });
 
     function curRtState(i) {
-      // colour for the answer-card grid
+      // colour for the answer-card grid — this run only (cumulative state lives on the home page)
       if (rt[i].result === "correct") return "correct";
       if (rt[i].result === "incorrect") return "wrong";
       if (rt[i].revealed) return "seen";
-      var s = states[questions[i].id];
-      if (s) { if (s.last_result === "correct") return "correct"; if (s.last_result === "incorrect") return "wrong"; if (s.seen) return "seen"; }
       return "";
     }
 
     function answeredCount() {
       var n = 0;
-      for (var i = 0; i < questions.length; i++) { if (rt[i].revealed || (states[questions[i].id] && states[questions[i].id].seen)) n++; }
+      for (var i = 0; i < questions.length; i++) { if (rt[i].revealed) n++; }
+      return n;
+    }
+
+    function wrongCount() {
+      var n = 0;
+      for (var i = 0; i < questions.length; i++) { if (rt[i].result === "incorrect") n++; }
       return n;
     }
 
@@ -72,6 +77,7 @@
       posEl.textContent = (idx + 1) + " / " + questions.length;
       var a = answeredCount();
       answeredEl.textContent = "已答 " + a;
+      if (wrongEl) { var w = wrongCount(); wrongEl.textContent = "本次错 " + w; wrongEl.classList.toggle("has", w > 0); }
       progbar.style.width = Math.round((a / questions.length) * 100) + "%";
     }
 
@@ -119,7 +125,7 @@
         });
         h += "</div>";
       } else {
-        h += '<div class="options" id="options">';
+        h += '<div class="options ' + q.type + '" id="options">';
         q.options.forEach(function (o) {
           h += '<div class="option" data-label="' + o.label + '"><span class="lab">' + o.label + '</span><span class="otext">' + o.text_html + '</span><span class="mark"></span></div>';
         });
@@ -253,11 +259,6 @@
     document.getElementById("btn-next").addEventListener("click", next);
     document.getElementById("btn-prev").addEventListener("click", prev);
     document.getElementById("btn-grid").addEventListener("click", function () { gridnav.classList.toggle("hidden"); });
-    document.getElementById("btn-shuffle").addEventListener("click", function () {
-      for (var i = questions.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = questions[i]; questions[i] = questions[j]; questions[j] = t; }
-      rt = questions.map(function () { return { sel: new Set(), revealed: false, result: null }; });
-      idx = 0; render();
-    });
 
     document.addEventListener("keydown", function (e) {
       if (e.target && /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
@@ -339,7 +340,7 @@
         h += "</div>";
       } else {
         var ansset = answer.toUpperCase().split("");
-        h += '<div class="options revealed">';
+        h += '<div class="options ' + type + ' revealed">';
         readOpts().forEach(function (o) {
           var corr = ansset.indexOf((o.label || "").toUpperCase()) >= 0;
           h += '<div class="option' + (corr ? " correct" : "") + '"><span class="lab">' + escapeHtml(o.label) + '</span><span class="otext">' + richToHtml(o.text) + '</span><span class="mark">' + (corr ? "✓" : "") + "</span></div>";

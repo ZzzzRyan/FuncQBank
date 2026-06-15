@@ -187,6 +187,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 
 .progress-line { display: flex; align-items: center; gap: 12px; font-family: var(--font-sans); font-size: .85rem; color: var(--ink-3); margin-bottom: 16px; }
 .progress-line .bar { flex: 1; margin: 0; }
+.progress-line .wrongcount { color: var(--ink-3); white-space: nowrap; }
+.progress-line .wrongcount.has { color: var(--red); font-weight: 600; }
 
 .qsheet { position: relative; }
 .qmeta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; font-family: var(--font-sans); }
@@ -213,6 +215,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   color: var(--ink-2); background: var(--paper); transition: all .12s;
 }
 .option .otext { flex: 1; }
+/* 多选用圆角矩形序号、单选用圆形序号，呼应「可多选 / 仅单选」的认知 */
+.options.multiple .option .lab { border-radius: var(--radius-sm); }
 .option.selected { border-color: var(--blue); background: var(--blue-soft); }
 .option.selected .lab { background: var(--blue); color: #fff; border-color: var(--blue); }
 .option.correct { border-color: var(--green); background: var(--green-soft); }

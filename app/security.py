@@ -9,6 +9,8 @@ from argon2 import PasswordHasher
 from argon2.exceptions import Argon2Error
 from fastapi import Request
 
+from app.config import settings
+
 _ph = PasswordHasher()
 
 
@@ -39,6 +41,30 @@ def verify_csrf(request: Request, submitted: str | None) -> bool:
 
 # --- very small in-memory fixed-window rate limiter (per key) ---
 _hits: dict[str, list[float]] = defaultdict(list)
+
+
+def client_ip(request: Request) -> str:
+    """Best-effort real client IP for the rate limiter.
+
+    Behind a reverse proxy the socket peer is the proxy (cloudflared on localhost,
+    Nginx, Caddy…), so request.client.host is identical for everyone. When
+    settings.trust_proxy_headers is on, read the IP the proxy forwarded:
+    Cloudflare's CF-Connecting-IP first, then X-Real-IP, then the leftmost
+    X-Forwarded-For hop. Only safe because the app is reached *only* through the
+    proxy; if exposed directly these headers are client-spoofable (hence the toggle).
+    """
+    if settings.trust_proxy_headers:
+        headers = request.headers
+        cf = headers.get("cf-connecting-ip")
+        if cf:
+            return cf.strip()
+        real = headers.get("x-real-ip")
+        if real:
+            return real.strip()
+        xff = headers.get("x-forwarded-for")
+        if xff:
+            return xff.split(",")[0].strip()
+    return request.client.host if request.client else "?"
 
 
 def rate_limited(key: str, limit: int, window_seconds: int) -> bool:

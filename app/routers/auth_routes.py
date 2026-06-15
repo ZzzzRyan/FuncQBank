@@ -9,7 +9,7 @@ from app.auth import login_user, logout_user, user_from_session
 from app.config import settings
 from app.db import get_session
 from app.models import ROLE_ADMIN, ROLE_USER, User
-from app.security import hash_password, rate_limited, verify_csrf, verify_password
+from app.security import client_ip, hash_password, rate_limited, verify_csrf, verify_password
 from app.templating import page
 
 router = APIRouter()
@@ -40,7 +40,7 @@ def login_submit(
 ):
     if not verify_csrf(request, csrf_token):
         return page(request, session, "login.html", next=_safe_next(next), error="会话已过期，请重试。")
-    ip = request.client.host if request.client else "?"
+    ip = client_ip(request)
     if rate_limited(f"login:{ip}", limit=15, window_seconds=300):
         return page(request, session, "login.html", next=_safe_next(next), error="尝试过于频繁，请稍后再试。")
 
@@ -79,7 +79,7 @@ def register_submit(
         return page(request, session, "register.html", closed=True, error=None, values={})
     if not verify_csrf(request, csrf_token):
         return fail("会话已过期，请重试。")
-    ip = request.client.host if request.client else "?"
+    ip = client_ip(request)
     if rate_limited(f"register:{ip}", limit=10, window_seconds=600):
         return fail("注册过于频繁，请稍后再试。")
 

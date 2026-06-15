@@ -27,9 +27,10 @@ OPENAI_ENDPOINT="https://你的网关/v1"   # OpenAI 兼容、支持视觉的接
 OPENAI_MODEL="你的视觉模型"
 OPENAI_APIKEY="sk-..."
 
-SESSION_SECRET="改成一长串随机字符串"      # 务必修改！
+SESSION_SECRET="改成一长串随机字符串"      # 务必修改！可用 python -c "import secrets;print(secrets.token_hex(32))" 生成
 REGISTRATION_OPEN=true                    # 是否开放自助注册
-COOKIE_SECURE=false                       # 走 HTTPS 时设为 true
+COOKIE_SECURE=false                       # 走 HTTPS（含 Cloudflare Tunnel）时设为 true
+TRUST_PROXY_HEADERS=true                  # 在反代/隧道后面：从代理头取真实客户端 IP 用于限流；直连裸跑才设 false
 # ADMIN_USERNAME=                          # 可选：启动时自动把该用户提升为管理员
 ```
 
@@ -104,15 +105,58 @@ docker compose up -d --build
 
 ### HTTPS / 反向代理
 
-公网部署请在前面放一个自动签发证书的反代，并在 `.env` 设 `COOKIE_SECURE=true`。Caddy 示例 `Caddyfile`：
+公网部署务必走 HTTPS，并在 `.env` 设 `COOKIE_SECURE=true`（让会话 Cookie 带 `Secure`）。
+应用本身只需监听本地端口（如 `127.0.0.1:8011`），由前面的反代/隧道终止 TLS。下面三种任选其一。
+
+**A. Caddy（自动签发证书）** —— `Caddyfile`：
 
 ```
 你的域名 {
-    reverse_proxy 127.0.0.1:8000
+    reverse_proxy 127.0.0.1:8011
 }
 ```
 
-`caddy run` 即自动申请并续期证书。Nginx 亦可（记得转发 `X-Forwarded-Proto`）。
+`caddy run` 即自动申请并续期证书。Caddy 默认会带上 `X-Forwarded-For`/`X-Forwarded-Proto`。
+
+**B. Nginx** —— 关键是把真实客户端 IP 和协议转发给应用（否则限流会把所有人当成同一个 IP）：
+
+```nginx
+server {
+    server_name 你的域名;
+    location / {
+        proxy_pass         http://127.0.0.1:8011;
+        proxy_set_header   Host              $host;
+        proxy_set_header   X-Real-IP         $remote_addr;        # ← 真实 IP，限流靠它
+        proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Forwarded-Proto $scheme;
+    }
+    # listen 443 ssl; ssl_certificate ...;  证书可用 certbot 签发
+}
+```
+
+**C. Cloudflare Tunnel（cloudflared，无需公网开端口、无需自己管证书）**
+
+Cloudflare 在边缘终止 TLS，浏览器看到的就是 HTTPS；cloudflared 通过**出站**连接把流量送到本机，
+所以服务器**不必对公网开放任何入站端口**。要点：
+
+1. `.env` 设 `COOKIE_SECURE=true`（浏览器侧是 HTTPS，Secure Cookie 会正常发送）。
+   建议在 Cloudflare 控制台开 **Always Use HTTPS**，避免偶发 http 导致带 Secure 的会话 Cookie 不发出、表现为“登录后立刻掉登录”。
+2. 真实客户端 IP 由 Cloudflare 放在 `CF-Connecting-IP` 头里并经隧道传入，应用已优先读取它做限流（`TRUST_PROXY_HEADERS=true`，默认开）。
+3. 隧道把域名指向本机端口即可（`config.yml` 片段）：
+
+```yaml
+tunnel: <你的隧道ID>
+credentials-file: /root/.cloudflared/<隧道ID>.json
+ingress:
+  - hostname: 你的域名
+    service: http://localhost:8011
+  - service: http_status:404
+```
+
+`cloudflared tunnel run` 启动（建议做成 systemd 服务）。应用照常 `uvicorn ... --host 127.0.0.1 --port 8011` 跑即可。
+
+> 真实 IP 说明：限流从 `CF-Connecting-IP` → `X-Real-IP` → `X-Forwarded-For` 依次取值，兼容 Cloudflare Tunnel 与 Nginx/Caddy。
+> 这些头**仅在应用只经反代/隧道访问时**可信；若你把应用直接裸跑暴露公网（不推荐），请设 `TRUST_PROXY_HEADERS=false`，否则它们可被伪造绕过限流。
 
 ## 6. 不用 Docker 的裸机部署
 
@@ -154,5 +198,5 @@ Dockerfile  docker-compose.yml
 ## 安全说明（"一定程度即可"）
 
 密码 argon2 哈希；会话为签名 Cookie（`httponly`，`samesite=lax`，HTTPS 下 `secure`）；表单与写接口校验 CSRF；
-登录/注册有基础限流；统一安全响应头（含 CSP）；原图仅管理员可访问。开放注册意味着拿到网址即可注册——
+登录/注册有基础限流（反代/隧道后按真实客户端 IP，见上）；统一安全响应头（含 CSP）；原图仅管理员可访问。开放注册意味着拿到网址即可注册——
 如需收紧，把 `.env` 的 `REGISTRATION_OPEN` 设为 `false`（之后由管理员用 `create_admin.py` 建号）。

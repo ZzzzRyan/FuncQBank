@@ -30,6 +30,11 @@ class Settings(BaseSettings):
     registration_open: bool = True
     admin_username: str = ""  # optional: bootstrap this username as admin on startup
     cookie_secure: bool = False  # set True when served over HTTPS
+    # Behind a trusted reverse proxy (Cloudflare Tunnel / Nginx / Caddy) the socket
+    # peer is the proxy, so the real client IP arrives in a header. Used for the
+    # login/register rate limiter. Keep True for any proxied deploy; set False only
+    # if the app is exposed directly (no proxy), where headers would be spoofable.
+    trust_proxy_headers: bool = True
 
     # --- Paths ---
     docs_dir: Path = BASE_DIR / "docs"
