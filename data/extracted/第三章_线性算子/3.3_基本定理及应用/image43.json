@@ -4,14 +4,14 @@
   "model": "mimo-v2.5",
   "status": "pending",
   "auto_flags": [],
-  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 14,\n  \"points\": 1,\n  \"stem\": \"设赋范线性空间中开集$E$与线性流形$M$不相交，则必存在空间中的超平面分离$E$和$M$。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 14,\n  \"points\": 1,\n  \"stem\": \"设赋范线性空间中开集$E$与线性流形$M$不相交，则必存在空间中的超平面分离$E$和$M$。\",\n  \"options\": [],\n  \"answer\": \"错误\",\n  \"answer_raw\": \"错误\",\n  \"explanation\": \"E为开球时结论正确，E为开集时错误（可举反例）\",\n  \"note\": null\n}",
   "type": "judge",
   "seq": 14,
   "points": 1,
   "stem": "设赋范线性空间中开集$E$与线性流形$M$不相交，则必存在空间中的超平面分离$E$和$M$。",
   "options": [],
-  "answer": "正确",
-  "answer_raw": "正确",
-  "explanation": null,
+  "answer": "错误",
+  "answer_raw": "错误",
+  "explanation": "E为开球时结论正确，E为开集时错误（可举反例）",
   "note": null
 }
