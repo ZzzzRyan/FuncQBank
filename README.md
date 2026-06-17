@@ -178,7 +178,7 @@ app/
   routers/           auth_routes / practice / admin
   templates/  static/  (app.css, app.js, vendor/katex 内置)
 scripts/
-  extract.py  generate_explanations.py  seed.py  export.py  create_admin.py
+  extract.py  generate_explanations.py  import_explanations.py  seed.py  export.py  create_admin.py
 data/extracted/      提取结果（内容事实源，入 git）
 docs/                题目原图（仅管理员可见）
 Dockerfile  docker-compose.yml
@@ -207,3 +207,39 @@ Dockerfile  docker-compose.yml
 **「用大模型重新识别此图」的行为（重要）**：它只调用模型，把新结果**填入右侧表单供你检查**，**不会自动保存、也不会改 `data/extracted/`**——你确认无误再点「保存」才会写库。若遇网关空响应/超时（该网关偶发，见下），会提示「识别失败，未改动任何数据」，**原题保持原样**，稍等重试即可。所以不存在“点一下就把识别好的数据改坏”的风险。
 
 > 批量找回偶发失败的题：命令行 `uv run scripts/extract.py --retry-flagged` 重试，再 `uv run scripts/seed.py`（已校对的不受影响）。当前 213 题已全部识别成功、无 flagged。
+
+## 生产库字段补丁（导入解析等）
+
+当 `data/extracted/*.json` 里补了某些字段，但生产库里已有用户、进度、人工校对结果时，不要重新 `seed` 覆盖整题。
+用 `scripts/import_explanations.py` 这种“字段级补丁”脚本，只更新白名单字段（当前支持 `explanation,note`），按 `rel_path` 匹配已有题目，不新建题目，也不改题干/选项/答案/状态/用户数据。
+
+Docker 部署时一定在容器内跑脚本：宿主机直接 `uv run ...` 会指向仓库里的 `data/app.db`，不是生产卷里的 `/app/var/app.db`。
+
+```bash
+# 1) 拉代码并重建镜像，让容器里拿到最新 JSON 和脚本
+git pull
+docker compose up -d --build
+
+# 2) 先 dry-run。确认输出里的数据库是 /app/var/app.db，且 DB 题目数正常
+docker compose exec app uv run --no-sync scripts/import_explanations.py
+
+# 3) 写入。更稳妥的做法是短暂停服务，避免备份 SQLite 时有并发写入
+docker compose stop app
+docker compose run --rm app uv run --no-sync scripts/import_explanations.py --apply
+docker compose up -d app
+```
+
+常用变体（默认仍是 dry-run；确认无误后再按第 3 步加 `--apply` 写入）：
+
+```bash
+# 只处理某个章节/路径片段
+docker compose exec app uv run --no-sync scripts/import_explanations.py --only "3.2"
+
+# 同步多个已允许字段
+docker compose exec app uv run --no-sync scripts/import_explanations.py --fields explanation,note
+
+# 覆盖生产库里已有的非空字段；谨慎使用，先 dry-run 看清楚旧值/新值
+docker compose exec app uv run --no-sync scripts/import_explanations.py --overwrite
+```
+
+`--apply` 默认会在同一个 Docker 卷里生成 `app.db.bak-时间戳` 备份；不要随手加 `--no-backup`。`uv run --no-sync` 的意思是“运行脚本前不重新同步依赖”，因为镜像构建时已经安装好了依赖，生产容器里这样更快也更少扰动。以后要补别的简单文本字段，先把字段加入脚本的白名单，再按同样流程 dry-run → 确认 DB 路径/变更计划 → apply。
