@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "$n$ 维实向量集合在向量加法和实数数乘下满足线性空间的公理（如封闭性、结合律、分配律等），因此构成实线性空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"$n$ 维实向量集合在向量加法和实数数乘下满足线性空间的公理（如封闭性、结合律、分配律等），因此构成实线性空间。\"}"
 }

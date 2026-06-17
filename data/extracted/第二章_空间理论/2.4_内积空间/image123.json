@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "Banach空间是完备的赋范线性空间，但并非所有范数都来自内积，因此不一定是Hilbert空间。正确说法是：所有Hilbert空间都是Banach空间，但反之不成立。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"Banach空间是完备的赋范线性空间，但并非所有范数都来自内积，因此不一定是Hilbert空间。正确说法是：所有Hilbert空间都是Banach空间，但反之不成立。\"}"
 }

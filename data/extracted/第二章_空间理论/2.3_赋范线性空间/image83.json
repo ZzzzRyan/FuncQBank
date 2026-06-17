@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "这是范数的**逆三角不等式**，由三角不等式 $\\|x\\| = \\|(x-y)+y\\| \\leq \\|x-y\\| + \\|y\\|$ 可推得，常用于估计范数差的范围。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"这是范数的**逆三角不等式**，由三角不等式 $\\|x\\| = \\|(x-y)+y\\| \\leq \\|x-y\\| + \\|y\\|$ 可推得，常用于估计范数差的范围。\"}"
 }

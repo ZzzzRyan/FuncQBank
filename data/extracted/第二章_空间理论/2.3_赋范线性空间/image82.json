@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": "$d(\\alpha x, \\alpha y) = |\\alpha|d(x, y)$",
-  "note": null
+  "explanation": "题干错误，因为由范数诱导的距离需满足 $d(\\alpha x, \\alpha y) = |\\alpha| d(x, y)$，以确保距离非负；正确说法是 **$d(\\alpha x, \\alpha y) = |\\alpha| d(x, y)$**。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"题干错误，因为由范数诱导的距离需满足 $d(\\alpha x, \\alpha y) = |\\alpha| d(x, y)$，以确保距离非负；正确说法是 **$d(\\alpha x, \\alpha y) = |\\alpha| d(x, y)$**。\"}"
 }

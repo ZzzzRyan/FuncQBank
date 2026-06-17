@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "在度量空间（如有界序列空间）中，列紧集的闭包是紧集，因为闭包保持列紧性且是闭集。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在度量空间（如有界序列空间）中，列紧集的闭包是紧集，因为闭包保持列紧性且是闭集。\"}"
 }

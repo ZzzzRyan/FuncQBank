@@ -29,6 +29,8 @@
   ],
   "answer": "D",
   "answer_raw": "D",
-  "explanation": null,
-  "note": null
+  "explanation": "选项 D 仅是子空间和的定义，任何 $M+N$ 都满足，不能保证直和（如分解可能不唯一），因此不是直和的充分必要条件。直和的充要条件如 A、B、C 所述。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"选项 D 仅是子空间和的定义，任何 $M+N$ 都满足，不能保证直和（如分解可能不唯一），因此不是直和的充分必要条件。直和的充要条件如 A、B、C 所述。\"}"
 }

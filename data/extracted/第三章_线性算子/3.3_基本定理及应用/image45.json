@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "该判断错误。有界线性算子的逆算子不一定有界；反例可在无限维空间中构造，需要额外条件如 $T$ 是连续双射时逆算子才有界。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"该判断错误。有界线性算子的逆算子不一定有界；反例可在无限维空间中构造，需要额外条件如 $T$ 是连续双射时逆算子才有界。\"}"
 }

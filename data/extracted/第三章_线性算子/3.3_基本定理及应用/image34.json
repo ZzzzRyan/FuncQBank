@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "复线性泛函 $f$ 的实部 $u$ 和虚部 $v$ 满足 $v(x) = -u(ix)$，因此实部唯一确定了 $f$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"复线性泛函 $f$ 的实部 $u$ 和虚部 $v$ 满足 $v(x) = -u(ix)$，因此实部唯一确定了 $f$。\"}"
 }

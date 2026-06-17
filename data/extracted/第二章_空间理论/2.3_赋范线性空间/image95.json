@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。两个有限维赋范空间线性同胚当且仅当它们的维数相同。因此，只有维数相同时才成立，并非任何两个都线性同胚。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"错误。两个有限维赋范空间线性同胚当且仅当它们的维数相同。因此，只有维数相同时才成立，并非任何两个都线性同胚。\"}"
 }

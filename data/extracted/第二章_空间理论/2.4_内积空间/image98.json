@@ -29,6 +29,8 @@
   ],
   "answer": "ABD",
   "answer_raw": "ABD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "内积空间中，A是柯西-施瓦茨不等式，B是内积连续性，D是平行四边形恒等式，均成立。C错误，正确说法是 $\\|x + y\\|^2 = \\|x\\|^2 + \\|y\\|^2$ 仅当 $x$ 与 $y$ 正交时成立。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"内积空间中，A是柯西-施瓦茨不等式，B是内积连续性，D是平行四边形恒等式，均成立。C错误，正确说法是 $\\|x + y\\|^2 = \\|x\\|^2 + \\|y\\|^2$ 仅当 $x$ 与 $y$ 正交时成立。\"}"
 }

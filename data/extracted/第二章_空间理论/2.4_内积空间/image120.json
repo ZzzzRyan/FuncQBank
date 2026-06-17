@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "内积空间中，内积对第二个变量是共轭线性的，即 $(x, \\alpha y) = \\bar{\\alpha}(x, y)$，这是内积定义的一部分，与线性性 $(x, \\alpha y) \\neq \\alpha (x, y)$ 需区分。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"内积空间中，内积对第二个变量是共轭线性的，即 $(x, \\alpha y) = \\bar{\\alpha}(x, y)$，这是内积定义的一部分，与线性性 $(x, \\alpha y) \\neq \\alpha (x, y)$ 需区分。\"}"
 }

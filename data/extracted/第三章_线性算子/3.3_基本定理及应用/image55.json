@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "图像 $G(T)$ 包含零向量 $(0,0)$，且由于 $T$ 的线性性，对加法和标量乘法封闭，因此它是 $X \\times Y$ 的线性子空间，这是线性算子图像的基本性质。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"图像 $G(T)$ 包含零向量 $(0,0)$，且由于 $T$ 的线性性，对加法和标量乘法封闭，因此它是 $X \\times Y$ 的线性子空间，这是线性算子图像的基本性质。\"}"
 }

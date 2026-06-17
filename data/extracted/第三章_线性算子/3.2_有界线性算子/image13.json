@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误，因为线性算子 $T$ 未必连续，不一定能保持级数的极限。正确说法是：若 $T$ 是**连续线性算子**，则等式 $T(\\sum_{n=1}^{\\infty} x_n) = \\sum_{n=1}^{\\infty} T(x_n)$ 成立。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"错误，因为线性算子 $T$ 未必连续，不一定能保持级数的极限。正确说法是：若 $T$ 是**连续线性算子**，则等式 $T(\\\\sum_{n=1}^{\\\\infty} x_n) = \\\\sum_{n=1}^{\\\\infty} T(x_n)$ 成立。\"}"
 }

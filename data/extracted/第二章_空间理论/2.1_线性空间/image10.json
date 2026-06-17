@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "线性相关性的定义基于有限线性组合：一个集合线性相关当且仅当存在一个有限子集线性相关。因此，无限集合中若有有限子集线性相关，则整个集合线性相关，陈述正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"线性相关性的定义基于有限线性组合：一个集合线性相关当且仅当存在一个有限子集线性相关。因此，无限集合中若有有限子集线性相关，则整个集合线性相关，陈述正确。\"}"
 }

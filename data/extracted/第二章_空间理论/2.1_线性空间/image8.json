@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "连续函数不一定将开集映为开集。例如，常数函数 $f(x)=c$ 是连续的，但将任何开集映射为 $\\{c\\}$，不是开集。正确说法是，连续函数将开集映为开集当且仅当它是开映射。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"连续函数不一定将开集映为开集。例如，常数函数 $f(x)=c$ 是连续的，但将任何开集映射为 $\\{c\\}$，不是开集。正确说法是，连续函数将开集映为开集当且仅当它是开映射。\"}"
 }

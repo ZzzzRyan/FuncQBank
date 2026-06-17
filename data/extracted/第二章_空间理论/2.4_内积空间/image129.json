@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "有限维内积空间在内积诱导的范数下自动完备，因此是 Hilbert 空间；又因有限维空间存在可数稠密子集（如取有理系数的线性组合），故必可分。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"有限维内积空间在内积诱导的范数下自动完备，因此是 Hilbert 空间；又因有限维空间存在可数稠密子集（如取有理系数的线性组合），故必可分。\"}"
 }

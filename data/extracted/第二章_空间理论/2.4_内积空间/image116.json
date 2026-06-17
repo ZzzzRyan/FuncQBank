@@ -29,6 +29,8 @@
   ],
   "answer": "D",
   "answer_raw": "D",
-  "explanation": null,
-  "note": null
+  "explanation": "D 不正确。$L^p$ 空间是 Hilbert 空间仅当 $p=2$；对于 $p \\neq 2$，它不是内积空间，因此不是 Hilbert 空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"D 不正确。$L^p$ 空间是 Hilbert 空间仅当 $p=2$；对于 $p \\neq 2$，它不是内积空间，因此不是 Hilbert 空间。\"}"
 }

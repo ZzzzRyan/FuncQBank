@@ -29,6 +29,8 @@
   ],
   "answer": "AB",
   "answer_raw": "AB (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "连续函数空间（如 $C([a,b])$）和实数空间 $\\mathbb{R}$ 是可分的：前者有多项式集作为可数稠密子集，后者有理数集稠密。有界序列空间 $l^\\infty$ 不可分，离散距离空间在不可数时也不可分。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"连续函数空间（如 $C([a,b])$）和实数空间 $\\mathbb{R}$ 是可分的：前者有多项式集作为可数稠密子集，后者有理数集稠密。有界序列空间 $l^\\infty$ 不可分，离散距离空间在不可数时也不可分。\"}"
 }

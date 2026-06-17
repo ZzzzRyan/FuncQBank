@@ -29,6 +29,8 @@
   ],
   "answer": "ACD",
   "answer_raw": "ACD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "在内积空间中，A和C是内积的线性性质，D是内积的非负性，都正确。B错误，因为对于复内积空间，共轭对称性应为 $(x, y) = \\overline{(y, x)}$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在内积空间中，A和C是内积的线性性质，D是内积的非负性，都正确。B错误，因为对于复内积空间，共轭对称性应为 $(x, y) = \\overline{(y, x)}$。\"}"
 }

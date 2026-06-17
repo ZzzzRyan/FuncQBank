@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "由于实数是复数的子域，$n$ 维复向量集合（如 $\\mathbb{C}^n$）在标准加法和实数数乘下，运算封闭且满足线性空间公理，因此可以构成实线性空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\" 由于实数是复数的子域，$n$ 维复向量集合（如 $\\mathbb{C}^n$）在标准加法和实数数乘下，运算封闭且满足线性空间公理，因此可以构成实线性空间。\"}"
 }

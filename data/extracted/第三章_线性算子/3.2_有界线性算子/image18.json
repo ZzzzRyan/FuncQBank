@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "命题错误，因为算子范数 $\\|T\\| = \\sup_{\\|x\\|=1} \\|Tx\\|$ 是上确界，而不是由单点值决定。正确说法是：如果存在 $x_0$ 且 $\\|x_0\\|=1$ 使得 $\\|Tx_0\\| \\ge M$，则 $\\|T\\| \\ge M$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"命题错误，因为算子范数 $\\|T\\| = \\sup_{\\|x\\|=1} \\|Tx\\|$ 是上确界，而不是由单点值决定。正确说法是：如果存在 $x_0$ 且 $\\|x_0\\|=1$ 使得 $\\|Tx_0\\| \\ge M$，则 $\\|T\\| \\ge M$。\"}"
 }

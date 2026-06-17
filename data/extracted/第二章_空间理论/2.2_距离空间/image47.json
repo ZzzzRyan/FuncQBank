@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "根据Weierstrass逼近定理，实系数多项式在 $C[0,1]$ 中稠密；再由有理数在实数中的稠密性，有理系数多项式也稠密。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"根据Weierstrass逼近定理，实系数多项式在 $C[0,1]$ 中稠密；再由有理数在实数中的稠密性，有理系数多项式也稠密。\"}"
 }

@@ -29,6 +29,8 @@
   ],
   "answer": "C",
   "answer_raw": "C",
-  "explanation": null,
-  "note": null
+  "explanation": "共轭数对的定义是 $\\frac{1}{p} + \\frac{1}{q} = 1$，因此正确答案为C。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"共轭数对的定义是 $\\frac{1}{p} + \\frac{1}{q} = 1$，因此正确答案为C。\"}"
 }

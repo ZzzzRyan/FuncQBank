@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正确。在距离空间中，开集和闭集互为补集：开集的余集是闭集，闭集的余集是开集，这是拓扑空间的基本定义性质。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"正确。在距离空间中，开集和闭集互为补集：开集的余集是闭集，闭集的余集是开集，这是拓扑空间的基本定义性质。\"}"
 }

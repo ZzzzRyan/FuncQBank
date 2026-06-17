@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "根据算子范数定义，$\\|T\\|$ 是所有满足 $\\|Tx\\| \\le M \\|x\\|$ 的常数 $M$ 的下确界，因此是最小的这样的常数。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"根据算子范数定义，$\\|T\\|$ 是所有满足 $\\|Tx\\| \\le M \\|x\\|$ 的常数 $M$ 的下确界，因此是最小的这样的常数。\"}"
 }

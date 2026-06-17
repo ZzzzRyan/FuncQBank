@@ -29,6 +29,8 @@
   ],
   "answer": "CD",
   "answer_raw": "CD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "C不正确，因为等距线性同构映射保持维数，所以X有限维时Y也必须为有限维；D不正确，因为等距线性映射满足||T(z)||=||z||，但范数非线性，一般有||αx+βy|| ≤ |α| ||x|| + |β| ||y||，等式不恒成立。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"C不正确，因为等距线性同构映射保持维数，所以X有限维时Y也必须为有限维；D不正确，因为等距线性映射满足||T(z)||=||z||，但范数非线性，一般有||αx+βy|| ≤ |α| ||x|| + |β| ||y||，等式不恒成立。\"}"
 }

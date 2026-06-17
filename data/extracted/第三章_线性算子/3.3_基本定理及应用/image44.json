@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "当线性算子 $T$ 可逆时，其逆映射 $T^{-1}$ 自动保持线性运算：对任意 $y_1, y_2 \\in Y$ 和标量 $\\alpha, \\beta$，有 $T^{-1}(\\alpha y_1 + \\beta y_2) = \\alpha T^{-1}(y_1) + \\beta T^{-1}(y_2)$，故 $T^{-1}$ 也是线性算子。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"当线性算子 $T$ 可逆时，其逆映射 $T^{-1}$ 自动保持线性运算：对任意 $y_1, y_2 \\in Y$ 和标量 $\\alpha, \\beta$，有 $T^{-1}(\\alpha y_1 + \\beta y_2) = \\alpha T^{-1}(y_1) + \\beta T^{-1}(y_2)$，故 $T^{-1}$ 也是线性算子。\"}"
 }

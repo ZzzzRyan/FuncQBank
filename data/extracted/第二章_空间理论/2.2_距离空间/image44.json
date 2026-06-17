@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "$\\mathbb{R}^3$ 是有限维赋范空间，所有有限维赋范空间在标准距离下都是完备的，因此是完备距离空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"$\\mathbb{R}^3$ 是有限维赋范空间，所有有限维赋范空间在标准距离下都是完备的，因此是完备距离空间。\"}"
 }

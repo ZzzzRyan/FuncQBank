@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "线性算子 $T$ 在一点连续时，其**线性性质**允许通过平移和缩放将连续性扩展到所有点，从而在整个空间上连续。记忆要点：线性结构是连接局部与整体连续性的桥梁。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"线性算子 $T$ 在一点连续时，其**线性性质**允许通过平移和缩放将连续性扩展到所有点，从而在整个空间上连续。记忆要点：线性结构是连接局部与整体连续性的桥梁。\"}"
 }

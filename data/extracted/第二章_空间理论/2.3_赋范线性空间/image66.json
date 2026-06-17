@@ -29,6 +29,8 @@
   ],
   "answer": "B",
   "answer_raw": "B",
-  "explanation": "若 $\\alpha_n \\to \\alpha$, 则选项成立。",
-  "note": null
+  "explanation": "B选项不正确，因为缺少 $\\alpha_n \\to \\alpha$ 的条件；正确说法是：若 $\\alpha_n \\to \\alpha$ 且 $x_n \\to x$，则 $\\alpha_n x_n \\to \\alpha x$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"B选项不正确，因为缺少 $\\alpha_n \\to \\alpha$ 的条件；正确说法是：若 $\\alpha_n \\to \\alpha$ 且 $x_n \\to x$，则 $\\alpha_n x_n \\to \\alpha x$。\"}"
 }

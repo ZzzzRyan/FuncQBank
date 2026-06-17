@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。连续映射的定义是开集的原像是开集，而不是将开集映为开集；后者是开映射的性质。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"错误。连续映射的定义是开集的原像是开集，而不是将开集映为开集；后者是开映射的性质。\"}"
 }

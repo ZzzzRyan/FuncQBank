@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正确。线性算子 $T$ 的有界性等价于它将有界集映为有界集，这是几何上的直观刻画，也与连续性相关。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"正确。线性算子 $T$ 的有界性等价于它将有界集映为有界集，这是几何上的直观刻画，也与连续性相关。\"}"
 }

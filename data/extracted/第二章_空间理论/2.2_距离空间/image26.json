@@ -29,6 +29,8 @@
   ],
   "answer": "D",
   "answer_raw": "D",
-  "explanation": null,
-  "note": null
+  "explanation": "选项D错误。在度量空间中，完全有界集不一定是列紧集；只有当空间完备时，完全有界集才是列紧集。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"选项D错误。在度量空间中，完全有界集不一定是列紧集；只有当空间完备时，完全有界集才是列紧集。\"}"
 }

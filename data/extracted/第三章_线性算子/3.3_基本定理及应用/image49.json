@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "因为 $\\|x\\|_1 \\le \\|x\\|_2$ 对所有 $x$ 成立，这直接满足了 $\\|·\\|_2$ 强于 $\\|·\\|_1$ 的定义（即存在常数 $C=1$ 使得 $\\|x\\|_1 \\le C\\|x\\|_2$），所以命题正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"因为 $\\|x\\|_1 \\le \\|x\\|_2$ 对所有 $x$ 成立，这直接满足了 $\\|·\\|_2$ 强于 $\\|·\\|_1$ 的定义（即存在常数 $C=1$ 使得 $\\|x\\|_1 \\le C\\|x\\|_2$），所以命题正确。\"}"
 }

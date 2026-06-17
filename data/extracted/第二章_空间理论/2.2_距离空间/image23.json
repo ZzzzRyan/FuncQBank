@@ -29,6 +29,8 @@
   ],
   "answer": "ACD",
   "answer_raw": "ACD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "可分的距离空间定义包括存在可数稠密子集，因此一定包含可数子集（A）和稠密子集（C）。任何空间都包含有限子集（D）。但不可数子集（B）不一定存在，例如可数空间（如 $\\mathbb{Q}$）中所有子集都是可数的，正确说法是B不一定被包括。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"可分的距离空间定义包括存在可数稠密子集，因此一定包含可数子集（A）和稠密子集（C）。任何空间都包含有限子集（D）。但不可数子集（B）不一定存在，例如可数空间（如 $\\mathbb{Q}$）中所有子集都是可数的，正确说法是B不一定被包括。\"}"
 }

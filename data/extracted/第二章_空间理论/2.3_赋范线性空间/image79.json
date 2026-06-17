@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "赋范线性空间通过范数 $||\\cdot||$ 定义度量 $d(x,y)=||x-y||$，这自动满足距离空间的公理且与线性结构兼容，因此它是距离线性空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"赋范线性空间通过范数 $||\\cdot||$ 定义度量 $d(x,y)=||x-y||$，这自动满足距离空间的公理且与线性结构兼容，因此它是距离线性空间。\"}"
 }

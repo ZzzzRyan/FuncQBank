@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "这个陈述正确，它是Hahn-Banach定理的直接结论：在赋范线性空间 $X$ 中，子空间 $G$ 上的任意连续线性泛函 $f$ 都可以保范延拓到整个 $X$。记忆时关联该定理，它是泛函分析中处理线性泛函延拓的核心工具。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"这个陈述正确，它是Hahn-Banach定理的直接结论：在赋范线性空间 $X$ 中，子空间 $G$ 上的任意连续线性泛函 $f$ 都可以保范延拓到整个 $X$。记忆时关联该定理，它是泛函分析中处理线性泛函延拓的核心工具。\"}"
 }

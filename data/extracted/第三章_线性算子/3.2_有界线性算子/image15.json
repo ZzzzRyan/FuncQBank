@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正确，因为 $T$ 连续且 $\\{0\\}$ 是闭集，核 $N(T)=T^{-1}(\\{0\\})$ 作为闭集的预像是闭子空间。记忆点：连续线性泛函的核必闭，若不连续则可能不闭。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"正确，因为 $T$ 连续且 $\\{0\\}$ 是闭集，核 $N(T)=T^{-1}(\\{0\\})$ 作为闭集的预像是闭子空间。记忆点：连续线性泛函的核必闭，若不连续则可能不闭。\"}"
 }

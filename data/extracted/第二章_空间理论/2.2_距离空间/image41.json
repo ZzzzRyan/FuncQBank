@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。在一般距离空间中，闭子空间不一定是完备的，而完备子空间一定是闭的；正确说法是：在完备距离空间中，子空间是完备的当且仅当它是闭的。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"错误。在一般距离空间中，闭子空间不一定是完备的，而完备子空间一定是闭的；正确说法是：在完备距离空间中，子空间是完备的当且仅当它是闭的。\"}"
 }

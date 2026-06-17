@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "在 Hilbert 空间中，正规正交集 $S$ 若满足 $S^\\perp = \\{0\\}$，则其闭线性张成等于 $X$，因此 $S$ 是完备的，从而是正规正交基。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在 Hilbert 空间中，正规正交集 $S$ 若满足 $S^\\perp = \\{0\\}$，则其闭线性张成等于 $X$，因此 $S$ 是完备的，从而是正规正交基。\"}"
 }

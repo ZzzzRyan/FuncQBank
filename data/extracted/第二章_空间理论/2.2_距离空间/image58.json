@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "无处稠密集的可列并是第一纲集，而第一纲集不是第二纲集，因此原陈述错误。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"无处稠密集的可列并是第一纲集，而第一纲集不是第二纲集，因此原陈述错误。\"}"
 }

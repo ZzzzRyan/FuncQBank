@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "这个陈述错误，因为有界线性算子的‘有界’指的是**算子范数有界**（即连续），而非函数值全局有界；例如 $T(x)=x$ 在 $\\mathbb{R}$ 上是有界线性算子，但作为函数无界。正确说法是：$T$ 作为算子有界，但未必是 $\\mathbb{R}$ 上的有界函数。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"这个陈述错误，因为有界线性算子的‘有界’指的是**算子范数有界**（即连续），而非函数值全局有界；例如 $T(x)=x$ 在 $\\mathbb{R}$ 上是有界线性算子，但作为函数无界。正确说法是：$T$ 作为算子有界，但未必是 $\\mathbb{R}$ 上的有界函数。\"}"
 }

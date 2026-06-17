@@ -29,6 +29,8 @@
   ],
   "answer": "BCD",
   "answer_raw": "BCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "内积空间必然是线性空间、赋范空间和距离空间，因为内积诱导范数 $\\|x\\| = \\sqrt{\\langle x, x \\rangle}$ 和距离 $d(x,y)=\\|x-y\\|$。欧氏空间是有限维内积空间，内积空间可以是无限维的，因此不一定是欧氏空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"内积空间必然是线性空间、赋范空间和距离空间，因为内积诱导范数 $\\|x\\| = \\sqrt{\\langle x, x \\rangle}$ 和距离 $d(x,y)=\\|x-y\\|$。欧氏空间是有限维内积空间，内积空间可以是无限维的，因此不一定是欧氏空间。\"}"
 }

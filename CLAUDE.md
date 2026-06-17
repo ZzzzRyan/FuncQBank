@@ -10,11 +10,12 @@
 - 装/同步依赖：`uv sync`；增删依赖：`uv add <pkg>` / `uv remove <pkg>`（不要手改 pyproject）
 - 跑服务（本机 **8000 端口已被另一应用占用，改用 8011**）：`uv run uvicorn app.main:app --reload --port 8011`
 - 提取题目：`uv run scripts/extract.py [--limit N | --only 子串 | --retry-flagged | --force | --workers N]`
+- 生成简短解析：`uv run scripts/generate_explanations.py [--limit N | --only 子串 | --force | --include-flagged | --workers N]`（默认不覆盖已有解析、不处理 flagged）
 - 入库（幂等）：`uv run scripts/seed.py`　·　建管理员：`uv run scripts/create_admin.py <用户名>`　·　导出备份：`uv run scripts/export.py`
 - 语法自检：`uv run python -m py_compile app/*.py app/routers/*.py scripts/*.py`
 
 ## 架构与数据流
-`docs/<章>/<节>/imageN.jpg`（原图，含答案）→ `scripts/extract.py`（视觉 LLM）→ `data/extracted/**.json`（内容**事实源**，入 git）→ `scripts/seed.py` → SQLite(`data/app.db`) → FastAPI 提供网页。
+`docs/<章>/<节>/imageN.jpg`（原图，含答案）→ `scripts/extract.py`（视觉 LLM）→ `data/extracted/**.json`（内容**事实源**，入 git）→ `scripts/generate_explanations.py`（为缺少解析的题目补短解析，仍写回 JSON）→ `scripts/seed.py` → SQLite(`data/app.db`) → FastAPI 提供网页。
 - `app/main.py` 装配（中间件、安全头、异常处理、挂载 `/static`、startup 建表）
 - `app/config.py` 读 `.env`（pydantic-settings）；`app/db.py` 引擎/会话；`app/models.py` 模型
 - `app/auth.py`+`app/security.py` 会话/角色、argon2、CSRF、限流；`app/render.py` 题干安全渲染；`app/templating.py` 的 `page()` 注入公共上下文

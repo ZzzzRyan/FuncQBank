@@ -29,6 +29,8 @@
   ],
   "answer": "ABC",
   "answer_raw": "ABC (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "完全有界集在度量空间中是有界（A）、可分（B），且其子集也完全有界（C）；列紧性要求空间完备，故D不正确，正确说法是完全有界且完备的集是列紧集。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"完全有界集在度量空间中是有界（A）、可分（B），且其子集也完全有界（C）；列紧性要求空间完备，故D不正确，正确说法是完全有界且完备的集是列紧集。\"}"
 }

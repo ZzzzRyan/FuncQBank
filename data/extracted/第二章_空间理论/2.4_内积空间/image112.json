@@ -29,6 +29,8 @@
   ],
   "answer": "BCD",
   "answer_raw": "BCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "选项A只保证 $\\operatorname{Re}\\langle x,y\\rangle=0$，在复内积空间中不等价于 $x\\perp y$；B、C、D均通过对任意 $k\\in\\mathbb{K}$ 的条件推出 $\\langle x,y\\rangle=0$，因此等价。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"选项A只保证 $\\operatorname{Re}\\langle x,y\\rangle=0$，在复内积空间中不等价于 $x\\perp y$；B、C、D均通过对任意 $k\\in\\mathbb{K}$ 的条件推出 $\\langle x,y\\rangle=0$，因此等价。\"}"
 }

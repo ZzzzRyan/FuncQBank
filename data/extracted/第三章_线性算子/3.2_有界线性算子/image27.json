@@ -29,6 +29,8 @@
   ],
   "answer": "ABCD",
   "answer_raw": "ABCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "这些选项都是算子范数 $\\|T\\|$ 的等价定义：A 是标准上确界，B 和 C 通过单位球简化（因 $\\|T\\| = \\sup_{\\|x\\|=1}\\|Tx\\| = \\sup_{\\|x\\|\\leq 1}\\|Tx\\|$），D 是最小常数表述。记忆时注意它们都基于 $\\|Tx\\| \\leq \\|T\\|\\|x\\|$ 的齐次性。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"这些选项都是算子范数 $\\|T\\|$ 的等价定义：A 是标准上确界，B 和 C 通过单位球简化（因 $\\|T\\| = \\sup_{\\|x\\|=1}\\|Tx\\| = \\sup_{\\|x\\|\\leq 1}\\|Tx\\|$），D 是最小常数表述。记忆时注意它们都基于 $\\|Tx\\| \\leq \\|T\\|\\|x\\|$ 的齐次性。\"}"
 }

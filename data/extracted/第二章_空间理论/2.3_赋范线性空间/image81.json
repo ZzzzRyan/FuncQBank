@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "由范数诱导的距离定义为 $d(x,y) = \\|x - y\\|$，因此 $d(x+z, y+z) = \\|(x+z) - (y+z)\\| = \\|x - y\\| = d(x,y)$，这直接利用了范数的平移不变性。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"由范数诱导的距离定义为 $d(x,y) = \\|x - y\\|$，因此 $d(x+z, y+z) = \\|(x+z) - (y+z)\\| = \\|x - y\\| = d(x,y)$，这直接利用了范数的平移不变性。\"}"
 }

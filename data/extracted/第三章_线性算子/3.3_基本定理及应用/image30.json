@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。仅当 $T_1$ 是 $T_2$ 的限制，即 $T_1 = T_2|_{D(T_1)}$，才有 $\\|T_1\\| \\leq \\|T_2\\|$。否则，域包含不能保证范数不等式。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"错误。仅当 $T_1$ 是 $T_2$ 的限制，即 $T_1 = T_2|_{D(T_1)}$，才有 $\\|T_1\\| \\leq \\|T_2\\|$。否则，域包含不能保证范数不等式。\"}"
 }

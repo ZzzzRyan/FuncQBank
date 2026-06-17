@@ -29,6 +29,8 @@
   ],
   "answer": "ABCD",
   "answer_raw": "ABCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "距离空间只需满足距离公理，不一定有线性结构，故A和D正确；赋范线性空间由范数定义，范数诱导距离，且必须是线性空间，故B和C正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"距离空间只需满足距离公理，不一定有线性结构，故A和D正确；赋范线性空间由范数定义，范数诱导距离，且必须是线性空间，故B和C正确。\"}"
 }

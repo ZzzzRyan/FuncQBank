@@ -29,6 +29,8 @@
   ],
   "answer": "C",
   "answer_raw": "C",
-  "explanation": null,
-  "note": null
+  "explanation": "选项C错误，因为复算术空间 $\\mathbb{C}^n$ 在复数域上是n维空间，而不是2n维。正确说法是 $\\mathbb{C}^n$ 是n维复向量空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"选项C错误，因为复算术空间 $\\mathbb{C}^n$ 在复数域上是n维空间，而不是2n维。正确说法是 $\\mathbb{C}^n$ 是n维复向量空间。\"}"
 }

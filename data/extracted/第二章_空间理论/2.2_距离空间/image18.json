@@ -29,6 +29,8 @@
   ],
   "answer": "BCD",
   "answer_raw": "BCD (少选不得分)",
-  "explanation": null,
-  "note": "选项D中'场收敛'可能为'均收敛'的笔误"
+  "explanation": "A 错误，Cauchy 列不一定收敛，例如在非完备空间中；正确说法是 Cauchy 列在完备空间中收敛。B、C、D 均为正确命题：收敛点列必为 Cauchy 列，Cauchy 列若有收敛子列则自身收敛，且完备空间的定义就是所有 Cauchy 列收敛。",
+  "note": "选项D中'场收敛'可能为'均收敛'的笔误",
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"A 错误，Cauchy 列不一定收敛，例如在非完备空间中；正确说法是 Cauchy 列在完备空间中收敛。B、C、D 均为正确命题：收敛点列必为 Cauchy 列，Cauchy 列若有收敛子列则自身收敛，且完备空间的定义就是所有 Cauchy 列收敛。\"}"
 }

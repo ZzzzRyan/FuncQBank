@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正规正交基是能张成整个内积空间的正规正交集，这是二者本质区别；记忆时可强调**完整张成性**。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"正规正交基是能张成整个内积空间的正规正交集，这是二者本质区别；记忆时可强调**完整张成性**。\"}"
 }

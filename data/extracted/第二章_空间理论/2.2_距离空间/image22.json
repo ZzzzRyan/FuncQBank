@@ -29,6 +29,8 @@
   ],
   "answer": "D",
   "answer_raw": "D",
-  "explanation": null,
-  "note": null
+  "explanation": "选项 D 错误：整数集合在实数集中不稠密，因为整数是离散的，任意两个整数之间没有其他整数。正确说法是整数集在实数中不是稠密的。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"选项 D 错误：整数集合在实数集中不稠密，因为整数是离散的，任意两个整数之间没有其他整数。正确说法是整数集在实数中不是稠密的。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "这个命题正确，它是一致有界原理（Uniform Boundedness Principle）的直接表述：若 $X$ 为 Banach 空间，线性算子族点点有界，则必一致有界。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"这个命题正确，它是一致有界原理（Uniform Boundedness Principle）的直接表述：若 $X$ 为 Banach 空间，线性算子族点点有界，则必一致有界。\"}"
 }

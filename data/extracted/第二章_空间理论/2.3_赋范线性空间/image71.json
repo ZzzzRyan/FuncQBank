@@ -29,6 +29,8 @@
   ],
   "answer": "A",
   "answer_raw": "A",
-  "explanation": null,
-  "note": null
+  "explanation": "$L^\\infty[a,b]$ 是不可分空间，因为它包含不可数多个本质有界函数；而 $L^p[a,b] (1 \\le p < \\infty)$、$C[a,b]$ 和 $\\mathbb{C}^n$ 都是可分空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"$L^\\infty[a,b]$ 是不可分空间，因为它包含不可数多个本质有界函数；而 $L^p[a,b] (1 \\le p < \\infty)$、$C[a,b]$ 和 $\\mathbb{C}^n$ 都是可分空间。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "题干错误，因为 $\\|x_0\\| = \\sup_{f \\in X'} |f(x_0)|$ 不成立，缺少泛函范数限制。正确说法是 $\\|x_0\\| = \\sup_{f \\in X', \\|f\\|=1} |f(x_0)|$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"题干错误，因为 $\\|x_0\\| = \\sup_{f \\in X'} |f(x_0)|$ 不成立，缺少泛函范数限制。正确说法是 $\\|x_0\\| = \\sup_{f \\in X', \\|f\\|=1} |f(x_0)|$。\"}"
 }

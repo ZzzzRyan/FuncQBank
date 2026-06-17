@@ -29,6 +29,8 @@
   ],
   "answer": "BC",
   "answer_raw": "BC (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "无限维赋范空间中，单位开球非列紧、单位闭球非紧，故B、C正确。A错，因为存在非闭的真子空间；D错，因为赋范空间未必完备。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"无限维赋范空间中，单位开球非列紧、单位闭球非紧，故B、C正确。A错，因为存在非闭的真子空间；D错，因为赋范空间未必完备。\"}"
 }

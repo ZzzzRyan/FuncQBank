@@ -29,6 +29,8 @@
   ],
   "answer": "ABCD",
   "answer_raw": "ABCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "在泛函分析中，拓扑同构映射是线性双射且 $T$ 与 $T^{-1}$ 都连续，因此所有选项A、B、C、D都是定义所必需的条件。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在泛函分析中，拓扑同构映射是线性双射且 $T$ 与 $T^{-1}$ 都连续，因此所有选项A、B、C、D都是定义所必需的条件。\"}"
 }

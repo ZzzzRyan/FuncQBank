@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。$T_2$ 是 $T_1$ 的延拓时，$\\|T_2\\|$ 可能大于 $\\|T_1\\|$，正确关系是 $\\|T_1\\| \\leq \\|T_2\\|$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"错误。$T_2$ 是 $T_1$ 的延拓时，$\\|T_2\\|$ 可能大于 $\\|T_1\\|$，正确关系是 $\\|T_1\\| \\leq \\|T_2\\|$。\"}"
 }

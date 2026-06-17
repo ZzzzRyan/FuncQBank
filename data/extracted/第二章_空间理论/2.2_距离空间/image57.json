@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "根据 Baire 纲定理，完备的赋范空间是第二纲的。连续函数空间（如 $C([a,b])$）在 sup 范数下是完备的，因此是第二纲的。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"根据 Baire 纲定理，完备的赋范空间是第二纲的。连续函数空间（如 $C([a,b])$）在 sup 范数下是完备的，因此是第二纲的。\"}"
 }

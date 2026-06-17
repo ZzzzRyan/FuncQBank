@@ -29,6 +29,8 @@
   ],
   "answer": "ABCD",
   "answer_raw": "ABCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "由 $x \\perp M$ 的定义，$x$ 与 $M$ 中所有元素正交，故 $M \\subset \\{x\\}^{\\perp}$ 且 $x \\in M^{\\perp}$。由于正交补是子空间，进而有 $\\text{span } M \\subset \\{x\\}^{\\perp}$ 和 $\\text{span}\\{x\\} \\subset M^{\\perp}$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"由 $x \\perp M$ 的定义，$x$ 与 $M$ 中所有元素正交，故 $M \\subset \\{x\\}^{\\perp}$ 且 $x \\in M^{\\perp}$。由于正交补是子空间，进而有 $\\text{span } M \\subset \\{x\\}^{\\perp}$ 和 $\\text{span}\\{x\\} \\subset M^{\\perp}$。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": "E为开球时结论正确，E为开集时错误（可举反例）",
-  "note": null
+  "explanation": "错误。$E$为开球时结论成立，但$E$为一般开集时不一定，需$E$为凸集才保证分离超平面存在。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"错误。$E$为开球时结论成立，但$E$为一般开集时不一定，需$E$为凸集才保证分离超平面存在。\"}"
 }

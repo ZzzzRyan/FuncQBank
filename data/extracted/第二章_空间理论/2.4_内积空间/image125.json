@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "由于 $\\{e_n\\}$ 是正规正交基，根据定义，Fourier 级数 $\\sum_{n=1}^{\\infty} (x, e_n) e_n$ 必收敛于 $x$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"由于 $\\{e_n\\}$ 是正规正交基，根据定义，Fourier 级数 $\\sum_{n=1}^{\\infty} (x, e_n) e_n$ 必收敛于 $x$。\"}"
 }

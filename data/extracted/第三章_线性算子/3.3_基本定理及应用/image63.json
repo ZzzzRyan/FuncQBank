@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "此判断正确。一致有界性即指算子范数一致有界，而 $\\sup_{\\lambda\\in\\Lambda}\\|T_{\\lambda}\\|<+\\infty$ 正表示存在统一上界，故直接成立。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"此判断正确。一致有界性即指算子范数一致有界，而 $\\sup_{\\lambda\\in\\Lambda}\\|T_{\\lambda}\\|<+\\infty$ 正表示存在统一上界，故直接成立。\"}"
 }

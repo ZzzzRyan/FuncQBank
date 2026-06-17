@@ -29,6 +29,8 @@
   ],
   "answer": "ACD",
   "answer_raw": "ACD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "在距离空间中，单点集和有限点集是列紧的，因为它们是有限集。可列点集如 $\\mathbb{Q}$ 在 $\\mathbb{R}$ 中未必列紧。有界闭集不一定列紧，例如在无限维空间中，单位闭球不是列紧的。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在距离空间中，单点集和有限点集是列紧的，因为它们是有限集。可列点集如 $\\\\mathbb{Q}$ 在 $\\\\mathbb{R}$ 中未必列紧。有界闭集不一定列紧，例如在无限维空间中，单位闭球不是列紧的。\"}"
 }

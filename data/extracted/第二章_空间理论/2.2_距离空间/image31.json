@@ -29,6 +29,8 @@
   ],
   "answer": "ACD",
   "answer_raw": "ACD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "选项B错误：无处稠密集的并集不一定是无处稠密的，如有理数集是稠密的；正确说法是可数个无处稠密集的并集是第一纲集。选项A、C、D正确：在$\\mathbb{R}$中，单点集无处稠密；整数集和有理数集都是可数个无处稠密集的并集，因此是第一纲集。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"选项B错误：无处稠密集的并集不一定是无处稠密的，如有理数集是稠密的；正确说法是可数个无处稠密集的并集是第一纲集。选项A、C、D正确：在$\\mathbb{R}$中，单点集无处稠密；整数集和有理数集都是可数个无处稠密集的并集，因此是第一纲集。\"}"
 }

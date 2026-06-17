@@ -29,6 +29,8 @@
   ],
   "answer": "AB",
   "answer_raw": "AB (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "映射 $T$ 存在不动点的充分条件是 $X$ 为完备空间且 $T$ 为严格压缩映射（选项AB）。选项C（$T$ 连续）和D（$X$ 可分）均不充分，因为连续映射不一定有不动点，可分性与不动点存在无关。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"映射 $T$ 存在不动点的充分条件是 $X$ 为完备空间且 $T$ 为严格压缩映射（选项AB）。选项C（$T$ 连续）和D（$X$ 可分）均不充分，因为连续映射不一定有不动点，可分性与不动点存在无关。\"}"
 }

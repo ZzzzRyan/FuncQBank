@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "在 $C[a,b]$ 中，完全有界集与列紧集等价，因为 $C[a,b]$ 是完备的 Banach 空间，而在完备度量空间中，这两个概念是等价的。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在 $C[a,b]$ 中，完全有界集与列紧集等价，因为 $C[a,b]$ 是完备的 Banach 空间，而在完备度量空间中，这两个概念是等价的。\"}"
 }

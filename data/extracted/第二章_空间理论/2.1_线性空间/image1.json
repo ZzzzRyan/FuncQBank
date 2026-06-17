@@ -25,6 +25,8 @@
   ],
   "answer": "B",
   "answer_raw": "B",
-  "explanation": null,
-  "note": null
+  "explanation": "B 中两个过原点的平面在 $\\mathbb{R}^3$ 中必相交于一条直线，交集非零向量，因此和**不是**直接和；而 A 和 C 中的集合和均为直接和（交集仅原点）。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"B 中两个过原点的平面在 $\\mathbb{R}^3$ 中必相交于一条直线，交集非零向量，因此和**不是**直接和；而 A 和 C 中的集合和均为直接和（交集仅原点）。\"}"
 }

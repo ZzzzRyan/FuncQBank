@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "由延拓定义，$T_2$ 在 $D(T_1)$ 上与 $T_1$ 一致，故 $\\|T_1\\| \\leq \\|T_2\\|$ 恒成立。记住：延拓算子的范数不小于原算子，这是常见结论。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"由延拓定义，$T_2$ 在 $D(T_1)$ 上与 $T_1$ 一致，故 $\\|T_1\\| \\leq \\|T_2\\|$ 恒成立。记住：延拓算子的范数不小于原算子，这是常见结论。\"}"
 }

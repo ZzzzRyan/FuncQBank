@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "这是逆算子定理的标准结论：Banach 空间之间的有界线性双射，其逆算子必然连续。关键记忆点是 **X** 和 **Y** 必须完备（Banach空间），否则结论可能不成立。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"这是逆算子定理的标准结论：Banach 空间之间的有界线性双射，其逆算子必然连续。关键记忆点是 **X** 和 **Y** 必须完备（Banach空间），否则结论可能不成立。\"}"
 }

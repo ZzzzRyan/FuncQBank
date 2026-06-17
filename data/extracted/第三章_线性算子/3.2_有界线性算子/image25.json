@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "这是 Neumann 级数定理的经典结论：在 Banach 空间 $X$ 中，若 $\\|I - T\\| < 1$，则 $T$ 可逆，其逆算子存在且可由 $T^{-1} = \\sum_{n=0}^{\\infty} (I - T)^n$ 表示，故 $T \\in GL(X)$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"这是 Neumann 级数定理的经典结论：在 Banach 空间 $X$ 中，若 $\\|I - T\\| < 1$，则 $T$ 可逆，其逆算子存在且可由 $T^{-1} = \\sum_{n=0}^{\\infty} (I - T)^n$ 表示，故 $T \\in GL(X)$。\"}"
 }

@@ -29,6 +29,8 @@
   ],
   "answer": "D",
   "answer_raw": "D",
-  "explanation": null,
-  "note": null
+  "explanation": "在有限维向量空间中，极大线性子空间的余维数为1。$\\mathbb{R}^3$中过原点的平面是2维线性子空间，余维数为1，故是极大的；而直线是1维，不过原点的平面不是线性子空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在有限维向量空间中，极大线性子空间的余维数为1。$\\mathbb{R}^3$中过原点的平面是2维线性子空间，余维数为1，故是极大的；而直线是1维，不过原点的平面不是线性子空间。\"}"
 }

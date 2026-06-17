@@ -29,6 +29,8 @@
   ],
   "answer": "ACD",
   "answer_raw": "ACD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "距离函数 $d$ 需满足非负性、对称性和三角不等式，这些是度量空间的基本公理。正齐次性（B）不是距离的必要条件，它适用于范数而非一般距离。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"距离函数 $d$ 需满足非负性、对称性和三角不等式，这些是度量空间的基本公理。正齐次性（B）不是距离的必要条件，它适用于范数而非一般距离。\"}"
 }

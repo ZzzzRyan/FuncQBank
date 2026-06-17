@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "**线性算子的乘法一般不交换**，$ST = TS$ 不总是成立；正确说法是当 $S$ 和 $T$ **可交换**时才有 $ST = TS$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"**线性算子的乘法一般不交换**，$ST = TS$ 不总是成立；正确说法是当 $S$ 和 $T$ **可交换**时才有 $ST = TS$。\"}"
 }

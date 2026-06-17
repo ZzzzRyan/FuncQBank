@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "线性算子 $T$ 的范数 $\\|T\\|$ 定义为 $\\sup_{\\|x\\|\\leq 1}\\|Tx\\|$；若 $T$ 无界，该上确界可能为 $+\\infty$，故原陈述正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"线性算子 $T$ 的范数 $\\|T\\|$ 定义为 $\\sup_{\\|x\\|\\leq 1}\\|Tx\\|$；若 $T$ 无界，该上确界可能为 $+\\infty$，故原陈述正确。\"}"
 }

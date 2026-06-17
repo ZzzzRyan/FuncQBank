@@ -29,6 +29,8 @@
   ],
   "answer": "ABCD",
   "answer_raw": "ABCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "在 Hilbert 空间 $X$ 中，对于任意子空间 $E$，正交补满足 $E^\\perp = (\\overline{E})^\\perp$ 和 $(E^\\perp)^\\perp = \\overline{E}$，且正交分解定理给出 $X = \\overline{E} \\oplus E^\\perp = E^\\perp \\oplus (E^\\perp)^\\perp$，这些都是标准性质。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在 Hilbert 空间 $X$ 中，对于任意子空间 $E$，正交补满足 $E^\\perp = (\\overline{E})^\\perp$ 和 $(E^\\perp)^\\perp = \\overline{E}$，且正交分解定理给出 $X = \\overline{E} \\oplus E^\\perp = E^\\perp \\oplus (E^\\perp)^\\perp$，这些都是标准性质。\"}"
 }

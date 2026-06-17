@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "该不等式是算子范数的基本性质，源于范数的次可乘性，确保 $\\|T^n\\| \\leq \\|T\\|^n$ 对任意自然数 $n$ 成立，正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"该不等式是算子范数的基本性质，源于范数的次可乘性，确保 $\\|T^n\\| \\leq \\|T\\|^n$ 对任意自然数 $n$ 成立，正确。\"}"
 }

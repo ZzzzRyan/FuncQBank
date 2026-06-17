@@ -29,6 +29,8 @@
   ],
   "answer": "ACD",
   "answer_raw": "ACD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "在度量空间中，有限点集是列紧集（A正确）；列紧集是完全有界的（C正确）；列紧空间是完备的（D正确）。但列紧集不一定是紧集，正确说法是紧集需列紧且闭（B错误）。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在度量空间中，有限点集是列紧集（A正确）；列紧集是完全有界的（C正确）；列紧空间是完备的（D正确）。但列紧集不一定是紧集，正确说法是紧集需列紧且闭（B错误）。\"}"
 }

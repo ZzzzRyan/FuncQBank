@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "由最佳逼近元的正交投影性质，误差 $f-p$ 与子空间正交，故 $(f-p, p)=0$。展开内积得 $(f-p, f-p) = (f, f) - (f, p)$，其中 $(f, p) = \\sum_{j=1}^{n} a_j (\\varphi_j, f)$，因此结论正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"由最佳逼近元的正交投影性质，误差 $f-p$ 与子空间正交，故 $(f-p, p)=0$。展开内积得 $(f-p, f-p) = (f, f) - (f, p)$，其中 $(f, p) = \\sum_{j=1}^{n} a_j (\\varphi_j, f)$，因此结论正确。\"}"
 }

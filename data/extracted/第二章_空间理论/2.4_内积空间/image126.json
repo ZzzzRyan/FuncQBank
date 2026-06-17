@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "并非所有无限维 Hilbert 空间都与 $l^2$ 同构；只有可分的无限维 Hilbert 空间才与 $l^2$ 等距同构。不可分 Hilbert 空间存在，因此原说法错误。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"并非所有无限维 Hilbert 空间都与 $l^2$ 同构；只有可分的无限维 Hilbert 空间才与 $l^2$ 等距同构。不可分 Hilbert 空间存在，因此原说法错误。\"}"
 }

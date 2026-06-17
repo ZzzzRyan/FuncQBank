@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "$l^\\infty$ 是所有有界序列构成的空间，装备无穷范数（上确界范数），该空间是完备的，因此是 Banach 空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"$l^\\infty$ 是所有有界序列构成的空间，装备无穷范数（上确界范数），该空间是完备的，因此是 Banach 空间。\"}"
 }

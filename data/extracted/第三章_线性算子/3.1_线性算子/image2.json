@@ -29,6 +29,8 @@
   ],
   "answer": "D",
   "answer_raw": "D",
-  "explanation": null,
-  "note": null
+  "explanation": "对于线性算子 $T$，连续性、有界性（选项 C）和在某点连续性（选项 B）都是等价的。而核 $T^{-1}(0)$ 总是 $X$ 的子空间，无论 $T$ 是否连续，因此 D 与其他三项不等价。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"对于线性算子 $T$，连续性、有界性（选项 C）和在某点连续性（选项 B）都是等价的。而核 $T^{-1}(0)$ 总是 $X$ 的子空间，无论 $T$ 是否连续，因此 D 与其他三项不等价。\"}"
 }

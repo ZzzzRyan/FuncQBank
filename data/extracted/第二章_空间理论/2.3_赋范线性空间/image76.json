@@ -29,6 +29,8 @@
   ],
   "answer": "ACD",
   "answer_raw": "ACD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "正确选项为A、C、D。B错误，因为有限维赋范空间中的有界集不一定是紧集，例如开单位球有界但不紧；正确说法是**有界闭集**才是紧集。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"正确选项为A、C、D。B错误，因为有限维赋范空间中的有界集不一定是紧集，例如开单位球有界但不紧；正确说法是**有界闭集**才是紧集。\"}"
 }

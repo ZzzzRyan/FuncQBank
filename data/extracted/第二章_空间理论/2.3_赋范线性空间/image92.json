@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "积空间 $X_1 \\times X_2$ 的范数或度量通常定义为分量范数的和或最大，因此若分量序列均为 Cauchy 列，则其乘积序列也是 Cauchy 列。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"积空间 $X_1 \\times X_2$ 的范数或度量通常定义为分量范数的和或最大，因此若分量序列均为 Cauchy 列，则其乘积序列也是 Cauchy 列。\"}"
 }

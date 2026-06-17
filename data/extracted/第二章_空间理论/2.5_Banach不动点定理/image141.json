@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "由于 $|f'(x)| \\leq \\alpha < 1$，$f$ 是收缩映射，由 Banach 不动点定理可知方程 $f(x) - x = 0$ 在 $\\mathbb{R}$ 上有解。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"由于 $|f'(x)| \\leq \\alpha < 1$，$f$ 是收缩映射，由 Banach 不动点定理可知方程 $f(x) - x = 0$ 在 $\\mathbb{R}$ 上有解。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": "需要满足 $Tx_n$ 的极限存在",
-  "note": null
+  "explanation": "对于闭线性算子 $T$，等式 $T(\\lim x_n) = \\lim T x_n$ 不一定成立。正确说法是：必须同时有 $\\lim T x_n$ 存在，该等式才成立。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"对于闭线性算子 $T$，等式 $T(\\\\lim x_n) = \\\\lim T x_n$ 不一定成立。正确说法是：必须同时有 $\\\\lim T x_n$ 存在，该等式才成立。\"}"
 }

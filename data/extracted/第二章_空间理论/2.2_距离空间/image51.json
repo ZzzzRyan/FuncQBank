@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "在有限维空间 $\\mathbb{R}^n$ 中，有界闭集是紧集，而紧集总是列紧的。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在有限维空间 $\\mathbb{R}^n$ 中，有界闭集是紧集，而紧集总是列紧的。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "压缩映射满足 Lipschitz 条件 $d(f(x), f(y)) \\leq k d(x, y)$，其中 $0 \\leq k < 1$，这直接蕴含了映射的连续性。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"压缩映射满足 Lipschitz 条件 $d(f(x), f(y)) \\leq k d(x, y)$，其中 $0 \\leq k < 1$，这直接蕴含了映射的连续性。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "根据Banach不动点定理，严格压缩映射 $T$ 在完备距离空间 $X$ 中有唯一不动点，且从任意初始点出发的迭代序列都收敛到该不动点，因此不动点的存在与迭代初始点选择无关。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"根据Banach不动点定理，严格压缩映射 $T$ 在完备距离空间 $X$ 中有唯一不动点，且从任意初始点出发的迭代序列都收敛到该不动点，因此不动点的存在与迭代初始点选择无关。\"}"
 }

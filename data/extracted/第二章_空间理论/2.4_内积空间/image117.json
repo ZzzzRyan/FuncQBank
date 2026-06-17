@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。$Hilbert$ 空间是完备的内积空间，其范数由内积诱导，因此它一定是 $Banach$ 空间。正确说法是 $Hilbert$ 空间是 $Banach$ 空间的一种。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"错误。$Hilbert$ 空间是完备的内积空间，其范数由内积诱导，因此它一定是 $Banach$ 空间。正确说法是 $Hilbert$ 空间是 $Banach$ 空间的一种。\"}"
 }

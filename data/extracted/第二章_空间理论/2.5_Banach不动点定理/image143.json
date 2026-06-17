@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。因为严格压缩映射需满足存在常数 $k \\in [0,1)$ 使得 $d(Tx, Ty) \\leq k d(x, y)$，而题干仅 $d(Tx, Ty) < d(x, y)$，可能无统一常数 $k<1$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"错误。因为严格压缩映射需满足存在常数 $k \\in [0,1)$ 使得 $d(Tx, Ty) \\leq k d(x, y)$，而题干仅 $d(Tx, Ty) < d(x, y)$，可能无统一常数 $k<1$。\"}"
 }

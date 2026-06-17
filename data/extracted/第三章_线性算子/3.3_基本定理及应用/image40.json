@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正确。这基于 **Hahn-Banach定理**，该定理保证在赋范线性空间上存在足够多的连续线性泛函，使得对于任意非零元素，存在一个泛函将其映射为非零值，从而判别元素是否为0元。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"正确。这基于 **Hahn-Banach定理**，该定理保证在赋范线性空间上存在足够多的连续线性泛函，使得对于任意非零元素，存在一个泛函将其映射为非零值，从而判别元素是否为0元。\"}"
 }

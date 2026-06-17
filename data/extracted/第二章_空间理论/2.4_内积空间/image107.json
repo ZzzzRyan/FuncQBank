@@ -29,6 +29,8 @@
   ],
   "answer": "BC",
   "answer_raw": "BC (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "无穷维可分 Hilbert 空间都同构于 $l^2$，而 $L^2[0,1]$ 作为无穷维可分 Hilbert 空间，也与 $l^2$ 同构。选项 $\\mathbb{R}^n$ 和 $\\mathbb{C}^n$ 是有限维的，不适用于无穷维同构。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"无穷维可分 Hilbert 空间都同构于 $l^2$，而 $L^2[0,1]$ 作为无穷维可分 Hilbert 空间，也与 $l^2$ 同构。选项 $\\mathbb{R}^n$ 和 $\\mathbb{C}^n$ 是有限维的，不适用于无穷维同构。\"}"
 }

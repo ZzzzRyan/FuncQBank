@@ -124,8 +124,41 @@ def _fix_latex_escapes(s: str) -> str:
     return "".join(out)
 
 
-def parse_json_loose(text: str) -> dict[str, Any]:
-    """Parse JSON that may be fenced, prose-wrapped, or contain unescaped LaTeX."""
+def _double_stray_backslashes(s: str) -> str:
+    """Double every backslash that isn't part of a JSON ``\\\\`` or ``\\"`` escape.
+
+    This rescues LaTeX commands the model wrote with a *single* backslash
+    (``\\rightarrow``, ``\\neq``, ``\\frac`` …): without it ``json.loads`` happily
+    eats ``\\r``/``\\t``/``\\n``/``\\b``/``\\f`` as control chars, silently turning
+    ``$x_n \\rightarrow x$`` into ``$x_n <CR>ightarrow x$``. Unlike
+    :func:`_fix_latex_escapes` this deliberately does NOT treat ``r/t/n/b/f/u``
+    as valid — that very leniency is what corrupts inline LaTeX. It keeps already
+    correct ``\\\\`` pairs intact, so it's safe to run on well-formed input too."""
+    out: list[str] = []
+    i, n = 0, len(s)
+    while i < n:
+        c = s[i]
+        if c == "\\":
+            nxt = s[i + 1] if i + 1 < n else ""
+            if nxt in '\\"':
+                out.append(c)
+                out.append(nxt)
+                i += 2
+                continue
+            out.append("\\\\")
+            i += 1
+            continue
+        out.append(c)
+        i += 1
+    return "".join(out)
+
+
+def parse_json_loose(text: str, latex_strict: bool = False) -> dict[str, Any]:
+    """Parse JSON that may be fenced, prose-wrapped, or contain unescaped LaTeX.
+
+    ``latex_strict`` doubles stray backslashes *before* parsing — use it when the
+    payload is mostly inline ``$...$`` LaTeX (e.g. generated explanations) and has
+    no legitimate ``\\n``/``\\t`` whitespace escapes to preserve."""
     t = text.strip()
     if t.startswith("```"):
         segs = t.split("```", 2)
@@ -136,6 +169,11 @@ def parse_json_loose(text: str) -> dict[str, Any]:
     start, end = t.find("{"), t.rfind("}")
     if start != -1 and end != -1 and end > start:
         t = t[start : end + 1]
+    if latex_strict:
+        try:
+            return json.loads(_double_stray_backslashes(t))
+        except json.JSONDecodeError:
+            pass  # fall back to the lenient path below
     try:
         return json.loads(t)
     except json.JSONDecodeError:

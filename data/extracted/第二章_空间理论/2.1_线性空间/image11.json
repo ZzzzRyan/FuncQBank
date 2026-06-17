@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "该说法错误。有限闭区间上的连续函数不一定是有界变差函数，例如 $f(x) = x \\sin(1/x)$ 在 $[0,1]$ 上连续但变差无界。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"该说法错误。有限闭区间上的连续函数不一定是有界变差函数，例如 $f(x) = x \\sin(1/x)$ 在 $[0,1]$ 上连续但变差无界。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "对偶空间 $X'$ 总是 Banach 空间，无论 $X$ 是否完备，这是泛函分析中的基本定理。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"对偶空间 $X'$ 总是 Banach 空间，无论 $X$ 是否完备，这是泛函分析中的基本定理。\"}"
 }

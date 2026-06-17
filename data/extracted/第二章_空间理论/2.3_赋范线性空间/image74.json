@@ -29,6 +29,8 @@
   ],
   "answer": "ABCD",
   "answer_raw": "ABCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "在赋范线性空间 $X$ 中，所有选项都等价于 $X$ 是有限维空间，因为有限维空间的紧性特征表现为有界集列紧、有界闭集紧、单位球面列紧和单位闭球紧，反之这些性质也刻画有限维性。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在赋范线性空间 $X$ 中，所有选项都等价于 $X$ 是有限维空间，因为有限维空间的紧性特征表现为有界集列紧、有界闭集紧、单位球面列紧和单位闭球紧，反之这些性质也刻画有限维性。\"}"
 }

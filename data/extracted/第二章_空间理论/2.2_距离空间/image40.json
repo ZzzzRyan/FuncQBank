@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正确。根据完备化定理，任何距离空间都可以被完备化，即存在一个完备的距离空间与之等距同构，这是泛函分析中的一个基本结果。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"正确。根据完备化定理，任何距离空间都可以被完备化，即存在一个完备的距离空间与之等距同构，这是泛函分析中的一个基本结果。\"}"
 }

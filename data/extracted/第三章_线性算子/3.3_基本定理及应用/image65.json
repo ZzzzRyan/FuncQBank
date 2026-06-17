@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。一致有界原理要求算子是连续的（有界线性算子）；如果算子仅线性而不连续，点点有界不一定蕴含一致有界。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"错误。一致有界原理要求算子是连续的（有界线性算子）；如果算子仅线性而不连续，点点有界不一定蕴含一致有界。\"}"
 }

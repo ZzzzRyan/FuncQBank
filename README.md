@@ -44,7 +44,11 @@ uv run scripts/extract.py                 # 全量；已提取的会自动跳过
 uv run scripts/extract.py --limit 5       # 先小批量试跑看看效果
 uv run scripts/extract.py --retry-flagged # 把被标记的（多为网关偶发空响应）重试一遍
 
-# 2) 导入数据库（幂等；已「校对」的题目不会被覆盖）
+# 2) 为缺少解析的题目批量生成简短解析（默认不覆盖已有解析、不处理 flagged）
+uv run scripts/generate_explanations.py --limit 5  # 先小批量试跑
+uv run scripts/generate_explanations.py
+
+# 3) 导入数据库（幂等；已「校对」的题目不会被覆盖）
 uv run scripts/seed.py
 ```
 
@@ -174,7 +178,7 @@ app/
   routers/           auth_routes / practice / admin
   templates/  static/  (app.css, app.js, vendor/katex 内置)
 scripts/
-  extract.py  seed.py  export.py  create_admin.py
+  extract.py  generate_explanations.py  seed.py  export.py  create_admin.py
 data/extracted/      提取结果（内容事实源，入 git）
 docs/                题目原图（仅管理员可见）
 Dockerfile  docker-compose.yml

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。因为当 $x_0 \\in M_0$ 时，直和 $X = \\{\\alpha x_0\\} \\oplus M_0$ 不成立。正确表述是：$M_0$ 是极大线性子空间当且仅当存在 $x_0 \\notin M_0$ 使得 $X = \\{\\alpha x_0\\} \\oplus M_0$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"错误。因为当 $x_0 \\in M_0$ 时，直和 $X = \\{\\alpha x_0\\} \\oplus M_0$ 不成立。正确表述是：$M_0$ 是极大线性子空间当且仅当存在 $x_0 \\notin M_0$ 使得 $X = \\{\\alpha x_0\\} \\oplus M_0$。\"}"
 }

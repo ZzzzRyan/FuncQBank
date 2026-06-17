@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "Newton迭代格式的标准形式为 $x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}$，对于 $f(x) = x^3 - x^2 - 1$，其导数 $f'(x) = 3x^2 - 2x$，代入后化简即得题干中的表达式，故正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"Newton迭代格式的标准形式为 $x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}$，对于 $f(x) = x^3 - x^2 - 1$，其导数 $f'(x) = 3x^2 - 2x$，代入后化简即得题干中的表达式，故正确。\"}"
 }

@@ -29,6 +29,8 @@
   ],
   "answer": "D",
   "answer_raw": "D",
-  "explanation": null,
-  "note": null
+  "explanation": "$n$ 维实内积空间是有限维实赋范空间，由范数等价性必拓扑同构于 $\\mathbb{R}^n$。选项 A $\\mathbb{C}^n$ 是复空间，B $l^2$ 是无限维空间，C $\\mathbb{K}^n$ 未指定实数，均不正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"$n$ 维实内积空间是有限维实赋范空间，由范数等价性必拓扑同构于 $\\mathbb{R}^n$。选项 A $\\mathbb{C}^n$ 是复空间，B $l^2$ 是无限维空间，C $\\mathbb{K}^n$ 未指定实数，均不正确。\"}"
 }

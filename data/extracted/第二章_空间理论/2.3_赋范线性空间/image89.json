@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "在赋范线性空间中，范数诱导的距离定义为 $d(x,y)=\\|x-y\\|$，因此向量列依范数收敛（即 $\\|x_n - x\\| \\to 0$）与按此距离收敛完全等价。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在赋范线性空间中，范数诱导的距离定义为 $d(x,y)=\\|x-y\\|$，因此向量列依范数收敛（即 $\\|x_n - x\\| \\to 0$）与按此距离收敛完全等价。\"}"
 }

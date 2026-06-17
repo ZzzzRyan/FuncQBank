@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "闭线性算子的定义直接蕴含其图像 $G(T)$ 在乘积空间 $X \\times Y$ 中是闭子空间，这是闭算子的基本特征，无需额外验证。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"闭线性算子的定义直接蕴含其图像 $G(T)$ 在乘积空间 $X \\times Y$ 中是闭子空间，这是闭算子的基本特征，无需额外验证。\"}"
 }

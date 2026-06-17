@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "紧性与列紧性在一般度量空间中并不等价，例如在无限维赋范空间中，闭单位球可能列紧但不紧。正确说法是，紧性等价于列紧性加上空间的完备性。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"紧性与列紧性在一般度量空间中并不等价，例如在无限维赋范空间中，闭单位球可能列紧但不紧。正确说法是，紧性等价于列紧性加上空间的完备性。\"}"
 }

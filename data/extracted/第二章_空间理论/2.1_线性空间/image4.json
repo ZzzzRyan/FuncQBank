@@ -29,6 +29,8 @@
   ],
   "answer": "ABCD",
   "answer_raw": "ABCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "所有选项均正确。A是线性相关的标准等价定义；B是当首向量非零时的相关递推刻画；C由线性相关定义易得添加任意向量仍相关；D是包含零向量必然导致线性相关。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"所有选项均正确。A是线性相关的标准等价定义；B是当首向量非零时的相关递推刻画；C由线性相关定义易得添加任意向量仍相关；D是包含零向量必然导致线性相关。\"}"
 }

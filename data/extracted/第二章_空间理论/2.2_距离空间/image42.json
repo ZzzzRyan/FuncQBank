@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "$C[0,1]$ 装备一致范数后是Banach空间，因此是完备距离空间。这是泛函分析中的标准结论。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"$C[0,1]$ 装备一致范数后是Banach空间，因此是完备距离空间。这是泛函分析中的标准结论。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "在 $C[0,1]$ 上，最大值范数 $\\|x\\|_2$ 总是控制 $L^1$ 范数 $\\|x\\|_1$，因为 $\\int_0^1 |x(t)| dt \\leq \\max_{t\\in[0,1]} |x(t)|$，所以 $\\|x\\|_2$ 强于 $\\|x\\|_1$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"在 $C[0,1]$ 上，最大值范数 $\\|x\\|_2$ 总是控制 $L^1$ 范数 $\\|x\\|_1$，因为 $\\int_0^1 |x(t)| dt \\leq \\max_{t\\in[0,1]} |x(t)|$，所以 $\\|x\\|_2$ 强于 $\\|x\\|_1$。\"}"
 }

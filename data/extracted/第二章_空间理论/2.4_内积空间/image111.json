@@ -29,6 +29,8 @@
   ],
   "answer": "ABCD",
   "answer_raw": "ABCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "所有选项均正确：A 是贝塞尔不等式，保证级数收敛；B 是投影的误差平方公式；C 是帕塞瓦尔恒等式的等价条件；D 由 A 直接推出，序列属于 $l^2$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"所有选项均正确：A 是贝塞尔不等式，保证级数收敛；B 是投影的误差平方公式；C 是帕塞瓦尔恒等式的等价条件；D 由 A 直接推出，序列属于 $l^2$。\"}"
 }

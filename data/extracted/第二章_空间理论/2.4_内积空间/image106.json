@@ -29,6 +29,8 @@
   ],
   "answer": "A",
   "answer_raw": "A",
-  "explanation": null,
-  "note": null
+  "explanation": "Schmidt 正交化从线性无关集得到正规正交集，但基要求集合完备并张成整个空间，因此不一定构成基。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"Schmidt 正交化从线性无关集得到正规正交集，但基要求集合完备并张成整个空间，因此不一定构成基。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "这是Neumann级数定理，关键条件是 $\\|T\\| < 1$，此时逆算子 $(I - T)^{-1}$ 存在且等于级数 $\\sum_{k=0}^{\\infty} T^k$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"这是Neumann级数定理，关键条件是 $\\|T\\| < 1$，此时逆算子 $(I - T)^{-1}$ 存在且等于级数 $\\sum_{k=0}^{\\infty} T^k$。\"}"
 }

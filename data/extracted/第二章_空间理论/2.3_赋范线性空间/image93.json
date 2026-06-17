@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "积空间 $X_1 \\times X_2$ 中的收敛由坐标收敛定义，因此序列收敛于 $(x_1, x_2)$ 当且仅当 $x_1^{(n)} \\to x_1$ 且 $x_2^{(n)} \\to x_2$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"积空间 $X_1 \\times X_2$ 中的收敛由坐标收敛定义，因此序列收敛于 $(x_1, x_2)$ 当且仅当 $x_1^{(n)} \\to x_1$ 且 $x_2^{(n)} \\to x_2$。\"}"
 }

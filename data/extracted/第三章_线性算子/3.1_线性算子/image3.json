@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": "$x$ 需满足 $\\|x\\| \\leq 1$。",
-  "note": null
+  "explanation": "原陈述错误，因为它没有指定 $x$ 的范围。正确说法是：存在 $M > 0$，使得对所有满足 $\\|x\\| \\leq 1$ 的 $x$，有 $\\|Tx\\| \\leq M$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"原陈述错误，因为它没有指定 $x$ 的范围。正确说法是：存在 $M > 0$，使得对所有满足 $\\|x\\| \\leq 1$ 的 $x$，有 $\\|Tx\\| \\leq M$。\"}"
 }

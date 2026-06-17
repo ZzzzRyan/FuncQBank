@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "内积空间中的 $正交集$ 通常定义为非零向量的集合，由于它们两两正交，因此是线性无关的。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"内积空间中的 $正交集$ 通常定义为非零向量的集合，由于它们两两正交，因此是线性无关的。\"}"
 }

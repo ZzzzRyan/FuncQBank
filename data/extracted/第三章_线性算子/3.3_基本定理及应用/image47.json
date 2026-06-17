@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正确，这是开映射定理的直接结论：Banach 空间之间的有界满射线性算子一定是开映射。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"正确，这是开映射定理的直接结论：Banach 空间之间的有界满射线性算子一定是开映射。\"}"
 }

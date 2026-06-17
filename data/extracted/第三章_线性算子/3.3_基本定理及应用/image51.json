@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "赋予最大模范数 $\\|x\\| = \\max_{t\\in[0,1]} |x(t)|$ 的 $C[0,1]$ 是完备的，这是泛函分析中的经典结果，因此它是 Banach 空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"赋予最大模范数 $\\|x\\| = \\max_{t\\in[0,1]} |x(t)|$ 的 $C[0,1]$ 是完备的，这是泛函分析中的经典结果，因此它是 Banach 空间。\"}"
 }

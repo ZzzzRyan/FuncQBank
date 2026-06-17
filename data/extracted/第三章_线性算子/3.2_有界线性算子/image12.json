@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "在赋范线性空间中，线性算子的**有界性**与**连续性**等价，因此有界线性算子 $T$ 必然连续。记忆点：这是泛函分析的基本定理，强调线性算子的有界性直接推出连续性。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"在赋范线性空间中，线性算子的**有界性**与**连续性**等价，因此有界线性算子 $T$ 必然连续。记忆点：这是泛函分析的基本定理，强调线性算子的有界性直接推出连续性。\"}"
 }

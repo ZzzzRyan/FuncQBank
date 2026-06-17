@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "在线性算子中，将任何有界集映成有界集等价于连续性，而在赋范空间中连续线性算子必然是有界的，因此 $T$ 为有界线性算子。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"在线性算子中，将任何有界集映成有界集等价于连续性，而在赋范空间中连续线性算子必然是有界的，因此 $T$ 为有界线性算子。\"}"
 }

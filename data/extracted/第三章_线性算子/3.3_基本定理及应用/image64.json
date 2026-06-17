@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "点点有界不一定蕴含一致有界，除非 $X$ 是完备的赋范空间（Banach空间）。正确说法是：若 $X$ 是Banach空间，则 $\\{T_\\lambda\\}$ 点点有界当且仅当一致有界。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"点点有界不一定蕴含一致有界，除非 $X$ 是完备的赋范空间（Banach空间）。正确说法是：若 $X$ 是Banach空间，则 $\\{T_\\lambda\\}$ 点点有界当且仅当一致有界。\"}"
 }

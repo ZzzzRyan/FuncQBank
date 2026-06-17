@@ -25,6 +25,8 @@
   ],
   "answer": "A",
   "answer_raw": "A",
-  "explanation": null,
-  "note": null
+  "explanation": "A选项中，$\\mathbb{R}^3$ 中过原点的直线是维数为1的子空间，不是极大线性子空间；正确说法是，在 $\\mathbb{R}^3$ 中极大线性子空间应为过原点的平面（维数2）。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"A选项中，$\\mathbb{R}^3$ 中过原点的直线是维数为1的子空间，不是极大线性子空间；正确说法是，在 $\\mathbb{R}^3$ 中极大线性子空间应为过原点的平面（维数2）。\"}"
 }

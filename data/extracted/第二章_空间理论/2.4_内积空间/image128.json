@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "不是所有 Hilbert 空间都具有可数的标准正交基；只有**可分**的 Hilbert 空间才有可数的标准正交基。非可分的 Hilbert 空间具有不可数的标准正交基。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"不是所有 Hilbert 空间都具有可数的标准正交基；只有**可分**的 Hilbert 空间才有可数的标准正交基。非可分的 Hilbert 空间具有不可数的标准正交基。\"}"
 }

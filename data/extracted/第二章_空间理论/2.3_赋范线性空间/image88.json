@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "赋范线性空间通过范数诱导的距离 $d(x, y) = \\|x - y\\|$ 自动成为距离空间，因此该陈述正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"赋范线性空间通过范数诱导的距离 $d(x, y) = \\|x - y\\|$ 自动成为距离空间，因此该陈述正确。\"}"
 }

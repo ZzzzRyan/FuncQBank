@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "该命题是线性算子连续性的标准等价刻画，直接对应拓扑中连续映射的定义：开集的原像为开集。记忆时注意其在赋范空间中的适用性。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"该命题是线性算子连续性的标准等价刻画，直接对应拓扑中连续映射的定义：开集的原像为开集。记忆时注意其在赋范空间中的适用性。\"}"
 }

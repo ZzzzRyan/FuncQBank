@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "该命题正确，是 Hahn-Banach 定理的直接推论：赋范线性空间的对偶空间 $X'$ 能分离不同点，即存在连续线性泛函 $f$ 使得 $f(x_1) \\neq f(x_2)$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"该命题正确，是 Hahn-Banach 定理的直接推论：赋范线性空间的对偶空间 $X'$ 能分离不同点，即存在连续线性泛函 $f$ 使得 $f(x_1) \\neq f(x_2)$。\"}"
 }

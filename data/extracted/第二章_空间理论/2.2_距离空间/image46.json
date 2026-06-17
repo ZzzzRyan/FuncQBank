@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "无理数集在 $\\mathbb{R}$ 中稠密，因为任意开区间 $(a,b)$ 都包含无理数，这是稠密子集的等价定义。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"无理数集在 $\\mathbb{R}$ 中稠密，因为任意开区间 $(a,b)$ 都包含无理数，这是稠密子集的等价定义。\"}"
 }

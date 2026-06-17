@@ -29,6 +29,8 @@
   ],
   "answer": "D",
   "answer_raw": "D",
-  "explanation": null,
-  "note": null
+  "explanation": "在 $C[a,b]$ 中，max 距离收敛定义为 **一致收敛**。点态收敛只保证逐点收敛，但不一定最大范数收敛；几乎处处收敛是测度论概念，不直接等价。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在 $C[a,b]$ 中，max 距离收敛定义为 **一致收敛**。点态收敛只保证逐点收敛，但不一定最大范数收敛；几乎处处收敛是测度论概念，不直接等价。\"}"
 }

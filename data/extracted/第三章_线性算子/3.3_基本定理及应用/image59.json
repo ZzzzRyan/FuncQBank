@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "闭线性算子不一定是有界的；正确说法是，闭线性算子只有在定义域为闭子空间时（如闭图像定理条件）才是有界线性算子。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"闭线性算子不一定是有界的；正确说法是，闭线性算子只有在定义域为闭子空间时（如闭图像定理条件）才是有界线性算子。\"}"
 }

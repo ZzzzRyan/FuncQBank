@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正确。这是一个经典结果，表明连续函数的 Fourier 级数不一定处处收敛；具体地，对任意点 $t_0$，可以构造 $f \\in C[a,b]$ 使其 Fourier 级数在 $t_0$ 发散。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"正确。这是一个经典结果，表明连续函数的 Fourier 级数不一定处处收敛；具体地，对任意点 $t_0$，可以构造 $f \\in C[a,b]$ 使其 Fourier 级数在 $t_0$ 发散。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "由正交分解 $\\|x\\|^2 = \\|\\sum_{n=1}^N (x, e_n) e_n\\|^2 + \\|x - \\sum_{n=1}^N (x, e_n) e_n\\|^2$ 直接可得，这是贝塞尔不等式的等价形式。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"由正交分解 $\\|x\\|^2 = \\|\\sum_{n=1}^N (x, e_n) e_n\\|^2 + \\|x - \\sum_{n=1}^N (x, e_n) e_n\\|^2$ 直接可得，这是贝塞尔不等式的等价形式。\"}"
 }

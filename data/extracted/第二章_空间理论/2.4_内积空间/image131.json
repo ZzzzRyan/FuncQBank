@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正确。内积空间中子集的正交补总是闭子空间，这是一个基本性质，与 $M$ 是否闭无关。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"正确。内积空间中子集的正交补总是闭子空间，这是一个基本性质，与 $M$ 是否闭无关。\"}"
 }

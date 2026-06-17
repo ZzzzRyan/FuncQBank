@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "$l^{\\infty}$ 包含不可数的离散子集（如所有0-1序列），因此不是可分的。正确表述为 $l^{\\infty}$ 不是可分的距离空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"$l^{\\infty}$ 包含不可数的离散子集（如所有0-1序列），因此不是可分的。正确表述为 $l^{\\infty}$ 不是可分的距离空间。\"}"
 }

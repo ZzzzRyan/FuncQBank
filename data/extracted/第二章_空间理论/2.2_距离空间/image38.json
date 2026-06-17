@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "$l^p$ $(1 \\leq p < +\\infty)$ 是赋范线性空间，其范数 $\\|x\\|_p = \\left( \\sum_{n=1}^{\\infty} |x_n|^p \\right)^{1/p}$ 诱导度量，因此自动是距离线性空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"$l^p$ $(1 \\leq p < +\\infty)$ 是赋范线性空间，其范数 $\\|x\\|_p = \\left( \\sum_{n=1}^{\\infty} |x_n|^p \\right)^{1/p}$ 诱导度量，因此自动是距离线性空间。\"}"
 }

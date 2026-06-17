@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "在选定基后，线性算子的矩阵表示是唯一的，因此可建立一一对应关系。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"在选定基后，线性算子的矩阵表示是唯一的，因此可建立一一对应关系。\"}"
 }

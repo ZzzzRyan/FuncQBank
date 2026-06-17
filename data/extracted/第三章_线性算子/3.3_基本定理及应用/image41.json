@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正确。闭超平面在赋范空间中恰好由非零连续线性泛函的等值集定义，反之，任何这样的集合都是闭的。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"正确。闭超平面在赋范空间中恰好由非零连续线性泛函的等值集定义，反之，任何这样的集合都是闭的。\"}"
 }

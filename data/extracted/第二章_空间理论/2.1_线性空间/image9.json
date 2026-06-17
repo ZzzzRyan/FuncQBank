@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "$n$ 维复向量集合即 $\\mathbb{C}^n$，在标准向量加法和复数数乘下满足线性空间公理，因此构成复线性空间，这是线性空间的原型之一。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"$n$ 维复向量集合即 $\\mathbb{C}^n$，在标准向量加法和复数数乘下满足线性空间公理，因此构成复线性空间，这是线性空间的原型之一。\"}"
 }

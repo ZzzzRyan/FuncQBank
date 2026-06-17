@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正确。若 $Y$ 为 Banach 空间，则 $L(X,Y)$ 按算子范数完备，这是一个基本定理，强调 $Y$ 的完备性足够，无需 $X$ 完备。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"正确。若 $Y$ 为 Banach 空间，则 $L(X,Y)$ 按算子范数完备，这是一个基本定理，强调 $Y$ 的完备性足够，无需 $X$ 完备。\"}"
 }

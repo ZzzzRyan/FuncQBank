@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "线性算子 $T$ 在 $0$ 点连续等价于 $T$ 在 $0$ 处**有界**，由线性性可推出 $T$ 在整个 $X$ 上连续，这是线性算子连续性与有界性等价的体现。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"线性算子 $T$ 在 $0$ 点连续等价于 $T$ 在 $0$ 处**有界**，由线性性可推出 $T$ 在整个 $X$ 上连续，这是线性算子连续性与有界性等价的体现。\"}"
 }

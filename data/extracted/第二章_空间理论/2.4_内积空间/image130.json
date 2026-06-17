@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": "题干中空间写为X，但公式中使用了H，可能为笔误，但按原文提取。"
+  "explanation": "正交分解定理表明，$\\overline{\\text{span } M} = H$ 当且仅当 $M^\\perp = \\{0\\}$，因此该命题在 Hilbert 空间中恒成立。",
+  "note": "题干中空间写为X，但公式中使用了H，可能为笔误，但按原文提取。",
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"正交分解定理表明，$\\overline{\\text{span } M} = H$ 当且仅当 $M^\\perp = \\{0\\}$，因此该命题在 Hilbert 空间中恒成立。\"}"
 }

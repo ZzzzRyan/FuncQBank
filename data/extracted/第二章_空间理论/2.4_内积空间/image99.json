@@ -29,6 +29,8 @@
   ],
   "answer": "AC",
   "answer_raw": "AC (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "内积满足非负性和对第一变元的线性。注意，复内积空间中，对称性应改为共轭对称性 $\\langle x, y \\rangle = \\overline{\\langle y, x \\rangle}$，而对第二变元是共轭线性的，不是线性的。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"内积满足非负性和对第一变元的线性。注意，复内积空间中，对称性应改为共轭对称性 $\\langle x, y \\rangle = \\overline{\\langle y, x \\rangle}$，而对第二变元是共轭线性的，不是线性的。\"}"
 }

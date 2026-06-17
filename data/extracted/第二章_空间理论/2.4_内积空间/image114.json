@@ -29,6 +29,8 @@
   ],
   "answer": "CD",
   "answer_raw": "CD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "要使 $X$ 为 $M$ 与 $N$ 的直和，必须同时满足 $X = M + N$ 和 $M \\cap N = \\{0\\}$。选项A错误，因为并集 $M \\cup N = X$ 不保证线性结构，正确说法是 $X = M + N$；选项B错误，因为子空间交集至少包含零向量，正确说法是 $M \\cap N = \\{0\\}$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"要使 $X$ 为 $M$ 与 $N$ 的直和，必须同时满足 $X = M + N$ 和 $M \\cap N = \\{0\\}$。选项A错误，因为并集 $M \\cup N = X$ 不保证线性结构，正确说法是 $X = M + N$；选项B错误，因为子空间交集至少包含零向量，正确说法是 $M \\cap N = \\{0\\}$。\"}"
 }

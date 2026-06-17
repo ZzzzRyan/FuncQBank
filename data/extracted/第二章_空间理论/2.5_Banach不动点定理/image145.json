@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "$[0,1]$ 是实数集的闭子集，而实数集在标准度量下完备，因此闭区间 $[0,1]$ 也是完备距离空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"$[0,1]$ 是实数集的闭子集，而实数集在标准度量下完备，因此闭区间 $[0,1]$ 也是完备距离空间。\"}"
 }

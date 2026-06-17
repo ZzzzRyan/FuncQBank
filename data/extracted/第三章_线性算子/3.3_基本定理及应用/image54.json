@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "两个范数都使 $X$ 完备（Banach 空间），但不一定等价。等价范数需满足拓扑相同，而完备性不保证这一点，例如在 $\\ell^1$ 和 $\\ell^2$ 范数下的反例。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"两个范数都使 $X$ 完备（Banach 空间），但不一定等价。等价范数需满足拓扑相同，而完备性不保证这一点，例如在 $\\ell^1$ 和 $\\ell^2$ 范数下的反例。\"}"
 }

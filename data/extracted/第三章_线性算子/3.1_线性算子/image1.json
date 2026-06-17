@@ -29,6 +29,8 @@
   ],
   "answer": "ABC",
   "answer_raw": "ABC (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "A 是线性算子的定义，B 中当 $Y = \\mathbb{K}$ 时 $T$ 为线性泛函，C 由线性性保证值域为子空间。D 错误，因为线性算子不一定保持线性无关性，正确说法是 **只有单射算子才保持线性无关性**。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"A 是线性算子的定义，B 中当 $Y = \\mathbb{K}$ 时 $T$ 为线性泛函，C 由线性性保证值域为子空间。D 错误，因为线性算子不一定保持线性无关性，正确说法是 **只有单射算子才保持线性无关性**。\"}"
 }

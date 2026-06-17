@@ -29,6 +29,8 @@
   ],
   "answer": "AB",
   "answer_raw": "AB (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "连续映射的定义是开集的原像是开集，故A正确；由补集关系知闭集的原像也是闭集，故B正确。C和D描述的是开映射和闭映射，连续映射不一定满足。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"连续映射的定义是开集的原像是开集，故A正确；由补集关系知闭集的原像也是闭集，故B正确。C和D描述的是开映射和闭映射，连续映射不一定满足。\"}"
 }

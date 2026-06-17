@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正确。题干正是线性算子点连续的序列定义：当 $x_n \\rightarrow x_0$ 时，必有 $Tx_n \\rightarrow Tx_0$，这是连续性在泛函分析中的基本刻画。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"正确。题干正是线性算子点连续的序列定义：当 $x_n \\rightarrow x_0$ 时，必有 $Tx_n \\rightarrow Tx_0$，这是连续性在泛函分析中的基本刻画。\"}"
 }

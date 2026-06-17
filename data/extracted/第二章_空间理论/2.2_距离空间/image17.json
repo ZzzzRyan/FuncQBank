@@ -29,6 +29,8 @@
   ],
   "answer": "ABCD",
   "answer_raw": "ABCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "所有选项都是常见的 Banach 空间，因此完备：$C[0,1]$ 在 supremum 范数下，$l^1$ 在 $\\ell^1$ 范数下，$l^\\infty$ 在 $\\ell^\\infty$ 范数下，$\\mathbb{R}^n$ 作为有限维空间自动完备。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"所有选项都是常见的 Banach 空间，因此完备：$C[0,1]$ 在 supremum 范数下，$l^1$ 在 $\\ell^1$ 范数下，$l^\\infty$ 在 $\\ell^\\infty$ 范数下，$\\mathbb{R}^n$ 作为有限维空间自动完备。\"}"
 }

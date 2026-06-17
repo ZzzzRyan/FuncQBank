@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "题干假设 $\\sup_{\\lambda\\in\\Lambda}\\|T_\\lambda x\\|<+\\infty$ 对所有 $x\\in X$ 成立，这正是点点有界的定义，因此结论直接成立。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"题干假设 $\\sup_{\\lambda\\in\\Lambda}\\|T_\\lambda x\\|<+\\infty$ 对所有 $x\\in X$ 成立，这正是点点有界的定义，因此结论直接成立。\"}"
 }

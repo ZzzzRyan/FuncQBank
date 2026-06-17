@@ -29,6 +29,8 @@
   ],
   "answer": "A",
   "answer_raw": "A",
-  "explanation": null,
-  "note": null
+  "explanation": "在距离空间中，紧集一定是有界集，因此A正确。注意：紧集必是闭集（C错误），其子集不一定紧（B错误，正确说法是闭子集紧），连续映射将紧集映为紧集（D错误）。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在距离空间中，紧集一定是有界集，因此A正确。注意：紧集必是闭集（C错误），其子集不一定紧（B错误，正确说法是闭子集紧），连续映射将紧集映为紧集（D错误）。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "距离空间只需满足距离公理，而赋范线性空间还需具备线性结构和由范数诱导的距离 $d(x,y)=\\|x-y\\|$。因此，距离空间未必是赋范线性空间。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"距离空间只需满足距离公理，而赋范线性空间还需具备线性结构和由范数诱导的距离 $d(x,y)=\\|x-y\\|$。因此，距离空间未必是赋范线性空间。\"}"
 }

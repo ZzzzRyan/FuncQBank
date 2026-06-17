@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "正交集必线性无关，因为若 $\\sum a_i x_i = 0$，内积自身可推得 $a_i = 0$；反之，线性无关集不一定正交，例如 $\\mathbb{R}^2$ 中 $(1,0)$ 和 $(1,1)$ 线性无关但不正交。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"正交集必线性无关，因为若 $\\sum a_i x_i = 0$，内积自身可推得 $a_i = 0$；反之，线性无关集不一定正交，例如 $\\mathbb{R}^2$ 中 $(1,0)$ 和 $(1,1)$ 线性无关但不正交。\"}"
 }

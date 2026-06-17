@@ -29,6 +29,8 @@
   ],
   "answer": "B",
   "answer_raw": "B",
-  "explanation": null,
-  "note": null
+  "explanation": "B选项中的等式是Parseval等式，它要求 $\\{e_n\\}$ 是完备正交系，但题干只给出正规正交集，未必完备，因此未必成立。正确说法是：若 $\\{e_n\\}$ 完备，则等式成立；否则有Bessel不等式 $\\sum_{n=1}^{\\infty} |(x, e_n)|^2 \\leq \\|x\\|^2$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"B选项中的等式是Parseval等式，它要求 $\\{e_n\\}$ 是完备正交系，但题干只给出正规正交集，未必完备，因此未必成立。正确说法是：若 $\\{e_n\\}$ 完备，则等式成立；否则有Bessel不等式 $\\sum_{n=1}^{\\infty} |(x, e_n)|^2 \\leq \\|x\\|^2$。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": "$0 < p < 1$ 时不是范数。",
-  "note": null
+  "explanation": "错误。当 $0 < p < 1$ 时，$\\|\\cdot\\|_p$ 不满足三角不等式，因此不是范数。正确说法是：只有当 $p \\geq 1$ 时，$\\|\\cdot\\|_p$ 才是 $\\mathbb{R}^n$ 中的范数。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"错误。当 $0 < p < 1$ 时，$\\|\\cdot\\|_p$ 不满足三角不等式，因此不是范数。正确说法是：只有当 $p \\geq 1$ 时，$\\|\\cdot\\|_p$ 才是 $\\mathbb{R}^n$ 中的范数。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "连续函数不一定可微，例如 Weierstrass 函数是处处连续但无处可微的。正确说法是：存在连续函数在所有点都不可微。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"连续函数不一定可微，例如 Weierstrass 函数是处处连续但无处可微的。正确说法是：存在连续函数在所有点都不可微。\"}"
 }

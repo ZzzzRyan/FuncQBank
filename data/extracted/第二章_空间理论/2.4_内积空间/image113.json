@@ -29,6 +29,8 @@
   ],
   "answer": "ABCD",
   "answer_raw": "ABCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "这些线性空间都是标准的内积空间：$\\mathbb{R}^n$和$\\mathbb{C}^n$可定义点积内积，$L^2[0,1]$可定义积分内积，$l^2$可定义序列内积。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"这些线性空间都是标准的内积空间：$\\mathbb{R}^n$和$\\mathbb{C}^n$可定义点积内积，$L^2[0,1]$可定义积分内积，$l^2$可定义序列内积。\"}"
 }

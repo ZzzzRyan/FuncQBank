@@ -29,6 +29,8 @@
   ],
   "answer": "C",
   "answer_raw": "C",
-  "explanation": "不要求线性",
-  "note": null
+  "explanation": "选项 C 错误，因为严格压缩映射不要求线性；正确说法是它仅需满足压缩条件，如 $\\|Tx - Ty\\| < \\|x - y\\|$。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"选项 C 错误，因为严格压缩映射不要求线性；正确说法是它仅需满足压缩条件，如 $\\|Tx - Ty\\| < \\|x - y\\|$。\"}"
 }

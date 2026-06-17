@@ -4,14 +4,16 @@
   "model": "mimo-v2.5",
   "status": "pending",
   "auto_flags": [],
-  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 28,\n  \"points\": 1,\n  \"stem\": \"设 $X,Y$ 为赋范线性空间, $\\\\{x_n\\\\}_{n=1}^{\\\\infty} \\\\subset X$, 若 $T$ 是 $X$ 到 $Y$ 中的有界线性算子, 则必有 $T\\\\left(\\\\lim_{n\\\\to\\\\infty} x_n\\\\right) = \\\\lim_{n\\\\to\\\\infty} T x_n$。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
+  "raw": "{\n  \"type\": \"judge\",\n  \"seq\": 28,\n  \"points\": 1,\n  \"stem\": \"设 $X,Y$ 为赋范线性空间，$\\\\{x_n\\\\}_{n=1}^{\\\\infty} \\\\subset X$，若 $T$ 是 $X$ 到 $Y$ 中的有界线性算子，则必有 $T\\\\left(\\\\lim_{n\\\\to\\\\infty} x_n\\\\right) = \\\\lim_{n\\\\to\\\\infty} T x_n$。\",\n  \"options\": [],\n  \"answer\": \"正确\",\n  \"answer_raw\": \"正确\",\n  \"explanation\": null,\n  \"note\": null\n}",
   "type": "judge",
   "seq": 28,
   "points": 1,
-  "stem": "设 $X,Y$ 为赋范线性空间, $\\{x_n\\}_{n=1}^{\\infty} \\subset X$, 若 $T$ 是 $X$ 到 $Y$ 中的有界线性算子, 则必有 $T\\left(\\lim_{n\\to\\infty} x_n\\right) = \\lim_{n\\to\\infty} T x_n$。",
+  "stem": "设 $X,Y$ 为赋范线性空间，$\\{x_n\\}_{n=1}^{\\infty} \\subset X$，若 $T$ 是 $X$ 到 $Y$ 中的有界线性算子，则必有 $T\\left(\\lim_{n\\to\\infty} x_n\\right) = \\lim_{n\\to\\infty} T x_n$。",
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "有界线性算子 $T$ 是连续的，因此它保持序列极限，即极限与算子交换顺序。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"有界线性算子 $T$ 是连续的，因此它保持序列极限，即极限与算子交换顺序。\"}"
 }

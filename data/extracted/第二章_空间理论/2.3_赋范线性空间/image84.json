@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": "均完备",
-  "note": null
+  "explanation": "题干错误，因为 $l^\\infty(n)$ 是完备的。正确说法是 $l^p(n)$ 和 $l^\\infty(n)$ 均完备。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"题干错误，因为 $l^\\infty(n)$ 是完备的。正确说法是 $l^p(n)$ 和 $l^\\infty(n)$ 均完备。\"}"
 }

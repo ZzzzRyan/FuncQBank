@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。因为有界线性算子（即连续线性算子）不一定是闭算子；正确说法是，当 $X$ 是 Banach 空间时，从 $X$ 到 $Y$ 的有界线性算子才是闭线性算子。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"错误。因为有界线性算子（即连续线性算子）不一定是闭算子；正确说法是，当 $X$ 是 Banach 空间时，从 $X$ 到 $Y$ 的有界线性算子才是闭线性算子。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "这两个范数在 $C[0,1]$ 上不等价。正确说法是：不存在常数 $c, C > 0$ 使得 $c\\|x\\|_1 \\leq \\|x\\|_2 \\leq C\\|x\\|_1$ 对所有连续函数成立，例如可通过构造高峰函数证明比值无界。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"这两个范数在 $C[0,1]$ 上不等价。正确说法是：不存在常数 $c, C > 0$ 使得 $c\\\\|x\\\\|_1 \\\\leq \\\\|x\\\\|_2 \\\\leq C\\\\|x\\\\|_1$ 对所有连续函数成立，例如可通过构造高峰函数证明比值无界。\"}"
 }

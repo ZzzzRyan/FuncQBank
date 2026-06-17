@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。完备的距离空间不一定是列紧空间；例如，无穷维巴拿赫空间如 $L^2$ 是完备的但不是列紧的。正确说法是，列紧空间通常要求有限维或满足特定紧性条件。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"错误。完备的距离空间不一定是列紧空间；例如，无穷维巴拿赫空间如 $L^2$ 是完备的但不是列紧的。正确说法是，列紧空间通常要求有限维或满足特定紧性条件。\"}"
 }

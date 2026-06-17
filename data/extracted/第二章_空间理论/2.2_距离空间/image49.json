@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "集合 $\\mathbb{Q}$ 在 $\\mathbb{R}$ 中稠密是实数理论的基本性质，表示任何实数都可以被有理数任意逼近。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"集合 $\\mathbb{Q}$ 在 $\\mathbb{R}$ 中稠密是实数理论的基本性质，表示任何实数都可以被有理数任意逼近。\"}"
 }

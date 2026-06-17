@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "$\\text{Hahn-Banach}$定理只保证保范延拓的存在性，唯一性需额外条件如严格凸性，故原陈述正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"$\\text{Hahn-Banach}$定理只保证保范延拓的存在性，唯一性需额外条件如严格凸性，故原陈述正确。\"}"
 }

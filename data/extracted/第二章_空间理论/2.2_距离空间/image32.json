@@ -29,6 +29,8 @@
   ],
   "answer": "AB",
   "answer_raw": "AB (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "在距离空间中，收敛点列的极限唯一（A正确），且所有子列都收敛到同一极限（B正确）。因此，C和D错误：收敛点列不存在不收敛的子列，且极限不是不唯一的。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"在距离空间中，收敛点列的极限唯一（A正确），且所有子列都收敛到同一极限（B正确）。因此，C和D错误：收敛点列不存在不收敛的子列，且极限不是不唯一的。\"}"
 }

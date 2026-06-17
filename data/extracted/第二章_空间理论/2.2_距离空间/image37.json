@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "$d$ 是 $\\mathbb{R}^2$ 上的最大度量，它满足距离的非负性、对称性和三角不等式，因此是一个距离。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"$d$ 是 $\\mathbb{R}^2$ 上的最大度量，它满足距离的非负性、对称性和三角不等式，因此是一个距离。\"}"
 }

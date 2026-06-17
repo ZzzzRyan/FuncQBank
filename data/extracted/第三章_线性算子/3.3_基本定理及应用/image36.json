@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "这是Hahn-Banach定理的推论，保证了赋范线性空间中每个向量都存在范数为1的连续线性泛函使其达到范数。记忆点：该定理是泛函分析中**保范扩张**的关键结果。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"这是Hahn-Banach定理的推论，保证了赋范线性空间中每个向量都存在范数为1的连续线性泛函使其达到范数。记忆点：该定理是泛函分析中**保范扩张**的关键结果。\"}"
 }

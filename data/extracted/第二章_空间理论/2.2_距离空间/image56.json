@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "由于 $E$ 无处稠密，即 $\\operatorname{int}(\\bar{E}) = \\emptyset$，故对任意球 $B(x,\\varepsilon)$，存在点 $y \\in B(x,\\varepsilon) \\setminus \\bar{E}$，再取足够小的 $\\delta > 0$ 使得 $B(y,\\delta) \\subset B(x,\\varepsilon)$ 且 $B(y,\\delta) \\cap \\bar{E} = \\emptyset$，因此命题正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"由于 $E$ 无处稠密，即 $\\operatorname{int}(\\bar{E}) = \\emptyset$，故对任意球 $B(x,\\varepsilon)$，存在点 $y \\in B(x,\\varepsilon) \\setminus \\bar{E}$，再取足够小的 $\\delta > 0$ 使得 $B(y,\\delta) \\subset B(x,\\varepsilon)$ 且 $B(y,\\delta) \\cap \\bar{E} = \\emptyset$，因此命题正确。\"}"
 }

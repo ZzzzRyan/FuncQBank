@@ -29,6 +29,8 @@
   ],
   "answer": "ABCD",
   "answer_raw": "ABCD (少选不得分)",
-  "explanation": null,
-  "note": null
+  "explanation": "实内积空间上的内积必须满足非负性、对称性、对第一变元的线性，且由对称性可推出对第二变元的线性，故所有选项均正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"实内积空间上的内积必须满足非负性、对称性、对第一变元的线性，且由对称性可推出对第二变元的线性，故所有选项均正确。\"}"
 }

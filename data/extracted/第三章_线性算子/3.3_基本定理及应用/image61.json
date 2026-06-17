@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "由闭图像定理，若闭线性算子的定义域是整个 Banach 空间，则必为有界线性算子。该命题正确。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"由闭图像定理，若闭线性算子的定义域是整个 Banach 空间，则必为有界线性算子。该命题正确。\"}"
 }

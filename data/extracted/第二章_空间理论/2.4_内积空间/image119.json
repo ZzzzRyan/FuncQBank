@@ -12,6 +12,8 @@
   "options": [],
   "answer": "正确",
   "answer_raw": "正确",
-  "explanation": null,
-  "note": null
+  "explanation": "可分Hilbert空间存在可数稠密子集，正规正交基的基数不能超过该稠密子集的基数，因此最多含有可数个向量。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"可分Hilbert空间存在可数稠密子集，正规正交基的基数不能超过该稠密子集的基数，因此最多含有可数个向量。\"}"
 }

@@ -29,6 +29,8 @@
   ],
   "answer": "B",
   "answer_raw": "B",
-  "explanation": null,
-  "note": null
+  "explanation": "在 $C[0,1]$ 上，$\\|T\\| = \\sup_{\\|x\\|\\leq 1} |2x(1)|$，由于 $|x(1)| \\leq \\|x\\|$ 且当 $\\|x\\|=1$ 时可达到等号，故 $\\|T\\|=2$。选项 A 忽略因子 2，正确说法是需考虑乘以 2 的系数。",
+  "note": null,
+  "explanation_model": "mimo-v2.5",
+  "explanation_raw": "{\"explanation\":\"在 $C[0,1]$ 上，$\\|T\\| = \\sup_{\\|x\\|\\leq 1} |2x(1)|$，由于 $|x(1)| \\leq \\|x\\|$ 且当 $\\|x\\|=1$ 时可达到等号，故 $\\|T\\|=2$。选项 A 忽略因子 2，正确说法是需考虑乘以 2 的系数。\"}"
 }

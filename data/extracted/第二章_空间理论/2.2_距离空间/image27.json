@@ -29,6 +29,8 @@
   ],
   "answer": "D",
   "answer_raw": "D",
-  "explanation": null,
-  "note": null
+  "explanation": "选项D错误，因为闭集$A$不一定是紧的，连续映射不一定能在$A$上取得极大极小值；正确说法是：紧集上连续映射能在集合上取得极大极小值。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"选项D错误，因为闭集$A$不一定是紧的，连续映射不一定能在$A$上取得极大极小值；正确说法是：紧集上连续映射能在集合上取得极大极小值。\"}"
 }

@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "整数集合 $\\mathbb{Z}$ 在有理数集合 $\\mathbb{Q}$ 中不稠密，因为整数是离散的，而有理数在实数中稠密；正确说法是，有理数集合在实数中稠密，但整数集合在有理数中不稠密。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"整数集合 $\\mathbb{Z}$ 在有理数集合 $\\mathbb{Q}$ 中不稠密，因为整数是离散的，而有理数在实数中稠密；正确说法是，有理数集合在实数中稠密，但整数集合在有理数中不稠密。\"}"
 }

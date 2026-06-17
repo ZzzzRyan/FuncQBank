@@ -12,6 +12,8 @@
   "options": [],
   "answer": "错误",
   "answer_raw": "错误",
-  "explanation": null,
-  "note": null
+  "explanation": "错误。Banach压缩映射原理要求距离空间 $X$ 是完备的；若不完备，严格压缩映射可能没有不动点。正确说法是：在完备距离空间上，压缩映射必有不动点。",
+  "note": null,
+  "explanation_model": "mimo-v2.5-pro",
+  "explanation_raw": "{\"explanation\":\"错误。Banach压缩映射原理要求距离空间 $X$ 是完备的；若不完备，严格压缩映射可能没有不动点。正确说法是：在完备距离空间上，压缩映射必有不动点。\"}"
 }
