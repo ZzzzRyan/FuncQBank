@@ -29,8 +29,8 @@
   ],
   "answer": "C",
   "answer_raw": "C",
-  "explanation": "C选项错误，因为$无理数集$在$\\mathbb{R}$中是第二纲集；正确说法是：$无理数集$是第二纲集。",
+  "explanation": "C选项错误，因为无理数集在$\\mathbb{R}$中是第二纲集；正确说法是：无理数集是第二纲集。",
   "note": null,
   "explanation_model": "mimo-v2.5-pro",
-  "explanation_raw": "{\"explanation\":\"C选项错误，因为$无理数集$在$\\\\mathbb{R}$中是第二纲集；正确说法是：$无理数集$是第二纲集。\"}"
+  "explanation_raw": "{\"explanation\":\"C选项错误，因为无理数集在$\\\\mathbb{R}$中是第二纲集；正确说法是：无理数集是第二纲集。\"}"
 }
