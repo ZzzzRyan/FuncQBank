@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="app/static/favicon.svg" width="96" height="96" alt="中文泛函题库 Logo">
-  <h1>中文泛函题库</h1>
-  <p><strong>FuncQBank</strong> · 面向泛函分析课程的题答分离 Web 题库</p>
+  <img src="app/static/favicon.svg" width="96" height="96" alt="泛函题库 Logo">
+  <h1>泛函题库</h1>
+  <p><strong>FuncQBank</strong> · 面向泛函分析课程的 Web 题库</p>
   <p>
     <a href="https://fanhan.zryan.xyz/">在线访问</a>
     ·
@@ -20,14 +20,14 @@
 </div>
 
 <p align="center">
-  <img src="docs/README.assets/base_page.png" width="32%" alt="中文泛函题库首页">
-  <img src="docs/README.assets/practice_page.png" width="32%" alt="中文泛函题库刷题页面">
-  <img src="docs/README.assets/error_page.png" width="32%" alt="中文泛函题库提示页面">
+  <img src="docs/README.assets/base_page.jpg" width="32%" alt="泛函题库首页">
+  <img src="docs/README.assets/practice_page.jpg" width="32%" alt="泛函题库刷题页面">
+  <img src="docs/README.assets/error_page.jpg" width="32%" alt="泛函题库提示页面">
 </p>
 
 ## 项目介绍
 
-中文泛函题库是一个用于泛函分析课程复习的网页题库。项目将原本「题干、选项、答案混在同一张截图里」的题目图片，通过视觉大模型结构化提取为「题干 / 选项 / 答案 / 解析」，再以题答分离的方式提供刷题、搜索、错题记录和后台校对能力。
+泛函题库是一个用于泛函分析课程复习的网页题库。项目将原本「题干、选项、答案混在同一张截图里」的题目图片，通过视觉大模型结构化提取为「题干 / 选项 / 答案 / 解析」，再以题目答案分离的方式提供刷题、搜索、错题记录和后台校对能力。
 
 已部署站点：https://fanhan.zryan.xyz/
 
@@ -85,7 +85,7 @@ https://fanhan.zryan.xyz/
 | `Enter` | 提交答案或进入下一题 |
 | `m` | 标记 / 取消标记为掌握 |
 
-说明：普通用户无法进入后台，也看不到原始题图——原图里直接带着答案，因此只对管理员开放。
+说明：普通用户无法进入后台，也看不到原始题图——原图主要用于校对识别的题目，只对管理员开放。
 
 ## 快速部署（复用已解析出的题目内容）
 
