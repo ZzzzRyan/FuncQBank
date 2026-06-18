@@ -25,7 +25,7 @@
 1. **题答分离**：刷题页只渲染提取出的文本；**含答案的原图绝不暴露给普通用户**——只有 `/admin/image/{id}`（`require_admin`）能取图。
 2. **公式妥善处理**：内容存纯文本，数学用 `$...$`、强调用 `**粗体**`。服务端一律经 `app/render.py:render_rich`（整体 HTML 转义、仅在非数学段落转粗体、保留 `$` 给 KaTeX），客户端 KaTeX 自动渲染。新增任何会显示题面/选项/解析的地方都要走 `render_rich`（JS 侧有等价 `richToHtml`）。
 3. **后台与刷题隔离 + 用户系统**：普通用户只能刷题；后台 `/admin/*` 全部 `require_admin`。开放注册、**首个注册者自动成管理员**。
-4. **对 LLM 不稳定的容错**：网关 `newapi.zryan.xyz` 偶发「空响应 / 把非流式当 SSE 字符串返回 / JSON 里 LaTeX 反斜杠未转义」三种故障，已在 `scripts/extract.py` 的 `call_model` / `parse_sse_content` / `_fix_latex_escapes` / `parse_json_loose` 兜底——复用它们，别新写一套。
+4. **对 LLM 不稳定的容错**：用户的 LLM 网关偶发「空响应 / 把非流式当 SSE 字符串返回 / JSON 里 LaTeX 反斜杠未转义」三种故障，已在 `scripts/extract.py` 的 `call_model` / `parse_sse_content` / `_fix_latex_escapes` / `parse_json_loose` 兜底——复用它们，别新写一套。
 5. **易人工纠错且非破坏**：后台「重新识别」只把结果**填进表单供检查、不写库**；失败（如空响应）**不改动任何数据**。改这块时保持「未点保存即不落库」的语义。
 6. **自包含易部署**：无 Node、KaTeX 已 vendored、SQLite 单文件、CSS 手写；保持 `uv` + Docker 可一键起。新增前端能力优先原生实现，别引 CDN/构建链。
 7. **安全基线**（"一定程度即可"，别退化）：argon2 哈希、写操作校验 CSRF（表单隐藏字段 `csrf_token`；fetch 用 `X-CSRF-Token` 头）、签名会话 Cookie、登录/注册限流、统一安全头(含 CSP)。

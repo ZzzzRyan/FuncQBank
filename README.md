@@ -1,245 +1,420 @@
-# 泛函题库 FuncQBank
+<div align="center">
+  <img src="app/static/favicon.svg" width="96" height="96" alt="中文泛函题库 Logo">
+  <h1>中文泛函题库</h1>
+  <p><strong>FuncQBank</strong> · 面向泛函分析课程的题答分离 Web 题库</p>
+  <p>
+    <a href="https://fanhan.zryan.xyz/">在线访问</a>
+    ·
+    <a href="#项目介绍">项目介绍</a>
+    ·
+    <a href="#快速部署复用已解析出的题目内容">快速部署</a>
+    ·
+    <a href="#全流程部署">全流程部署</a>
+  </p>
+  <p>
+    <img alt="Python" src="https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white">
+    <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-SQLite-009688?logo=fastapi&logoColor=white">
+    <img alt="Package Manager" src="https://img.shields.io/badge/package-uv-654FF0">
+    <img alt="Docker" src="https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white">
+  </p>
+</div>
 
-泛函分析课程题库网页应用，用于**考前刷题与记忆原题**。题目原本是手机截图（题干+答案混在一张图里），
-本项目用大模型把每张图结构化提取为「题干 / 选项 / 答案 / 解析」，公式转为 LaTeX，做成**题目与答案分离**、
-界面美观、移动端友好的网页题库；并提供管理员后台校对纠错、个人进度、错题本、搜索筛选与随机练习。
+<p align="center">
+  <img src="docs/README.assets/base_page.png" width="32%" alt="中文泛函题库首页">
+  <img src="docs/README.assets/practice_page.png" width="32%" alt="中文泛函题库刷题页面">
+  <img src="docs/README.assets/error_page.png" width="32%" alt="中文泛函题库提示页面">
+</p>
 
-- 后端：FastAPI + SQLite（SQLModel），单进程，`uv` 管理
-- 前端：服务端渲染 + 原生 JS + KaTeX（已本地内置，离线可用），无需 Node 构建
-- 题型：单选 / 多选 / 判断，共 **213 题**（第二章 145 题、第三章 68 题）
-- 用户系统：开放注册；普通用户只能刷题，管理员才能进入后台与查看原图
+## 项目介绍
 
----
+中文泛函题库是一个用于泛函分析课程复习的网页题库。项目将原本「题干、选项、答案混在同一张截图里」的题目图片，通过视觉大模型结构化提取为「题干 / 选项 / 答案 / 解析」，再以题答分离的方式提供刷题、搜索、错题记录和后台校对能力。
 
-## 1. 环境准备
+已部署站点：https://fanhan.zryan.xyz/
 
-需要 [`uv`](https://docs.astral.sh/uv/)（Python 包管理）。克隆代码后：
+主要特性：
+
+- **题答分离**：普通刷题页面只展示结构化题目内容，含答案的原始截图只允许管理员访问。
+- **移动端友好**：服务端渲染、原生 JavaScript、手写 CSS，适合手机和桌面端直接刷题。
+- **公式渲染**：数学公式使用 LaTeX 文本保存，前端通过本地内置 KaTeX 渲染，无需 CDN。
+- **练习功能**：支持按章节刷题、随机练习、搜索筛选、错题本、掌握标记和答题进度记录。
+- **后台校对**：管理员可对照原图修正题干、选项、答案、解析，并将题目标记为已校对。
+- **自包含部署**：FastAPI + SQLite，前端无 Node 构建链；支持 `uv` 本机运行和 Docker 部署。
+
+当前题库共收录 **213** 道题，分布在第二章「空间理论」（145 题）和第三章「线性算子」（68 题），题型涵盖单选、多选和判断。
+
+技术栈：
+
+| 层级 | 技术 |
+| --- | --- |
+| 后端 | FastAPI、SQLModel、SQLite |
+| 前端 | Jinja2 模板、原生 JavaScript、KaTeX |
+| 认证与安全 | 签名 Cookie、argon2 密码哈希、CSRF、基础限流、安全响应头 |
+| 包管理 | uv |
+| 部署 | Docker Compose 或裸机 uvicorn |
+
+数据流：
+
+```text
+docs/ 原始题图
+  -> scripts/extract.py 视觉模型识别
+  -> data/extracted/*.json 结构化题目事实源
+  -> scripts/generate_explanations.py 补充简短解析
+  -> scripts/seed.py 导入 SQLite
+  -> FastAPI Web 题库
+```
+
+## 直接使用
+
+如果只是刷题，直接访问已部署站点即可：
+
+https://fanhan.zryan.xyz/
+
+常用入口：
+
+- 首页按章节进入练习。
+- 练习页可先作答，再提交查看答案；答错题目会进入错题本。
+- 搜索页支持按题干关键词和题型筛选。
+- 登录后可保存个人进度、错题记录和掌握标记。
+
+快捷键：
+
+| 快捷键 | 功能 |
+| --- | --- |
+| `←` / `→` | 切换上一题 / 下一题 |
+| 数字键 | 选择选项 |
+| `Enter` | 提交答案或进入下一题 |
+| `m` | 标记 / 取消标记为掌握 |
+
+说明：普通用户无法进入后台，也看不到原始题图——原图里直接带着答案，因此只对管理员开放。
+
+## 快速部署（复用已解析出的题目内容）
+
+本仓库已经包含结构化后的题目数据 `data/extracted/`。如果只是想部署同款题库，不需要重新调用大模型识别图片，直接复用这些 JSON 入库即可。
+
+### 方式一：Docker Compose
 
 ```bash
-uv sync          # 创建虚拟环境并安装依赖
+git clone https://github.com/ZzzzRyan/FuncQBank.git
+cd FuncQBank
 cp .env.example .env
 ```
 
-编辑 `.env`：
+编辑 `.env`，至少修改：
 
 ```ini
-OPENAI_ENDPOINT="https://你的网关/v1"   # OpenAI 兼容、支持视觉的接口
-OPENAI_MODEL="你的视觉模型"
-OPENAI_APIKEY="sk-..."
-
-SESSION_SECRET="改成一长串随机字符串"      # 务必修改！可用 python -c "import secrets;print(secrets.token_hex(32))" 生成
-REGISTRATION_OPEN=true                    # 是否开放自助注册
-COOKIE_SECURE=false                       # 走 HTTPS（含 Cloudflare Tunnel）时设为 true
-TRUST_PROXY_HEADERS=true                  # 在反代/隧道后面：从代理头取真实客户端 IP 用于限流；直连裸跑才设 false
-# ADMIN_USERNAME=                          # 可选：启动时自动把该用户提升为管理员
+SESSION_SECRET="改成一长串随机字符串"
+REGISTRATION_OPEN=true
+COOKIE_SECURE=false
+TRUST_PROXY_HEADERS=true
 ```
 
-> `.env` 已被 git 忽略，不会泄露密钥。
+如果只是复用已解析题目，`OPENAI_ENDPOINT`、`OPENAI_MODEL`、`OPENAI_APIKEY` 可以先留空或保留示例值；它们只在批量提取、生成解析、后台重新识别图片时需要。
 
-## 2. 提取题目 → 入库
-
-```bash
-# 1) 用大模型识别 docs/ 下全部图片 → data/extracted/*.json（可断点续跑）
-uv run scripts/extract.py                 # 全量；已提取的会自动跳过
-uv run scripts/extract.py --limit 5       # 先小批量试跑看看效果
-uv run scripts/extract.py --retry-flagged # 把被标记的（多为网关偶发空响应）重试一遍
-
-# 2) 为缺少解析的题目批量生成简短解析（默认不覆盖已有解析、不处理 flagged）
-uv run scripts/generate_explanations.py --limit 5  # 先小批量试跑
-uv run scripts/generate_explanations.py
-
-# 3) 导入数据库（幂等；已「校对」的题目不会被覆盖）
-uv run scripts/seed.py
-```
-
-提取结果 `data/extracted/` 是题目内容的事实源，建议纳入 git 版本管理。
-脚本对识别失败/异常会标记为 `flagged`，方便后台优先复核。
-
-## 3. 创建管理员
+启动服务：
 
 ```bash
-uv run scripts/create_admin.py <用户名> --name "显示名"   # 会提示输入密码
-```
-
-> 也可不创建：**第一个注册的账号会自动成为管理员**。建议你先注册/建号，再把网址发给同学。
-
-## 4. 本地运行
-
-```bash
-uv run uvicorn app.main:app --reload --port 8000  # 自动重载，开发用；生产部署见下
-```
-
-打开 http://127.0.0.1:8000 ：
-
-- **刷题**：首页按章节进入；先看题，点「提交答案 / 直接看答案」揭示正确答案；答错自动进**错题本**；可标记「★ 掌握」。
-  - 快捷键：`←/→` 切题、数字键选项、回车揭示/下一题、`m` 标记掌握。
-- **错题本 / 搜索**：顶部导航进入；搜索支持题干关键词 + 题型筛选。
-- **后台校对**（仅管理员，导航「后台」）：详见下方《后台校对操作要点》。
-
-> 普通用户看不到后台，也无法访问原图（`/admin/image/*` 仅管理员，返回 403）——因为原图里含答案。
-
-## 5. Docker 部署（推荐，便于迁移）
-
-```bash
-# 在服务器上：填好 .env 后
 docker compose up -d --build
 ```
 
-- 题目内容（`docs/` 图片 + `data/extracted` JSON）打包进镜像；运行期数据库存于命名卷 `funcqbank-data`（容器内 `/app/var/app.db`），**重启/升级不丢数据**。
-- 首次启动会自动 `seed` 入库。
-- 默认监听 `8000`。迁移到新服务器：拷贝整个仓库 + `.env`，`docker compose up -d --build` 即可；要保留用户/进度，连同卷一起迁移（`docker run --rm -v funcqbank-data:/v -v $PWD:/b alpine tar czf /b/funcqbank-data.tgz -C /v .` 备份）。
+默认访问地址：
 
-### HTTPS / 反向代理
-
-公网部署务必走 HTTPS，并在 `.env` 设 `COOKIE_SECURE=true`（让会话 Cookie 带 `Secure`）。
-应用本身只需监听本地端口（如 `127.0.0.1:8011`），由前面的反代/隧道终止 TLS。下面三种任选其一。
-
-**A. Caddy（自动签发证书）** —— `Caddyfile`：
-
+```text
+http://127.0.0.1:8000
 ```
+
+Docker 部署说明：
+
+- 容器首次启动会自动执行 `scripts/seed.py`，把 `data/extracted/` 导入数据库。
+- SQLite 数据库存放在 Docker 卷 `funcqbank-data`（容器内路径 `/app/var/app.db`），因此重启或重建镜像都不会丢失用户、进度和人工校对数据。
+- 第一个注册的账号会自动成为管理员，你也可以手动创建。
+
+手动创建管理员：
+
+```bash
+docker compose exec app uv run --no-sync scripts/create_admin.py <用户名> --name "显示名"
+```
+
+### 方式二：本机 uv 运行
+
+本项目约定所有 Python 依赖和脚本都使用 `uv` 管理。
+
+```bash
+git clone https://github.com/ZzzzRyan/FuncQBank.git
+cd FuncQBank
+uv sync
+cp .env.example .env
+```
+
+编辑 `.env` 后导入题库并运行：
+
+```bash
+uv run scripts/seed.py
+uv run scripts/create_admin.py <用户名> --name "显示名"
+uv run uvicorn app.main:app --host 127.0.0.1 --port 8000
+```
+
+开发时可使用自动重载：
+
+```bash
+uv run uvicorn app.main:app --reload --port 8000
+```
+
+## 全流程部署
+
+全流程适用于你希望从 `docs/` 中的原始题图重新识别题目、补充解析，再部署自己的题库实例的场景。
+
+### 1. 准备环境
+
+```bash
+uv sync
+cp .env.example .env
+```
+
+配置 `.env`：
+
+```ini
+# OpenAI 兼容、支持视觉输入的接口
+OPENAI_ENDPOINT="https://你的网关/v1"
+OPENAI_MODEL="你的视觉模型"
+OPENAI_APIKEY="sk-..."
+
+# Web 应用
+SESSION_SECRET="改成一长串随机字符串"
+REGISTRATION_OPEN=true
+COOKIE_SECURE=false
+TRUST_PROXY_HEADERS=true
+```
+
+生产环境建议用下面命令生成 `SESSION_SECRET`：
+
+```bash
+uv run python -c "import secrets; print(secrets.token_hex(32))"
+```
+
+### 2. 识别题目图片
+
+先小批量试跑，确认模型输出质量和网关稳定性：
+
+```bash
+uv run scripts/extract.py --limit 5
+```
+
+全量识别：
+
+```bash
+uv run scripts/extract.py
+```
+
+脚本会自动跳过已成功提取的图片，可以随时中断再续跑。识别失败或被标记为需复核的题目，可以用下面命令重试：
+
+```bash
+uv run scripts/extract.py --retry-flagged
+```
+
+常用筛选参数：
+
+```bash
+uv run scripts/extract.py --only "3.2"  # 仅处理文件夹名称包含 "3.2" 的题目
+uv run scripts/extract.py --workers 4   # 4 线程并行处理
+uv run scripts/extract.py --force       # 强制覆盖已成功提取的题目（谨慎使用）
+```
+
+### 3. 生成简短解析
+
+```bash
+uv run scripts/generate_explanations.py --limit 5
+uv run scripts/generate_explanations.py
+```
+
+该脚本默认不覆盖已有解析，也不处理 `flagged` 题目，生成结果同样写回 `data/extracted/*.json`。
+
+### 4. 导入数据库
+
+```bash
+uv run scripts/seed.py
+```
+
+`seed.py` 是幂等的：它按 `rel_path` 匹配题目，已经标记为 `verified` 的人工校对题不会被覆盖。
+
+### 5. 创建管理员并启动
+
+```bash
+uv run scripts/create_admin.py <用户名> --name "显示名"
+uv run uvicorn app.main:app --host 127.0.0.1 --port 8000
+```
+
+也可以跳过创建管理员，让第一个注册用户自动成为管理员。
+
+### 6. 上线部署
+
+完成提取和入库后，可以继续使用裸机 `uvicorn`，也可以用 Docker 部署：
+
+```bash
+docker compose up -d --build
+```
+
+公网部署建议放在 HTTPS 反向代理或 Cloudflare Tunnel 后面，并设置：
+
+```ini
+COOKIE_SECURE=true
+TRUST_PROXY_HEADERS=true
+```
+
+Caddy 示例：
+
+```caddyfile
 你的域名 {
-    reverse_proxy 127.0.0.1:8011
+    reverse_proxy 127.0.0.1:8000
 }
 ```
 
-`caddy run` 即自动申请并续期证书。Caddy 默认会带上 `X-Forwarded-For`/`X-Forwarded-Proto`。
-
-**B. Nginx** —— 关键是把真实客户端 IP 和协议转发给应用（否则限流会把所有人当成同一个 IP）：
+Nginx 示例：
 
 ```nginx
 server {
     server_name 你的域名;
+
     location / {
-        proxy_pass         http://127.0.0.1:8011;
+        proxy_pass         http://127.0.0.1:8000;
         proxy_set_header   Host              $host;
-        proxy_set_header   X-Real-IP         $remote_addr;        # ← 真实 IP，限流靠它
+        proxy_set_header   X-Real-IP         $remote_addr;
         proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
         proxy_set_header   X-Forwarded-Proto $scheme;
     }
-    # listen 443 ssl; ssl_certificate ...;  证书可用 certbot 签发
 }
 ```
 
-**C. Cloudflare Tunnel（cloudflared，无需公网开端口、无需自己管证书）**
-
-Cloudflare 在边缘终止 TLS，浏览器看到的就是 HTTPS；cloudflared 通过**出站**连接把流量送到本机，
-所以服务器**不必对公网开放任何入站端口**。要点：
-
-1. `.env` 设 `COOKIE_SECURE=true`（浏览器侧是 HTTPS，Secure Cookie 会正常发送）。
-   建议在 Cloudflare 控制台开 **Always Use HTTPS**，避免偶发 http 导致带 Secure 的会话 Cookie 不发出、表现为“登录后立刻掉登录”。
-2. 真实客户端 IP 由 Cloudflare 放在 `CF-Connecting-IP` 头里并经隧道传入，应用已优先读取它做限流（`TRUST_PROXY_HEADERS=true`，默认开）。
-3. 隧道把域名指向本机端口即可（`config.yml` 片段）：
+Cloudflare Tunnel 示例：
 
 ```yaml
 tunnel: <你的隧道ID>
 credentials-file: /root/.cloudflared/<隧道ID>.json
 ingress:
   - hostname: 你的域名
-    service: http://localhost:8011
+    service: http://localhost:8000
   - service: http_status:404
 ```
 
-`cloudflared tunnel run` 启动（建议做成 systemd 服务）。应用照常 `uvicorn ... --host 127.0.0.1 --port 8011` 跑即可。
+如果应用被直接暴露到公网而不经过可信反向代理，不建议开启 `TRUST_PROXY_HEADERS`，否则客户端可伪造代理头影响限流。
 
-> 真实 IP 说明：限流从 `CF-Connecting-IP` → `X-Real-IP` → `X-Forwarded-For` 依次取值，兼容 Cloudflare Tunnel 与 Nginx/Caddy。
-> 这些头**仅在应用只经反代/隧道访问时**可信；若你把应用直接裸跑暴露公网（不推荐），请设 `TRUST_PROXY_HEADERS=false`，否则它们可被伪造绕过限流。
+## 一些操作事项
 
-## 6. 不用 Docker 的裸机部署
+### 环境变量
 
-```bash
-# 1) 环境准备（同 1~3 步）
-uv sync
-uv run scripts/seed.py
-uv run scripts/create_admin.py <用户名>
+| 变量 | 说明 |
+| --- | --- |
+| `OPENAI_ENDPOINT` | OpenAI 兼容接口地址，用于图片识别和重新识别 |
+| `OPENAI_MODEL` | 支持视觉输入的模型名 |
+| `OPENAI_APIKEY` | 模型接口密钥 |
+| `SESSION_SECRET` | 会话签名密钥，生产环境必须改为长随机字符串 |
+| `REGISTRATION_OPEN` | 是否开放自助注册 |
+| `COOKIE_SECURE` | HTTPS 下应设为 `true` |
+| `TRUST_PROXY_HEADERS` | 在可信反向代理或隧道后读取真实客户端 IP |
+| `ADMIN_USERNAME` | 可选，启动时将指定已有用户提升为管理员 |
+| `DB_PATH` | 可选，自定义 SQLite 数据库路径 |
 
-# 2) 裸机部署
-uv run uvicorn app.main:app --host 0.0.0.0 --port 8000   # 建议用 systemd 守护 + Caddy/Nginx 反代
-```
+### 后台校对
 
-## 7. 备份 / 导出
+后台编辑页分为三栏：左侧是原始题图，中间是与刷题页一致的实时预览，右侧是题干、选项、答案、解析等编辑表单。
 
-```bash
-uv run scripts/export.py        # DB → data/export/*.json（含人工校对结果，便于备份/版本管理）
-```
-SQLite 数据库就是单个文件，直接拷贝 `data/app.db`（或卷内 `app.db`）即可备份。
-
----
-
-## 目录结构
-
-```
-app/
-  main.py            FastAPI 装配（中间件、安全头、路由、异常处理）
-  config.py          读取 .env
-  db.py  models.py   SQLite + SQLModel 模型
-  auth.py security.py  会话/角色、密码哈希(argon2)、CSRF、限流
-  render.py          题干/选项的 LaTeX+加粗 安全渲染
-  templating.py      Jinja2 与公共上下文
-  routers/           auth_routes / practice / admin
-  templates/  static/  (app.css, app.js, vendor/katex 内置)
-scripts/
-  extract.py  generate_explanations.py  import_explanations.py  seed.py  export.py  create_admin.py
-data/extracted/      提取结果（内容事实源，入 git）
-docs/                题目原图（仅管理员可见）
-Dockerfile  docker-compose.yml
-```
-
-## 安全说明（"一定程度即可"）
-
-密码 argon2 哈希；会话为签名 Cookie（`httponly`，`samesite=lax`，HTTPS 下 `secure`）；表单与写接口校验 CSRF；
-登录/注册有基础限流（反代/隧道后按真实客户端 IP，见上）；统一安全响应头（含 CSP）；原图仅管理员可访问。开放注册意味着拿到网址即可注册——
-如需收紧，把 `.env` 的 `REGISTRATION_OPEN` 设为 `false`（之后由管理员用 `create_admin.py` 建号）。
-
-## 后台校对操作要点
-
-编辑页三栏：**左＝原图，中＝整道题实时预览（与刷题页一致、答案高亮、公式实时渲染），右＝编辑表单**。改右侧任意字段，中间预览即时更新。
-
-题目三种状态：
+题目状态：
 
 | 状态 | 含义 | 是否出现在刷题页 |
-|---|---|---|
-| **待校对 pending** | 已识别、尚未人工确认 | 是 |
-| **已校对 verified** | 你已人工确认 | 是；`seed.py` 重新导入**不会覆盖** |
-| **需复核 flagged** | 自动检查有疑点（答案字母不在选项内、字段缺失、批量提取时网关失败等） | **否，隐藏直到处理** |
+| --- | --- | --- |
+| `pending` | 已识别，尚未人工确认 | 是 |
+| `verified` | 已人工确认 | 是，重新 `seed` 不会覆盖 |
+| `flagged` | 字段缺失、答案异常、模型失败等需复核情况 | 否 |
 
-**校对流程**：列表用「需复核」筛选优先处理 → 打开对照原图修正 → 点 **「保存并标记已校对」**（或「保存并下一道」连续校对）。保存后状态变 verified 并重新出现在刷题页。
+后台「用大模型重新识别此图」只会把识别结果填入表单供管理员检查，不会自动写入数据库，也不会修改 `data/extracted/`。只有点击保存后才会落库。
 
-**「用大模型重新识别此图」的行为（重要）**：它只调用模型，把新结果**填入右侧表单供你检查**，**不会自动保存、也不会改 `data/extracted/`**——你确认无误再点「保存」才会写库。若遇网关空响应/超时（该网关偶发，见下），会提示「识别失败，未改动任何数据」，**原题保持原样**，稍等重试即可。所以不存在“点一下就把识别好的数据改坏”的风险。
+### 备份与迁移
 
-> 批量找回偶发失败的题：命令行 `uv run scripts/extract.py --retry-flagged` 重试，再 `uv run scripts/seed.py`（已校对的不受影响）。当前 213 题已全部识别成功、无 flagged。
-
-## 生产库字段补丁（导入解析等）
-
-当 `data/extracted/*.json` 里补了某些字段，但生产库里已有用户、进度、人工校对结果时，不要重新 `seed` 覆盖整题。
-用 `scripts/import_explanations.py` 这种“字段级补丁”脚本，只更新白名单字段（当前支持 `explanation,note`），按 `rel_path` 匹配已有题目，不新建题目，也不改题干/选项/答案/状态/用户数据。
-
-Docker 部署时一定在容器内跑脚本：宿主机直接 `uv run ...` 会指向仓库里的 `data/app.db`，不是生产卷里的 `/app/var/app.db`。
+导出数据库中的题目内容：
 
 ```bash
-# 1) 拉代码并重建镜像，让容器里拿到最新 JSON 和脚本
-git pull
-docker compose up -d --build
+uv run scripts/export.py
+```
 
-# 2) 先 dry-run。确认输出里的数据库是 /app/var/app.db，且 DB 题目数正常
+裸机部署时，SQLite 数据库默认是：
+
+```text
+data/app.db
+```
+
+Docker 部署时，数据库在命名卷 `funcqbank-data` 中。可以用下面命令备份卷内容：
+
+```bash
+docker run --rm -v funcqbank-data:/v -v "$PWD":/b alpine tar czf /b/funcqbank-data.tgz -C /v .
+```
+
+迁移到新服务器时，拷贝仓库和 `.env` 即可换机运行。但用户、进度、错题和人工校对结果都存在数据库里，想保留这些数据，就必须一并迁移 SQLite 数据库文件或 Docker 卷。
+
+### 生产库字段补丁
+
+如果 `data/extracted/*.json` 里补充了解析等字段，而生产库中已经有用户和人工校对数据，直接整题覆盖并不安全。这时可以用字段级同步脚本，只更新指定字段：
+
+```bash
+# Docker 部署先 dry-run
 docker compose exec app uv run --no-sync scripts/import_explanations.py
 
-# 3) 写入。更稳妥的做法是短暂停服务，避免备份 SQLite 时有并发写入
+# 确认数据库路径和变更计划后再写入
 docker compose stop app
 docker compose run --rm app uv run --no-sync scripts/import_explanations.py --apply
 docker compose up -d app
 ```
 
-常用变体（默认仍是 dry-run；确认无误后再按第 3 步加 `--apply` 写入）：
+常用参数（使用 `-h` 查看帮助）：
 
 ```bash
-# 只处理某个章节/路径片段
 docker compose exec app uv run --no-sync scripts/import_explanations.py --only "3.2"
-
-# 同步多个已允许字段
 docker compose exec app uv run --no-sync scripts/import_explanations.py --fields explanation,note
-
-# 覆盖生产库里已有的非空字段；谨慎使用，先 dry-run 看清楚旧值/新值
 docker compose exec app uv run --no-sync scripts/import_explanations.py --overwrite
 ```
 
-`--apply` 默认会在同一个 Docker 卷里生成 `app.db.bak-时间戳` 备份；不要随手加 `--no-backup`。`uv run --no-sync` 的意思是“运行脚本前不重新同步依赖”，因为镜像构建时已经安装好了依赖，生产容器里这样更快也更少扰动。以后要补别的简单文本字段，先把字段加入脚本的白名单，再按同样流程 dry-run → 确认 DB 路径/变更计划 → apply。
+该脚本默认 dry-run；`--apply` 会写入，并默认在同一个数据库目录下生成备份。
+
+### 安全边界
+
+项目包含基础安全措施：
+
+- 密码使用 argon2 哈希。
+- 会话使用签名 Cookie，支持 HTTPS `Secure` 标记。
+- 写操作校验 CSRF。
+- 登录和注册有基础限流。
+- 响应包含统一安全头。
+- 普通用户无法访问后台和含答案原图。
+
+开放注册意味着拿到网址的用户都可以注册。如果只想内部使用，可以在 `.env` 中设置：
+
+```ini
+REGISTRATION_OPEN=false
+```
+
+之后由管理员通过 `scripts/create_admin.py` 创建或管理账号。
+
+### 目录结构
+
+```text
+app/
+  main.py                 FastAPI 装配
+  config.py               环境变量与路径配置
+  db.py / models.py       SQLite 与 SQLModel 模型
+  auth.py / security.py   会话、权限、密码、CSRF、限流
+  render.py               题干、选项、解析的安全富文本渲染
+  routers/                登录、练习、后台等路由
+  templates/              Jinja2 模板
+  static/                 CSS、JavaScript、favicon、KaTeX
+scripts/
+  extract.py              从题图提取结构化题目
+  generate_explanations.py 生成简短解析
+  seed.py                 JSON 入库
+  export.py               导出备份
+  import_explanations.py  字段级同步
+  create_admin.py         创建或提升管理员
+data/extracted/           已解析题目 JSON，建议纳入版本管理
+docs/                     原始题图与 README 展示截图
+Dockerfile
+docker-compose.yml
+pyproject.toml
+uv.lock
+```
