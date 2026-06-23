@@ -1,7 +1,7 @@
 <div align="center">
   <img src="app/static/favicon.svg" width="96" height="96" alt="泛函题库 Logo">
   <h1>泛函题库</h1>
-  <p><strong>FuncQBank</strong> · 面向泛函分析课程的 Web 题库</p>
+  <p><strong>FuncQBank</strong> · BUAA北航研究生泛函分析课程的 Web 题库</p>
   <p>
     <a href="https://fanhan.zryan.xyz/">在线访问</a>
     ·
@@ -27,7 +27,7 @@
 
 ## 项目介绍
 
-泛函题库是一个用于泛函分析课程复习的网页题库。项目将原本「题干、选项、答案混在同一张截图里」的题目图片，通过视觉大模型结构化提取为「题干 / 选项 / 答案 / 解析」，再以题目答案分离的方式提供刷题、搜索、错题记录和后台校对能力。
+泛函题库是一个用于BUAA北航研究生泛函分析课程复习的网页题库。项目将原本「题干、选项、答案混在同一张截图里」的题目图片，通过 LLM 结构化提取为「题干 / 选项 / 答案 / 解析」，再以题目答案分离的方式提供刷题、搜索、错题记录和后台校对能力。
 
 已部署站点：https://fanhan.zryan.xyz/
 
