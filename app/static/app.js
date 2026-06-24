@@ -106,6 +106,17 @@
     var isWrongBook = !!pageData.is_wrong_book;
     var masterThreshold = pageData.master_threshold || 2;
     var nextScopeUrl = pageData.next_scope_url || "";
+    var completionEnabled = !!pageData.completion_enabled;
+    var initialStates = {};
+    Object.keys(states || {}).forEach(function (qid) {
+      var s = states[qid] || {};
+      initialStates[qid] = {
+        wrong: !!s.wrong,
+        mastered: !!s.mastered,
+        correct_count: s.correct_count || 0,
+        seen: s.seen || 0,
+      };
+    });
 
     var sheet = document.getElementById("qsheet");
     var gridnav = document.getElementById("gridnav");
@@ -113,8 +124,13 @@
     var answeredEl = document.getElementById("answered");
     var wrongEl = document.getElementById("wrongcount");
     var progbar = document.getElementById("progbar");
+    var btnNext = document.getElementById("btn-next");
+    var btnPrev = document.getElementById("btn-prev");
+    var kbdHint = document.getElementById("kbd-hint");
+    var summaryTemplate = document.getElementById("section-summary-template");
 
     var idx = 0;
+    var summaryShown = false;
     var rt = questions.map(function () { return { sel: new Set(), revealed: false, result: null }; });
 
     function curRtState(i) {
@@ -137,12 +153,51 @@
       return n;
     }
 
+    function newWrongCount() {
+      var n = 0;
+      for (var i = 0; i < questions.length; i++) { if (rt[i].newWrong) n++; }
+      return n;
+    }
+
+    function improvedCount() {
+      var n = 0;
+      for (var i = 0; i < questions.length; i++) { if (rt[i].masteryImproved) n++; }
+      return n;
+    }
+
+    function summaryStats() {
+      return {
+        done: answeredCount(),
+        total: questions.length,
+        wrong: wrongCount(),
+        newWrong: newWrongCount(),
+        improved: improvedCount(),
+      };
+    }
+
+    function updateNavText() {
+      if (!btnNext || !btnPrev) return;
+      if (summaryShown) {
+        btnNext.textContent = nextScopeUrl ? "下一节 →" : "返回题库";
+        btnPrev.textContent = "← 回看本节";
+        if (kbdHint) kbdHint.textContent = "回车继续 · ← 回看最后一题";
+        return;
+      }
+      btnPrev.textContent = "← 上一题";
+      if (idx >= questions.length - 1 && completionEnabled) btnNext.textContent = "查看小结 →";
+      else if (idx >= questions.length - 1 && nextScopeUrl) btnNext.textContent = "下一节 →";
+      else btnNext.textContent = "下一题 →";
+      if (kbdHint) kbdHint.textContent = "← → 切题 · 数字键选择 · 回车揭示";
+    }
+
     function updateProgress() {
-      posEl.textContent = "第 " + (idx + 1) + " 题 / 共 " + questions.length + " 题";
+      if (summaryShown) posEl.textContent = "本节小结";
+      else posEl.textContent = "第 " + (idx + 1) + " 题 / 共 " + questions.length + " 题";
       var a = answeredCount();
       answeredEl.textContent = "已答 " + a + " / " + questions.length;
       if (wrongEl) { var w = wrongCount(); wrongEl.textContent = "本次错 " + w; wrongEl.classList.toggle("has", w > 0); }
       progbar.style.width = Math.round((a / questions.length) * 100) + "%";
+      updateNavText();
     }
 
     function buildGrid() {
@@ -153,8 +208,8 @@
         b.textContent = (i + 1);
         var cls = curRtState(i);
         if (cls) b.classList.add(cls);
-        if (i === idx) b.classList.add("cur");
-        b.addEventListener("click", function () { idx = i; render(); });
+        if (!summaryShown && i === idx) b.classList.add("cur");
+        b.addEventListener("click", function () { summaryShown = false; idx = i; render(); });
         gridnav.appendChild(b);
       });
     }
@@ -174,7 +229,47 @@
       return s ? (s.correct_count || 0) : 0;
     }
 
+    function summaryTone(stats) {
+      if (stats.done < stats.total) return "本节已完成 " + stats.done + " / " + stats.total + " 题，未完成的题可以回看补上。";
+      if (stats.wrong === 0) return "这一节本次没有错题，保持这个节奏。";
+      if (stats.newWrong > 0) return "有 " + stats.newWrong + " 道是这次新错，优先回看这些题。";
+      return "本次错题都不是新错，按错题本继续复习即可。";
+    }
+
+    function renderSummary() {
+      summaryShown = true;
+      var stats = summaryStats();
+      var titleEl = document.querySelector(".practice-head .title");
+      var title = titleEl ? titleEl.textContent : "本节";
+      var nextHref = nextScopeUrl || "/";
+      var nextLabel = nextScopeUrl ? "下一节 →" : "返回题库";
+      var summaryNode = summaryTemplate.content.firstElementChild.cloneNode(true);
+
+      summaryNode.querySelector('[data-summary="title"]').textContent = title;
+      summaryNode.querySelector('[data-summary="lead"]').textContent = summaryTone(stats);
+      summaryNode.querySelector('[data-summary="done"]').textContent = stats.done;
+      summaryNode.querySelector('[data-summary="total"]').textContent = "共 " + stats.total + " 题";
+      summaryNode.querySelector('[data-summary="wrong"]').textContent = stats.wrong;
+      summaryNode.querySelector('[data-summary="new-wrong"]').textContent = stats.newWrong;
+      summaryNode.querySelector('[data-summary="improved"]').textContent = stats.improved;
+      summaryNode.querySelector('[data-summary="bar"]').style.width = Math.round((stats.done / stats.total) * 100) + "%";
+      var next = summaryNode.querySelector('[data-summary="next"]');
+      next.href = nextHref;
+      next.textContent = nextLabel;
+
+      sheet.classList.remove("revealed");
+      sheet.classList.add("summary-sheet");
+      sheet.textContent = "";
+      sheet.appendChild(summaryNode);
+      var review = document.getElementById("summary-review");
+      if (review) review.addEventListener("click", function () { summaryShown = false; idx = Math.max(0, questions.length - 1); render(); });
+      updateProgress();
+      buildGrid();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     function render() {
+      summaryShown = false;
       var q = questions[idx];
       var st = rt[idx];
       var isJudge = q.type === "judge";
@@ -213,6 +308,7 @@
       h += '<div class="actions" id="actions"></div>';
       h += '<div id="reveal-area"></div>';
       sheet.classList.remove("revealed");
+      sheet.classList.remove("summary-sheet");
       sheet.innerHTML = h;
 
       // restore selection visuals
@@ -263,7 +359,7 @@
       if (!a) return;
       if (st.revealed) {
         var isLast = idx >= questions.length - 1;
-        var label = isLast && nextScopeUrl ? "下一章 →" : "下一题 →";
+        var label = isLast && completionEnabled ? "查看小结 →" : (isLast && nextScopeUrl ? "下一节 →" : "下一题 →");
         a.innerHTML = '<button class="btn btn-primary" id="act-next" type="button">' + label + '</button>';
         var n = document.getElementById("act-next"); if (n) n.addEventListener("click", next);
         return;
@@ -286,17 +382,25 @@
       var correct = setEq(st.sel, answerSet(q));
       st.result = correct ? "correct" : "incorrect";
       st.revealed = true;
+      var before = initialStates[q.id] || {};
+      st.newWrong = st.result === "incorrect" && !(before.wrong && !before.mastered);
+      st.masteryImproved = st.result === "correct" && before.wrong && !before.mastered;
       post("/api/attempt", { question_id: q.id, result: st.result }).then(function (res) {
         if (res) {
+          var beforeCount = before.correct_count || 0;
           states[q.id] = states[q.id] || {};
           states[q.id].wrong = res.wrong;
           states[q.id].mastered = res.mastered;
           states[q.id].correct_count = res.correct_count || 0;
           states[q.id].last_result = st.result;
           states[q.id].seen = 1;
+          st.masteryImproved = st.result === "correct" &&
+            ((states[q.id].correct_count || 0) > beforeCount || (!before.mastered && res.mastered));
           if (isWrongBook && st.result === "correct") {
             if (!activeWrongOf(q)) st.pendingRemoval = true;
             render();
+          } else if (summaryShown) {
+            renderSummary();
           } else {
             buildGrid();
           }
@@ -378,22 +482,30 @@
     }
 
     function next() {
+      if (summaryShown) { window.location.href = nextScopeUrl || "/"; return; }
       if (isWrongBook && rt[idx] && rt[idx].pendingRemoval) { removeCurrentWrong(); return; }
       if (idx < questions.length - 1) { idx++; render(); }
+      else if (completionEnabled) { renderSummary(); }
       else if (nextScopeUrl) { window.location.href = nextScopeUrl; }
     }
 
     function prev() {
+      if (summaryShown) { summaryShown = false; idx = Math.max(0, questions.length - 1); render(); return; }
       if (isWrongBook && rt[idx] && rt[idx].pendingRemoval) { removeCurrentWrong(); return; }
       if (idx > 0) { idx--; render(); }
     }
 
-    document.getElementById("btn-next").addEventListener("click", next);
-    document.getElementById("btn-prev").addEventListener("click", prev);
+    btnNext.addEventListener("click", next);
+    btnPrev.addEventListener("click", prev);
     document.getElementById("btn-grid").addEventListener("click", function () { gridnav.classList.toggle("hidden"); });
 
     document.addEventListener("keydown", function (e) {
       if (e.target && /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+      if (summaryShown) {
+        if (e.key === "Enter" || e.key === "ArrowRight") { next(); e.preventDefault(); }
+        else if (e.key === "ArrowLeft") { prev(); e.preventDefault(); }
+        return;
+      }
       var q = questions[idx], st = rt[idx];
       if (e.key === "ArrowRight") { next(); e.preventDefault(); }
       else if (e.key === "ArrowLeft") { prev(); e.preventDefault(); }
@@ -413,7 +525,14 @@
   }
 
   // ---------------- Admin: live full-question preview + safe re-extract ----------------
-  function escapeHtml(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#x27;");
+  }
 
   function nonmath(s) {
     return escapeHtml(s).replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br>");

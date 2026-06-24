@@ -13,6 +13,40 @@
 </div>
 
 <div class="sheet qsheet" id="qsheet"></div>
+<template id="section-summary-template">
+  <div class="section-summary">
+    <div class="summary-kicker">本节小结</div>
+    <h2 data-summary="title"></h2>
+    <p class="summary-lead" data-summary="lead"></p>
+    <div class="summary-stats">
+      <div class="summary-stat">
+        <span class="n" data-summary="done"></span>
+        <span class="k">已完成</span>
+        <span class="s" data-summary="total"></span>
+      </div>
+      <div class="summary-stat wrong">
+        <span class="n" data-summary="wrong"></span>
+        <span class="k">本次错</span>
+        <span class="s">需要回看</span>
+      </div>
+      <div class="summary-stat new-wrong">
+        <span class="n" data-summary="new-wrong"></span>
+        <span class="k">新错题</span>
+        <span class="s">这次新增</span>
+      </div>
+      <div class="summary-stat improved">
+        <span class="n" data-summary="improved"></span>
+        <span class="k">有进步</span>
+        <span class="s">掌握更稳</span>
+      </div>
+    </div>
+    <div class="summary-bar"><i data-summary="bar" style="width:0%"></i></div>
+    <div class="actions summary-actions">
+      <button class="btn" id="summary-review" type="button">回看本节</button>
+      <a class="btn btn-primary" data-summary="next" href="/">下一节 →</a>
+    </div>
+  </div>
+</template>
 <div class="gridnav hidden" id="gridnav"></div>
 
 <div class="qnav">
@@ -23,4 +57,4 @@
 
 <script id="qdata" type="application/json">{{ questions_json|safe }}</script>
 <script id="sdata" type="application/json">{{ states_json|safe }}</script>
-<script id="pdata" type="application/json">{"is_wrong_book": {{ 'true' if path == '/practice/wrong' else 'false' }}, "master_threshold": {{ master_threshold|default(2) }}, "next_scope_url": {{ (next_scope_url or '')|tojson }} }</script>
+<script id="pdata" type="application/json">{"is_wrong_book": {{ 'true' if path == '/practice/wrong' else 'false' }}, "master_threshold": {{ master_threshold|default(2) }}, "next_scope_url": {{ (next_scope_url or '')|tojson }}, "completion_enabled": {{ 'true' if completion_enabled|default(false) else 'false' }} }</script>

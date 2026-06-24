@@ -78,11 +78,13 @@ def render_practice(
     subtitle: str,
     questions: list[Question],
     next_scope_url: str | None = None,
+    completion_enabled: bool = False,
 ):
     return page(
         request, session, "practice.html",
         scope_title=title, scope_subtitle=subtitle,
         master_threshold=MASTER_THRESHOLD, next_scope_url=next_scope_url,
+        completion_enabled=completion_enabled,
         **_payload_ctx(session, user, questions),
     )
 
@@ -185,6 +187,7 @@ def practice_section(
         subtitle=ch.title if ch else "",
         questions=questions,
         next_scope_url=f"/practice/section/{next_sec.id}" if next_sec else None,
+        completion_enabled=True,
     )
 
 

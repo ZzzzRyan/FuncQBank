@@ -347,6 +347,52 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .explanation { margin-top: 14px; padding: 14px 16px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); }
 .explanation .h { font-family: var(--font-sans); font-size: .78rem; font-weight: 700; letter-spacing: .08em; color: var(--ink-3); margin-bottom: 6px; }
 
+/* section completion summary */
+.summary-sheet { padding: 30px 34px; }
+.section-summary { font-family: var(--font-sans); }
+.summary-kicker {
+  color: var(--blue); font-size: .8rem; font-weight: 700; letter-spacing: 0;
+  margin-bottom: 8px;
+}
+.section-summary h2 {
+  font-size: 1.75rem; color: var(--ink); margin-bottom: 10px;
+}
+.summary-lead {
+  margin: 0; color: var(--ink-2); font-size: .98rem; line-height: 1.7;
+}
+.summary-stats {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.summary-stat {
+  min-width: 0; padding: 17px 18px 16px 0;
+  display: grid; gap: 2px;
+}
+.summary-stat + .summary-stat {
+  padding-left: 18px; border-left: 1px solid var(--line);
+}
+.summary-stat .n {
+  font-family: var(--font-display); font-size: 2rem; font-weight: 600; line-height: 1;
+  color: var(--ink);
+}
+.summary-stat .k {
+  color: var(--ink); font-size: .88rem; font-weight: 700;
+}
+.summary-stat .s {
+  color: var(--ink-3); font-size: .78rem;
+}
+.summary-stat.wrong .n, .summary-stat.new-wrong .n { color: var(--red); }
+.summary-stat.improved .n { color: var(--green); }
+.summary-bar {
+  height: 6px; margin-top: 18px; border-radius: 999px;
+  background: var(--paper-2); border: 1px solid var(--line); overflow: hidden;
+}
+.summary-bar > i {
+  display: block; height: 100%;
+  background: linear-gradient(90deg, var(--blue), color-mix(in srgb, var(--green) 70%, var(--blue)));
+}
+.summary-actions { margin-top: 24px; }
+
 /* bottom navigation + answer card grid */
 .qnav { display: flex; align-items: center; justify-content: space-between; margin-top: 26px; gap: 12px; font-family: var(--font-sans); }
 .gridnav {
@@ -510,6 +556,16 @@ details summary { cursor: pointer; font-family: var(--font-sans); font-size: .85
   .option .lab { width: 32px; height: 32px; }
   .actions { gap: 10px; margin-top: 22px; }
   .actions .btn { min-height: 44px; }
+  .summary-sheet { padding: 24px 22px; }
+  .section-summary h2 { font-size: 1.46rem; line-height: 1.22; }
+  .summary-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .summary-stat { padding: 16px 14px 15px 0; }
+  .summary-stat:nth-child(2n + 1) { border-left: none; padding-left: 0; }
+  .summary-stat:nth-child(2n) { border-left: 1px solid var(--line); padding-left: 16px; }
+  .summary-stat:nth-child(n + 3) { border-top: 1px solid var(--line); }
+  .summary-stat .n { font-size: 1.76rem; }
+  .summary-actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .summary-actions .btn { width: 100%; }
   .judge { gap: 12px; }
   .judge button { padding: 18px 12px; }
   .gridnav { margin-top: 18px; padding: 14px; gap: 7px; grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)); }
@@ -537,4 +593,12 @@ details summary { cursor: pointer; font-family: var(--font-sans); font-size: .85
   .progress-line #btn-grid { grid-column: 2 / 3; grid-row: 1; }
   .progress-line .pos { grid-column: 1 / 2; }
   .qnav .btn { min-width: 92px; padding-inline: 12px; }
+  .summary-stats { grid-template-columns: 1fr; }
+  .summary-stat,
+  .summary-stat + .summary-stat,
+  .summary-stat:nth-child(2n) {
+    padding: 14px 0; border-left: none;
+  }
+  .summary-stat + .summary-stat { border-top: 1px solid var(--line); }
+  .summary-actions { grid-template-columns: 1fr; }
 }
