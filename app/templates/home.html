@@ -40,4 +40,4 @@
   {% endfor %}
 </div>
 {% endblock %}
-{% block footer %}{% include "_beian.html" %}{% endblock %}
+{% block footer %}{% if beian %}{% include "_beian.html" %}{% endif %}{% endblock %}

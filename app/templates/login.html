@@ -16,4 +16,4 @@
   {% if registration_open %}<p class="tag" style="margin-top:18px">还没有账号？<a href="/register">注册一个</a></p>{% endif %}
 </div></div>
 {% endblock %}
-{% block footer %}{% include "_beian.html" %}{% endblock %}
+{% block footer %}{% if beian %}{% include "_beian.html" %}{% endif %}{% endblock %}

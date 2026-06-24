@@ -30,6 +30,8 @@ class Settings(BaseSettings):
     registration_open: bool = True
     admin_username: str = ""  # optional: bootstrap this username as admin on startup
     cookie_secure: bool = False  # set True when served over HTTPS
+    # ICP 备案号：站点专属信息，留空则底部不显示备案栏（在 .env 中设置）
+    beian: str = ""
     # Behind a trusted reverse proxy (Cloudflare Tunnel / Nginx / Caddy) the socket
     # peer is the proxy, so the real client IP arrives in a header. Used for the
     # login/register rate limiter. Keep True for any proxied deploy; set False only
