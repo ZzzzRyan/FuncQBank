@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 泛函题库 **FuncQBank** —— 泛函分析考前刷题 / 记忆原题的 Web 题库（考试只考原题）。
-本文件给未来的 Claude 会话提供**必须遵守的原则与项目约定**。请先读完再动手。
+本文件给接手开发的 AI 会话（Claude / Codex 等，`AGENTS.md` 也指向这里）提供**必须遵守的原则与项目约定**。请先读完再动手。
 
 ## 一句话定位
 把「题干+答案混在一张图里」的截图，用大模型结构化提取成「题干/选项/答案/解析」，做成**题答分离**、界面美观、移动端友好的刷题网站；管理员后台可逐题校对纠错；自包含、易部署。
@@ -30,14 +30,28 @@
 6. **自包含易部署**：无 Node、KaTeX 已 vendored、SQLite 单文件、CSS 手写；保持 `uv` + Docker 可一键起。新增前端能力优先原生实现，别引 CDN/构建链。
 7. **安全基线**（"一定程度即可"，别退化）：argon2 哈希、写操作校验 CSRF（表单隐藏字段 `csrf_token`；fetch 用 `X-CSRF-Token` 头）、签名会话 Cookie、登录/注册限流、统一安全头(含 CSP)。
 
-## 代码约定
-- UI 文案用中文；注释密度/命名风格贴合周围既有代码。
-- `app/models.py` **不要加** `from __future__ import annotations`——会破坏 SQLModel 的 `Relationship` 解析。
-- 题型常量 `single/multiple/judge`、状态常量 `pending/verified/flagged` 都在 `app/models.py`。**flagged 题目从刷题页隐藏**（`practice.py` 的 `VISIBLE`）。
-- `seed.py` 幂等且**保护 `verified` 行**不被覆盖；`extract.py` 可断点续跑。
-- 改了 `app/static/app.css` 或 `app.js` 后，**bump `app/templating.py` 里的 `asset_v`** 以刷新浏览器缓存。
-- 设计系统集中在 `app.css` 的 CSS 变量（教材/考卷风格：暖纸张、衬线、钢笔蓝、红笔批改色）；保持统一、移动端优先。
+## 代码风格与结构纪律（保持整洁，别堆屎山）
+**职责归位——先找现成的家，别另起炉灶。** 改动前先确认这段逻辑该落在哪一层，沿用既有模块，不要复制粘贴出第二套：
+- 数据模型与所有常量 → `app/models.py`；DB 引擎/会话 → `app/db.py`；配置 → `app/config.py`。
+- 鉴权/角色/会话 → `app/auth.py`+`app/security.py`；题面安全渲染 → `app/render.py`；模板公共上下文注入 → `app/templating.py:page()`。
+- HTTP 路由 → `app/routers/{auth_routes,practice,admin}.py`。**路由保持「薄」**：只做请求解析、鉴权、查询、渲染/重定向；可复用或较复杂的逻辑下沉为模块级函数（如 `practice.py` 的 `VISIBLE`、查询辅助）。当前规模别过度分层——不需要 service/repository 框架，一个文件一职责即可。
+- 数据管线脚本 → `scripts/`，与 web 应用 `app/` 严格分离，每个脚本可独立运行、可断点续跑。
+- 模板都继承 `base.html`；可复用片段用 `_` 前缀（如 `_practice_body.html`）。
 
-## 当前环境（重要）
-- **这台机器是测试环境，不是部署目标。`data/app.db` 完全可丢弃**：需要就 `rm data/app.db && uv run scripts/seed.py` 重建，**不要为了保数据库/历史数据而妥协代码质量或回避重构——开发与正确性第一**。（模型/字段要改就大胆改，重新 seed 即可。）
-- 真正部署见 `README.md`（Docker + 反代 HTTPS）；部署环境才需要持久化与 `verified` 保护。
+**风格惯例（贴合既有代码）：**
+- 每个模块顶部一句话 docstring 说明职责；UI 文案用中文；注释密度/命名风格随周围。
+- 除 `app/models.py` 外的模块普遍带 `from __future__ import annotations`；`models.py` **绝不能加**——会破坏 SQLModel 的 `Relationship` 解析。
+- 题型 `single/multiple/judge`、状态 `pending/verified/flagged`、角色 `user/admin` 常量都在 `app/models.py`，引用常量名而非裸字符串。**flagged 题目从刷题页隐藏**（`practice.py` 的 `VISIBLE`）。
+- 改 `app/static/app.css` 或 `app.js` 后，**bump `app/templating.py` 里的 `asset_v`** 刷新浏览器缓存。
+- 设计系统集中在 `app.css` 的 CSS 变量（教材/考卷风格：暖纸张、衬线、钢笔蓝、红笔批改色）；保持统一、移动端优先。
+- 收尾前跑语法自检（见上）；新增依赖一律 `uv add`，不手改 `pyproject.toml`/`uv.lock`。
+
+**架构优先，别打补丁。** 遇到反复出现或牵连多处的问题，从数据流与职责边界层面修正一次，**不要在调用点堆 `if`/特例/重复兜底**。容错与渲染已有统一入口（`extract.py` 的解析兜底、`render_rich`/`richToHtml`），复用它们而不是再写一套。动手大改前若涉及跨层重构或行为变化，先说明思路。
+
+## 数据库与环境（重要——项目已上线）
+- **本机是开发/测试环境**，这里的 `data/app.db` 可丢弃：需要就 `rm data/app.db && uv run scripts/seed.py` 重建。本机不要为了保数据库而妥协代码质量。
+- **但项目已上线，线上库存有不可重建的真实数据**：用户账号、`verified` 人工校对、刷题进度（`UserQuestionState`）。代码要照顾这条线上现实。
+- **无迁移框架——这是硬约束**：`app/db.py:init_db()` 只 `SQLModel.metadata.create_all`（**仅建缺失的表，绝不会 `ALTER` 既有表/加列/改约束**）。所以任何 schema 改动在线上 `app.db` 上是静默失配，不会自动生效。
+- **任何数据库结构改动必须先和用户说明并给出迁移方案**——包括：增删改模型字段、改 `UniqueConstraint`/索引、改 JSON 列形状（`options`/`answer`/`auto_flags`）、改状态/类型常量语义。说明时附上线上迁移路径（手写 `ALTER TABLE` / 一次性迁移脚本 / 导出→重建→重导），别让用户在线上撞见数据丢失或启动报错。
+- **不算 schema 改动、无需特别报备**：纯内容修正（改 `data/extracted/**.json` 后 `seed.py` 重入库，`verified` 行受保护不被覆盖）。
+- 真正部署见 `README.md`（Docker + 反代 HTTPS）。
