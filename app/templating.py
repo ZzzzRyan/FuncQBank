@@ -16,7 +16,7 @@ templates = Jinja2Templates(directory=str(BASE_DIR / "app" / "templates"))
 templates.env.filters["rich"] = render_rich
 templates.env.globals["registration_open"] = settings.registration_open
 templates.env.globals["app_name"] = "泛函题库"
-templates.env.globals["asset_v"] = "11"  # bump to bust browser cache of app.css/app.js
+templates.env.globals["asset_v"] = "13"  # bump to bust browser cache of app.css/app.js
 
 TYPE_LABELS = {"single": "单选题", "multiple": "多选题", "judge": "判断题"}
 templates.env.globals["type_labels"] = TYPE_LABELS

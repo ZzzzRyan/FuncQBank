@@ -84,6 +84,9 @@ html[data-theme="dark"] .option.wrong .lab { color: #15131a; }
 
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: var(--font-serif);
   font-size: 18px;
   line-height: 1.7;
@@ -427,6 +430,17 @@ textarea { resize: vertical; line-height: 1.6; }
 .auth-card { width: 100%; max-width: 410px; }
 .auth-card .brand { font-size: 1.8rem; justify-content: center; margin-bottom: 4px; }
 .auth-card .tag { text-align: center; color: var(--ink-3); font-family: var(--font-sans); font-size: .9rem; margin-bottom: 24px; }
+.beian {
+  text-align: center; padding: 26px 18px 30px;
+  margin-top: auto;
+  font-family: var(--font-sans); font-size: .76rem; letter-spacing: .02em;
+}
+.beian a {
+  color: var(--ink-3); text-decoration: none; opacity: .72;
+  transition: opacity .12s, color .12s;
+}
+.beian a:hover { opacity: 1; color: var(--ink-2); }
+
 .alert { font-family: var(--font-sans); font-size: .9rem; padding: 10px 14px; border-radius: var(--radius-sm); margin-bottom: 16px; }
 .alert.err { background: var(--red-soft); color: var(--red); border: 1px solid color-mix(in srgb, var(--red) 30%, var(--line)); }
 .alert.info { background: var(--blue-soft); color: var(--blue-deep); border: 1px solid color-mix(in srgb, var(--blue) 25%, var(--line)); }
