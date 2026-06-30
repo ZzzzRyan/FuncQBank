@@ -9,7 +9,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.responses import FileResponse, JSONResponse, RedirectResponse
 from sqlalchemy import case
 from sqlmodel import Session, func, select
@@ -118,11 +118,13 @@ def admin_edit(
     q = session.get(Question, qid)
     if not q:
         return RedirectResponse("/admin", status_code=303)
+    image_exists = (settings.docs_dir / q.rel_path).exists()
     return page(
         request, session, "admin/edit.html",
         q=q, sec=q.section, ch=session.get(Chapter, q.section.chapter_id) if q.section else None,
         next_id=_next_review_id(session, q),
         types=sorted(QUESTION_TYPES),
+        image_exists=image_exists,
     )
 
 
@@ -226,10 +228,10 @@ async def admin_reextract(
 def admin_image(qid: int, session: Session = Depends(get_session), admin: User = Depends(require_admin)):
     q = session.get(Question, qid)
     if not q:
-        return RedirectResponse("/admin", status_code=303)
+        raise HTTPException(status_code=404, detail="题目不存在")
     path = settings.docs_dir / q.rel_path
     if not path.exists():
-        return RedirectResponse("/admin", status_code=303)
+        raise HTTPException(status_code=404, detail="原图文件缺失")
     return FileResponse(str(path), media_type="image/jpeg")
 
 

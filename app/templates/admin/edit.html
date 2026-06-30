@@ -17,12 +17,19 @@
 
   <div class="edit-grid">
     <!-- 1) original image -->
+    {% if image_exists %}
     <div class="imgpane">
       <div class="pane-label">原图</div>
       <img src="/admin/image/{{ q.id }}" alt="题目原图" loading="lazy">
       <button class="btn btn-sm btn-block" type="button" id="reextract-btn" data-url="/admin/question/{{ q.id }}/reextract" style="margin-top:12px">用大模型重新识别此图</button>
       <div class="hint" style="margin-top:6px">仅把新识别结果填入右侧表单供你检查，<b>不会自动保存</b>。</div>
     </div>
+    {% else %}
+    <div class="imgpane no-image">
+      <div class="pane-label">原图</div>
+      <div class="no-image-hint">此题无对应原图（手动录入）</div>
+    </div>
+    {% endif %}
 
     <!-- 2) live preview of the whole question -->
     <div class="qpreview-pane">
