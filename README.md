@@ -67,7 +67,7 @@ docs/ 原始题图
 
 如果只是刷题，直接访问已部署站点即可：
 
-https://fanhan.zryan.xyz/
+https://fanhan.zryan.cn/
 
 常用入口：
 
