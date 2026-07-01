@@ -180,6 +180,13 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 }
 .theme-toggle:hover { background: var(--paper-2); color: var(--ink); border-color: var(--ink-3); }
 .theme-toggle svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; }
+.nav a.gh-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  flex: 0 0 36px; width: 36px; height: 36px; min-width: 36px; padding: 0;
+  border-radius: 8px; color: var(--ink-3); transition: background .15s, color .15s;
+}
+.nav a.gh-link:hover { background: var(--paper-2); color: var(--ink); }
+.nav a.gh-link svg { display: block; flex: 0 0 20px; width: 20px; height: 20px; fill: currentColor; }
 .theme-toggle[data-mode="light"] svg circle { fill: currentColor; stroke: none; }
 .theme-toggle[data-mode="dark"] svg path { fill: currentColor; stroke: none; }
 .theme-toggle[data-mode="system"] svg path { fill: currentColor; stroke: none; }
@@ -514,12 +521,15 @@ details summary { cursor: pointer; font-family: var(--font-sans); font-size: .85
 .exam-stat-card .k { font-family: var(--font-sans); font-size: .76rem; color: var(--ink-3); margin-top: 2px; }
 .exam-stat-card .s { font-family: var(--font-sans); font-size: .72rem; color: var(--ink-3); }
 
-.exam-breakdown { background: var(--sheet); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 18px; }
-.exam-type-row { display: flex; align-items: center; gap: 14px; padding: 7px 0; }
-.exam-type-row + .exam-type-row { border-top: 1px solid var(--line); padding-top: 13px; }
-.exam-type-row .type-label { font-family: var(--font-sans); font-size: .88rem; font-weight: 600; min-width: 60px; color: var(--ink); }
-.exam-type-row .type-score { font-family: var(--font-display); font-size: 1rem; color: var(--ink-2); min-width: 56px; }
-.exam-type-row .bar { flex: 1; height: 8px; background: var(--paper-2); border-radius: 4px; overflow: hidden; }
+.exam-breakdown { background: var(--sheet); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 0 20px; margin-bottom: 18px; }
+.exam-type-row {
+  display: grid; grid-template-columns: 72px 78px minmax(0, 1fr);
+  align-items: center; column-gap: 14px; min-height: 58px;
+}
+.exam-type-row + .exam-type-row { border-top: 1px solid var(--line); }
+.exam-type-row .type-label { font-family: var(--font-sans); font-size: .88rem; font-weight: 600; color: var(--ink); }
+.exam-type-row .type-score { font-family: var(--font-display); font-size: 1rem; color: var(--ink-2); }
+.exam-type-row .bar { flex: 1; height: 8px; background: var(--paper-2); border-radius: 4px; overflow: hidden; transform: translateY(-5px);}
 .exam-type-row .bar i { display: block; height: 100%; background: var(--blue); border-radius: 4px; }
 
 /* Wrong-book notice on report */
@@ -576,14 +586,16 @@ details summary { cursor: pointer; font-family: var(--font-sans); font-size: .85
 
 /* Answer card unanswered state */
 .gridnav .unanswered { border-color: var(--line-2); color: var(--ink-3); background: var(--paper); }
-.gridnav .unanswered.cur { border-color: var(--blue); }
+.gridnav .answered { background: var(--blue-soft); border-color: var(--blue); color: var(--blue); }
+.gridnav .unanswered.cur,
+.gridnav .answered.cur { border-color: var(--ink-2); }
 
 @media (max-width: 760px) {
   .exam-info-cards { grid-template-columns: 1fr; }
   .exam-stats-grid { grid-template-columns: repeat(2, 1fr); }
   .exam-big-score { font-size: 2.8rem; }
   .exam-qrow { padding: 14px 16px; }
-  .exam-type-row { flex-wrap: wrap; gap: 8px; }
+  .exam-type-row { grid-template-columns: 58px 56px minmax(72px, 1fr); column-gap: 8px; }
   .exam-filters { gap: 6px; }
 }
 @media (max-width: 420px) {
