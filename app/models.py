@@ -87,6 +87,20 @@ class User(SQLModel, table=True):
     created_at: datetime = Field(default_factory=_utcnow)
 
 
+class ExamAttempt(SQLModel, table=True):
+    """One exam sitting: 25 judge + 25 choice, 2 pts each = 100 pts total."""
+    id: Optional[int] = Field(default=None, primary_key=True)
+    user_id: int = Field(foreign_key="user.id", index=True)
+    question_ids: list[int] = Field(sa_column=Column(SA_JSON))        # ordered list of question ids
+    answers: list[dict[str, Any]] = Field(default_factory=list, sa_column=Column(SA_JSON))  # [{qid, user, correct, pts}]
+    score: int = 0
+    total: int = 100
+    judge_count: int = 0
+    choice_count: int = 0
+    status: str = Field(default="in_progress")  # in_progress | completed
+    created_at: datetime = Field(default_factory=_utcnow)
+
+
 class UserQuestionState(SQLModel, table=True):
     __table_args__ = (UniqueConstraint("user_id", "question_id", name="uq_uqs_user_question"),)
     id: Optional[int] = Field(default=None, primary_key=True)

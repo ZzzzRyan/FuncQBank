@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% block title %}考试报告 · {{ app_name }}{% endblock %}
+{% block body %}
+<div class="wrap page">
+  <div class="practice-head">
+    <div>
+      <div class="title">考试报告</div>
+      <div class="sub">{{ attempt.created_at.strftime('%Y-%m-%d %H:%M') }}</div>
+    </div>
+    <div class="toolbar">
+      <a class="btn btn-sm" href="/exam">← 返回考试</a>
+      <a class="btn btn-sm" href="/practice/wrong">错题本</a>
+      <a class="btn btn-sm" href="/">题库</a>
+    </div>
+  </div>
+
+  <!-- Score hero -->
+  <div class="exam-hero {% if score >= 80 %}great{% elif score >= 60 %}ok{% else %}low{% endif %}">
+    <div class="exam-big-score">{{ score }}<span class="of"> / {{ total }}</span></div>
+    <div class="exam-grade">
+      {% if score >= 90 %}优秀！{% elif score >= 80 %}良好{% elif score >= 70 %}中等{% elif score >= 60 %}及格{% else %}继续努力{% endif %}
+    </div>
+  </div>
+
+  <!-- Stats cards -->
+  <div class="exam-stats-grid">
+    <div class="exam-stat-card">
+      <div class="n">{{ correct_count }}</div>
+      <div class="k">答对</div>
+    </div>
+    <div class="exam-stat-card">
+      <div class="n red">{{ wrong_count }}</div>
+      <div class="k">答错</div>
+    </div>
+    <div class="exam-stat-card">
+      <div class="n">{{ "%.0f"|format(correct_count * 100 / (correct_count + wrong_count) if (correct_count + wrong_count) else 0) }}%</div>
+      <div class="k">正确率</div>
+    </div>
+    {% if total_exams > 1 %}
+    <div class="exam-stat-card">
+      <div class="n">{{ rank }}</div>
+      <div class="k">本次排名</div>
+      <div class="s">共 {{ total_exams }} 次考试</div>
+    </div>
+    {% endif %}
+    <div class="exam-stat-card">
+      <div class="n">{{ best_score if best_score else score }}</div>
+      <div class="k">历史最高</div>
+    </div>
+    <div class="exam-stat-card">
+      <div class="n">{{ avg_score if avg_score else score }}</div>
+      <div class="k">历史平均</div>
+    </div>
+  </div>
+
+  <!-- Per-type breakdown -->
+  <div class="exam-breakdown">
+    <div class="exam-type-row">
+      <span class="type-label">判断题</span>
+      <span class="type-score">{{ judge_correct }} / {{ judge_total }}</span>
+      <div class="bar"><i style="width: {{ (judge_correct * 100 / judge_total) if judge_total else 0|round|int }}%"></i></div>
+    </div>
+    <div class="exam-type-row">
+      <span class="type-label">选择题</span>
+      <span class="type-score">{{ choice_correct }} / {{ choice_total }}</span>
+      <div class="bar"><i style="width: {{ (choice_correct * 100 / choice_total) if choice_total else 0|round|int }}%"></i></div>
+    </div>
+  </div>
+
+  {% if wrong_count > 0 %}
+  <div class="alert info exam-wrong-notice">
+    本次考试的 {{ wrong_count }} 道错题已自动收录到<b>错题本</b>，可在错题本中反复练习。
+    <a class="btn btn-sm" href="/practice/wrong" style="margin-left:12px">去错题本 →</a>
+  </div>
+  {% endif %}
+
+  <!-- Per-question detail -->
+  <section class="chapter">
+    <h2>逐题详情</h2>
+    <div class="exam-filters" id="exam-filters">
+      <div class="filter-group">
+        <button class="btn btn-sm filter-btn active" data-filter="result" data-val="all">全部</button>
+        <button class="btn btn-sm filter-btn" data-filter="result" data-val="correct">✓ 正确</button>
+        <button class="btn btn-sm filter-btn" data-filter="result" data-val="wrong">✗ 错误</button>
+      </div>
+      <div class="filter-group">
+        <button class="btn btn-sm filter-btn active" data-filter="type" data-val="all">全题型</button>
+        <button class="btn btn-sm filter-btn" data-filter="type" data-val="judge">判断</button>
+        <button class="btn btn-sm filter-btn" data-filter="type" data-val="single">单选</button>
+        <button class="btn btn-sm filter-btn" data-filter="type" data-val="multiple">多选</button>
+      </div>
+    </div>
+    <div class="exam-details">
+      {% for d in details %}
+      <div class="exam-qrow {% if d.is_correct %}correct{% else %}wrong{% endif %}" data-result="{{ 'correct' if d.is_correct else 'wrong' }}" data-type="{{ d.type }}" id="q-{{ d.id }}">
+        <div class="exam-qhead">
+          <span class="exam-qnum">{{ loop.index }}</span>
+          <span class="badge {{ d.type }}">{{ {'single':'单选','multiple':'多选','judge':'判断'}.get(d.type, d.type) }}</span>
+          <span class="exam-qresult">{{ '✓ +2' if d.is_correct else '✗ 0' }}</span>
+        </div>
+        <div class="exam-qstem">{{ d.stem_html|safe }}</div>
+
+        {% if d.type != 'judge' %}
+        <div class="exam-qopts">
+          {% for o in d.options %}
+          <span class="exam-opt{% if o.label in d.correct_answer %} exam-opt-correct{% elif o.label in d.user_answer %} exam-opt-wrong{% endif %}">
+            {{ o.label }}. {{ o.text_html|safe }}
+          </span>
+          {% endfor %}
+        </div>
+        {% else %}
+        <div class="exam-judge-result">
+          你的答案：<b>{{ '正确' if '正确' in d.user_answer else ('错误' if '错误' in d.user_answer else '未作答') }}</b>
+          · 正确答案：<b>{{ d.correct_answer|join('、') }}</b>
+        </div>
+        {% endif %}
+
+        {% if d.explanation_html %}
+        <details class="exam-qexplain">
+          <summary>解析</summary>
+          <div>{{ d.explanation_html|safe }}</div>
+        </details>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    <div class="exam-no-results" id="exam-no-results" style="display:none">没有匹配的题目。</div>
+  </section>
+
+  <div class="actions" style="margin-top:20px">
+    <a class="btn btn-primary" href="/exam">再考一次</a>
+    <a class="btn" href="/">返回题库</a>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+(function () {
+  var filters = document.querySelectorAll(".exam-filters .filter-btn");
+  var rows = document.querySelectorAll(".exam-qrow");
+  var noResults = document.getElementById("exam-no-results");
+
+  var state = { result: "all", type: "all" };
+
+  function apply() {
+    var visible = 0;
+    rows.forEach(function (r) {
+      var ok = true;
+      if (state.result !== "all" && r.dataset.result !== state.result) ok = false;
+      if (state.type !== "all" && r.dataset.type !== state.type) ok = false;
+      r.style.display = ok ? "" : "none";
+      if (ok) visible++;
+    });
+    noResults.style.display = visible > 0 ? "none" : "";
+  }
+
+  filters.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var group = btn.dataset.filter;
+      var val = btn.dataset.val;
+      state[group] = val;
+      document.querySelectorAll('.filter-btn[data-filter="' + group + '"]').forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      apply();
+    });
+  });
+
+  // initial state: all rows visible
+  apply();
+})();
+</script>
+{% endblock %}

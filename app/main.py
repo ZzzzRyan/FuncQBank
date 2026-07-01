@@ -13,7 +13,7 @@ from sqlmodel import Session, select
 from app.config import BASE_DIR, settings
 from app.db import engine, init_db
 from app.models import ROLE_ADMIN, User
-from app.routers import admin, auth_routes, practice
+from app.routers import admin, auth_routes, exam, practice
 from app.templating import templates
 
 
@@ -64,6 +64,7 @@ app.mount("/static", StaticFiles(directory=str(BASE_DIR / "app" / "static")), na
 
 app.include_router(auth_routes.router)
 app.include_router(practice.router)
+app.include_router(exam.router)
 app.include_router(admin.router)
 
 

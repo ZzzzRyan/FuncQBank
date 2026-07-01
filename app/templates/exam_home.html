@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}考试 · {{ app_name }}{% endblock %}
+{% block body %}
+<div class="wrap page">
+  <div class="practice-head">
+    <div>
+      <div class="title">模拟考试</div>
+      <div class="sub">25 判断 + 25 选择 · 每题 2 分 · 满分 100 分</div>
+    </div>
+    <div class="stat-strip" style="margin-top:0">
+      <div class="stat"><div class="n">{{ total_exams }}</div><div class="k">已考</div></div>
+      {% if avg_score is not none %}<div class="stat"><div class="n blue">{{ avg_score }}</div><div class="k">均分</div></div>{% endif %}
+      {% if best %}<div class="stat"><div class="n green">{{ best }}</div><div class="k">最高</div></div>{% endif %}
+    </div>
+  </div>
+
+  <div class="exam-info-cards">
+    <div class="exam-info-card">
+      <div class="exam-info-n">50</div>
+      <div class="exam-info-k">总题数</div>
+      <div class="exam-info-s">判断 25 + 选择 25</div>
+    </div>
+    <div class="exam-info-card">
+      <div class="exam-info-n">2 分</div>
+      <div class="exam-info-k">每题分值</div>
+      <div class="exam-info-s">满分 100 分</div>
+    </div>
+    <div class="exam-info-card">
+      <div class="exam-info-n">不可跳</div>
+      <div class="exam-info-k">作答规则</div>
+      <div class="exam-info-s">不可直接显示答案</div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:20px">
+    <button class="btn btn-primary btn-lg" id="start-exam" type="button">开始考试</button>
+    <div id="start-error" class="alert err" style="display:none; margin-top:12px"></div>
+  </div>
+
+  {% if attempts %}
+  <section class="chapter" style="margin-top:32px">
+    <h2>历史考试</h2>
+    <div class="exam-history">
+      {% for a in attempts %}
+      <a class="exam-row" href="/exam/report/{{ a.id }}">
+        <div>
+          <span class="exam-score {% if a.score >= 80 %}green{% elif a.score >= 60 %}gold{% else %}red{% endif %}">{{ a.score }}</span>
+          <span class="exam-meta">/ {{ a.total }} · {{ a.created_at.strftime('%Y-%m-%d %H:%M') }}</span>
+        </div>
+        <span class="caret" aria-hidden="true">→</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+document.getElementById("start-exam").addEventListener("click", function () {
+  var btn = this;
+  btn.disabled = true;
+  btn.textContent = "正在生成试卷…";
+  var err = document.getElementById("start-error");
+  err.style.display = "none";
+  fetch("/exam/start", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "X-CSRF-Token": "{{ csrf_token }}" },
+    body: "{}",
+  }).then(function (r) { return r.json(); }).then(function (data) {
+    if (data && data.ok) {
+      window.location.href = "/exam/take/" + data.attempt_id;
+    } else {
+      btn.disabled = false;
+      btn.textContent = "开始考试";
+      err.textContent = (data && data.error) || "启动考试失败，请重试。";
+      err.style.display = "";
+    }
+  }).catch(function () {
+    btn.disabled = false;
+    btn.textContent = "开始考试";
+    err.textContent = "网络错误，请重试。";
+    err.style.display = "";
+  });
+});
+</script>
+{% endblock %}

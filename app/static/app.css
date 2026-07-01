@@ -483,6 +483,113 @@ textarea { resize: vertical; line-height: 1.6; }
 .raw-dump { font-family: ui-monospace, monospace; font-size: .78rem; white-space: pre-wrap; word-break: break-word; color: var(--ink-2); max-height: 240px; overflow: auto; background: var(--paper); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--line); }
 details summary { cursor: pointer; font-family: var(--font-sans); font-size: .85rem; color: var(--ink-3); }
 
+/* ---------- Exam ---------- */
+
+/* Exam home info cards */
+.exam-info-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 18px 0 0; }
+.exam-info-card { background: var(--sheet); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 18px 16px; text-align: center; }
+.exam-info-card .exam-info-n { font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); }
+.exam-info-card .exam-info-k { font-family: var(--font-sans); font-size: .78rem; color: var(--ink-3); margin-top: 2px; }
+.exam-info-card .exam-info-s { font-family: var(--font-sans); font-size: .72rem; color: var(--ink-3); margin-top: 4px; }
+
+/* Live score: reuse the .stat layout (stacked n + k) already in the design system */
+
+/* Progress-line toolbar button group */
+.toolbar-group { display: flex; gap: 6px; }
+.toolbar-group .btn { flex-shrink: 0; }
+
+/* Exam hero (report) */
+.exam-hero { text-align: center; padding: 32px 24px 24px; border-radius: var(--radius); margin-bottom: 18px; }
+.exam-hero.great { background: var(--green-soft); }
+.exam-hero.ok { background: var(--gold-soft); }
+.exam-hero.low { background: var(--red-soft); }
+.exam-big-score { font-family: var(--font-display); font-size: 3.6rem; line-height: 1; color: var(--ink); }
+.exam-big-score .of { font-size: 1.4rem; color: var(--ink-3); font-weight: 400; }
+.exam-grade { font-family: var(--font-sans); font-size: 1rem; color: var(--ink-2); margin-top: 6px; font-weight: 600; }
+
+.exam-stats-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 18px; }
+.exam-stat-card { background: var(--sheet); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 16px 14px; text-align: center; }
+.exam-stat-card .n { font-family: var(--font-display); font-size: 1.55rem; color: var(--ink); }
+.exam-stat-card .n.red { color: var(--red); }
+.exam-stat-card .k { font-family: var(--font-sans); font-size: .76rem; color: var(--ink-3); margin-top: 2px; }
+.exam-stat-card .s { font-family: var(--font-sans); font-size: .72rem; color: var(--ink-3); }
+
+.exam-breakdown { background: var(--sheet); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 18px; }
+.exam-type-row { display: flex; align-items: center; gap: 14px; padding: 7px 0; }
+.exam-type-row + .exam-type-row { border-top: 1px solid var(--line); padding-top: 13px; }
+.exam-type-row .type-label { font-family: var(--font-sans); font-size: .88rem; font-weight: 600; min-width: 60px; color: var(--ink); }
+.exam-type-row .type-score { font-family: var(--font-display); font-size: 1rem; color: var(--ink-2); min-width: 56px; }
+.exam-type-row .bar { flex: 1; height: 8px; background: var(--paper-2); border-radius: 4px; overflow: hidden; }
+.exam-type-row .bar i { display: block; height: 100%; background: var(--blue); border-radius: 4px; }
+
+/* Wrong-book notice on report */
+.exam-wrong-notice { display: flex; align-items: center; justify-content: center; margin-bottom: 0; }
+
+/* Filters */
+.exam-filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+.exam-filters .filter-group { display: flex; gap: 4px; }
+.exam-filters .filter-btn { border-radius: var(--radius-sm); }
+.exam-filters .filter-btn.active { background: var(--blue); border-color: var(--blue); color: var(--on-primary); }
+.exam-no-results { font-family: var(--font-sans); font-size: .9rem; color: var(--ink-3); text-align: center; padding: 20px 0; }
+/* exam-qrow hide/show is controlled via style.display by the filter JS */
+
+/* Per-question detail */
+.exam-details { display: flex; flex-direction: column; gap: 10px; }
+.exam-qrow { background: var(--sheet); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 16px 20px; }
+.exam-qrow.correct { border-left: 4px solid var(--green); }
+.exam-qrow.wrong { border-left: 4px solid var(--red); }
+.exam-qhead { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.exam-qnum { font-family: var(--font-display); font-size: .92rem; font-weight: 700; color: var(--ink-3); }
+.exam-qresult { font-family: var(--font-sans); font-size: .8rem; font-weight: 600; margin-left: auto; }
+.exam-qrow.correct .exam-qresult { color: var(--green); }
+.exam-qrow.wrong .exam-qresult { color: var(--red); }
+.exam-qstem { font-size: 1rem; line-height: 1.7; margin-bottom: 12px; }
+.exam-qopts { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 6px; }
+.exam-opt { font-family: var(--font-sans); font-size: .86rem; padding: 5px 11px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; }
+.exam-opt-correct { background: var(--green-soft); border-color: var(--green); }
+.exam-opt-wrong { background: var(--red-soft); border-color: var(--red); }
+.exam-judge-result { font-family: var(--font-sans); font-size: .88rem; color: var(--ink-2); margin-bottom: 6px; }
+.exam-qexplain { margin-top: 6px; }
+.exam-qexplain div { font-size: .9rem; line-height: 1.65; color: var(--ink-2); padding: 8px 0 0; }
+
+/* Exam history rows */
+.exam-history { display: flex; flex-direction: column; gap: 4px; }
+.exam-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--sheet); border: 1px solid var(--line); border-radius: var(--radius-sm); text-decoration: none; color: inherit; transition: background .15s; }
+.exam-row:hover { background: var(--surface-hi); border-color: var(--line-2); }
+.exam-score { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin-right: 10px; }
+.exam-score.green { color: var(--green); }
+.exam-score.gold { color: var(--gold); }
+.exam-score.red { color: var(--red); }
+.exam-meta { font-family: var(--font-sans); font-size: .84rem; color: var(--ink-3); }
+
+/* Submit confirmation modal */
+.modal-overlay { position: fixed; inset: 0; background: rgba(34, 31, 37, .52); display: grid; place-items: center; z-index: 200; }
+.modal-overlay.hidden { display: none; }
+.modal-sheet { background: var(--sheet); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 32px; max-width: 420px; width: calc(100% - 32px); text-align: center; box-shadow: var(--shadow-lg); }
+.modal-sheet h3 { font-family: var(--font-display); font-size: 1.25rem; margin: 0 0 14px; }
+.modal-sheet .muted { font-size: .86rem; margin: 12px 0 18px; }
+.modal-actions { display: flex; gap: 10px; justify-content: center; }
+.submit-stats { display: flex; gap: 18px; justify-content: center; margin-bottom: 6px; }
+.submit-stats .stat { text-align: center; }
+.submit-stats .stat .n { font-family: var(--font-display); font-size: 1.4rem; }
+.submit-stats .stat .k { font-family: var(--font-sans); font-size: .74rem; color: var(--ink-3); }
+
+/* Answer card unanswered state */
+.gridnav .unanswered { border-color: var(--line-2); color: var(--ink-3); background: var(--paper); }
+.gridnav .unanswered.cur { border-color: var(--blue); }
+
+@media (max-width: 760px) {
+  .exam-info-cards { grid-template-columns: 1fr; }
+  .exam-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .exam-big-score { font-size: 2.8rem; }
+  .exam-qrow { padding: 14px 16px; }
+  .exam-type-row { flex-wrap: wrap; gap: 8px; }
+  .exam-filters { gap: 6px; }
+}
+@media (max-width: 420px) {
+  .exam-stats-grid { grid-template-columns: 1fr; }
+}
+
 .table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: .92rem; }
 .table th, .table td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); }
 .table th { color: var(--ink-3); font-size: .8rem; font-weight: 700; letter-spacing: .03em; }
@@ -540,7 +647,7 @@ details summary { cursor: pointer; font-family: var(--font-sans); font-size: .85
   .hero h1 { font-size: 2rem; line-height: 1.12; }
   .hero .lead { font-size: .96rem; line-height: 1.55; }
   .stat-strip { width: 100%; gap: 0; justify-content: space-between; padding-right: 10px; }
-  .quick { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 18px 0 28px; }
+  .quick { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 18px 0 28px; }
   .quick .btn { width: 100%; min-height: 48px; padding: 12px 10px; }
   .chapter { margin: 28px 0; }
   .chapter > h2 { font-size: .98rem; gap: 10px; }

@@ -1,0 +1,306 @@
+{% extends "base.html" %}
+{% block title %}考试中 · {{ app_name }}{% endblock %}
+{% block body %}
+<div class="wrap page" data-count="{{ count }}">
+  <div class="practice-head">
+    <div>
+      <div class="title">模拟考试</div>
+      <div class="sub">{{ judge_count }} 判断 + {{ choice_count }} 选择 · 共 {{ count }} 题 · 满分 {{ total_pts }} 分</div>
+    </div>
+    <div class="stat" id="live-score">
+      <div class="n blue">0</div>
+      <div class="k">得分</div>
+    </div>
+  </div>
+
+  <div class="progress-line">
+    <span id="answered" class="progress-main">已答 0 / {{ count }}</span>
+    <div class="bar"><i id="progbar" style="width:0%"></i></div>
+    <span id="pos" class="pos">第 1 题</span>
+    <span class="toolbar-group">
+      <button class="btn btn-sm" id="btn-grid" type="button">答题卡</button>
+      <button class="btn btn-sm btn-primary" id="btn-submit" type="button">交卷</button>
+    </span>
+  </div>
+
+  <div class="sheet qsheet" id="qsheet"></div>
+  <div class="gridnav hidden" id="gridnav"></div>
+
+  <div class="qnav">
+    <button class="btn" id="btn-prev" type="button">← 上一题</button>
+    <span class="muted sans" id="kbd-hint" style="font-size:.78rem">← → 切题 · 数字键选择 · 回车提交</span>
+    <button class="btn" id="btn-next" type="button">下一题 →</button>
+  </div>
+</div>
+
+<div class="modal-overlay hidden" id="submit-modal">
+  <div class="modal-sheet">
+    <h3>确认交卷</h3>
+    <div id="submit-summary"></div>
+    <p class="muted">交卷后不可修改，确定要交卷吗？</p>
+    <div class="modal-actions">
+      <button class="btn" id="modal-cancel" type="button">继续答题</button>
+      <button class="btn btn-primary" id="modal-confirm" type="button">确认交卷</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script id="examdata" type="application/json">{{ questions_json|safe }}</script>
+<script>
+(function () {
+  "use strict";
+  var CSRF = (document.querySelector('meta[name="csrf-token"]') || {}).content || "";
+  var dataEl = document.getElementById("examdata");
+  if (!dataEl) return;
+  var questions;
+  try { questions = JSON.parse(dataEl.textContent || "[]"); } catch(e) { return; }
+  if (!questions || !questions.length) return;
+  var PTS = 2;
+  var COUNT = questions.length;
+
+  var sheet     = document.getElementById("qsheet");
+  var gridnav   = document.getElementById("gridnav");
+  var posEl     = document.getElementById("pos");
+  var answeredEl = document.getElementById("answered");
+  var progbar   = document.getElementById("progbar");
+  var btnNext   = document.getElementById("btn-next");
+  var btnPrev   = document.getElementById("btn-prev");
+  var scoreEl   = document.getElementById("live-score");
+  var submitBtn = document.getElementById("btn-submit");
+  var modal     = document.getElementById("submit-modal");
+  var idx = 0;
+
+  // per-question answer state
+  var exam = [];
+  for (var i = 0; i < COUNT; i++) {
+    exam[i] = { sel: new Set(), answered: false, correct: false };
+  }
+
+  function answerSet(q) { return new Set(q.answer || []); }
+
+  function setEq(a, b) {
+    if (a.size !== b.size) return false;
+    var ok = true; a.forEach(function (x) { if (!b.has(x)) ok = false; });
+    return ok;
+  }
+
+  function answeredCount() { var n = 0; for (var i = 0; i < COUNT; i++) { if (exam[i].answered) n++; } return n; }
+  function totalScore()    { var s = 0; for (var i = 0; i < COUNT; i++) { if (exam[i].correct) s += PTS; } return s; }
+
+  function updateProgress() {
+    posEl.textContent = "第 " + (idx + 1) + " 题 / 共 " + COUNT + " 题";
+    var a = answeredCount();
+    answeredEl.textContent = "已答 " + a + " / " + COUNT;
+    progbar.style.width = Math.round((a / COUNT) * 100) + "%";
+    var nEl = scoreEl.querySelector(".n");
+    if (nEl) { var s = totalScore(); nEl.textContent = s; nEl.classList.toggle("blue", s > 0); }
+    if (btnNext) btnNext.textContent = (idx >= COUNT - 1) ? "最后一题" : "下一题 →";
+    if (submitBtn) submitBtn.textContent = "交卷 (" + a + "/" + COUNT + ")";
+  }
+
+  function buildGrid() {
+    if (!gridnav) return;
+    gridnav.innerHTML = "";
+    for (var i = 0; i < COUNT; i++) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = (i + 1);
+      if (exam[i].answered) b.classList.add(exam[i].correct ? "correct" : "wrong");
+      else b.classList.add("unanswered");
+      if (i === idx) b.classList.add("cur");
+      b.addEventListener("click", (function (j) { return function () { idx = j; render(); }; })(i));
+      gridnav.appendChild(b);
+    }
+  }
+
+  function render() {
+    var q = questions[idx];
+    var st = exam[idx];
+    var isJudge = q.type === "judge";
+    var typeLabel = { single: "单选题", multiple: "多选题", judge: "判断题" }[q.type] || q.type;
+
+    var h = "";
+    h += '<div class="qmeta"><span class="num">第 ' + (idx + 1) + ' 题</span>';
+    h += '<span class="badge ' + q.type + '">' + typeLabel + "</span>";
+    h += '<span class="points">' + PTS + " 分</span></div>";
+    h += '<div class="stem">' + q.stem_html + "</div>";
+
+    if (isJudge) {
+      h += '<div class="judge" id="judge"><button type="button" data-v="正确"><span class="ic">✓</span>正确</button><button type="button" data-v="错误"><span class="ic">✗</span>错误</button></div>';
+    } else {
+      h += '<div class="options ' + q.type + '" id="options">';
+      q.options.forEach(function (o) {
+        h += '<div class="option" data-label="' + o.label + '"><span class="lab">' + o.label + '</span><span class="otext">' + o.text_html + '</span><span class="mark"></span></div>';
+      });
+      h += "</div>";
+    }
+
+    h += '<div class="actions" id="actions"></div>';
+    h += '<div id="reveal-area"></div>';
+    sheet.classList.remove("revealed");
+    sheet.innerHTML = h;
+
+    // restore visuals
+    if (st.answered) {
+      var ans = answerSet(q);
+      if (!isJudge) {
+        sheet.querySelectorAll(".option").forEach(function (el) {
+          var lab = el.dataset.label;
+          var mk = el.querySelector(".mark");
+          if (st.sel.has(lab) && !ans.has(lab)) el.classList.add("wrong");
+          if (ans.has(lab)) el.classList.add("correct");
+          if (q.type === "multiple") el.querySelector(".lab").textContent = lab;
+          if (mk) mk.textContent = ans.has(lab) ? "✓" : (st.sel.has(lab) ? "✗" : "");
+        });
+        document.getElementById("options").style.pointerEvents = "none";
+      } else {
+        sheet.querySelectorAll("#judge button").forEach(function (el) {
+          var v = el.dataset.v;
+          if (ans.has(v)) el.classList.add("correct");
+          else if (st.sel.has(v)) el.classList.add("wrong");
+        });
+        document.getElementById("judge").style.pointerEvents = "none";
+      }
+      // reveal box
+      var rv = document.getElementById("reveal-area");
+      if (rv) {
+        var h2 = '<div class="reveal">';
+        h2 += '<span class="verdict ' + (st.correct ? "ok" : "no") + '">' + (st.correct ? "✓ 回答正确" : "✗ 回答错误") + '</span>';
+        h2 += '<div class="answer-line">正确答案：<b>' + (q.answer_raw || (q.answer || []).join("")) + "</b></div>";
+        if (q.explanation_html) h2 += '<div class="explanation"><div class="h">解析</div>' + q.explanation_html + "</div>";
+        h2 += "</div>";
+        rv.innerHTML = h2;
+        typesetEl(rv);
+      }
+      sheet.classList.add("revealed");
+    } else {
+      if (!isJudge) {
+        sheet.querySelectorAll(".option").forEach(function (el) {
+          el.addEventListener("click", function () { if (!exam[idx].answered) toggleOption(el); });
+        });
+      } else {
+        sheet.querySelectorAll("#judge button").forEach(function (el) {
+          el.addEventListener("click", function () { if (!exam[idx].answered) { exam[idx].sel = new Set([el.dataset.v]); grade(); } });
+        });
+      }
+    }
+
+    renderActions();
+    typesetEl(sheet);
+    updateProgress();
+    buildGrid();
+  }
+
+  function typesetEl(el) {
+    if (typeof renderMathInElement !== "function") return;
+    try { renderMathInElement(el, { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false }); } catch(e) {}
+  }
+
+  function toggleOption(el) {
+    var q = questions[idx], st = exam[idx], lab = el.dataset.label;
+    if (q.type === "single") {
+      st.sel = new Set([lab]);
+      sheet.querySelectorAll(".option").forEach(function (o) { o.classList.toggle("selected", o.dataset.label === lab); });
+    } else {
+      if (st.sel.has(lab)) {
+        st.sel.delete(lab); el.classList.remove("selected"); el.querySelector(".lab").textContent = lab;
+      } else {
+        st.sel.add(lab); el.classList.add("selected"); el.querySelector(".lab").textContent = "✓";
+      }
+    }
+    renderActions();
+  }
+
+  function renderActions() {
+    var st = exam[idx], a = document.getElementById("actions");
+    if (!a) return;
+    if (st.answered) {
+      var label = (idx >= COUNT - 1) ? "最后一题" : "下一题 →";
+      a.innerHTML = '<button class="btn btn-primary" id="act-next" type="button">' + label + '</button>';
+      document.getElementById("act-next").addEventListener("click", next);
+      return;
+    }
+    var q = questions[idx];
+    if (q.type === "judge") {
+      a.innerHTML = '<span class="muted" style="font-size:.82rem">点击上方选项作答</span>';
+    } else {
+      var dis = st.sel.size === 0 ? "disabled" : "";
+      a.innerHTML = '<button class="btn btn-primary" id="act-submit" ' + dis + ' type="button">提交答案</button>';
+      document.getElementById("act-submit").addEventListener("click", grade);
+    }
+  }
+
+  function grade() {
+    var q = questions[idx], st = exam[idx];
+    if (st.sel.size === 0) return;
+    st.correct = setEq(st.sel, answerSet(q));
+    st.answered = true;
+    render();
+  }
+
+  function next() {
+    if (idx < COUNT - 1) { idx++; render(); }
+  }
+
+  function prev() {
+    if (idx > 0) { idx--; render(); }
+  }
+
+  // ---- buttons ----
+  btnNext.addEventListener("click", next);
+  btnPrev.addEventListener("click", prev);
+  document.getElementById("btn-grid").addEventListener("click", function () { gridnav.classList.toggle("hidden"); });
+
+  // ---- submit modal ----
+  submitBtn.addEventListener("click", function () {
+    var a = answeredCount();
+    var summary = document.getElementById("submit-summary");
+    summary.innerHTML = '<div class="submit-stats">' +
+      '<div class="stat"><div class="n">' + a + '</div><div class="k">已答</div></div>' +
+      '<div class="stat"><div class="n">' + (COUNT - a) + '</div><div class="k">未答</div></div>' +
+      '<div class="stat"><div class="n blue">' + totalScore() + '</div><div class="k">当前得分</div></div>' +
+      '</div>';
+    modal.classList.remove("hidden");
+  });
+
+  document.getElementById("modal-cancel").addEventListener("click", function () { modal.classList.add("hidden"); });
+  document.getElementById("modal-confirm").addEventListener("click", function () {
+    modal.classList.add("hidden");
+    var answers = [];
+    for (var i = 0; i < COUNT; i++) { answers.push({ qid: questions[i].id, user: Array.from(exam[i].sel) }); }
+    submitBtn.disabled = true;
+    submitBtn.textContent = "正在交卷…";
+    fetch("/exam/submit/{{ attempt_id }}", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-CSRF-Token": CSRF },
+      body: JSON.stringify({ answers: answers }),
+    }).then(function (r) { return r.json(); }).then(function (data) {
+      if (data && data.ok) { window.location.href = data.redirect; }
+      else { submitBtn.disabled = false; submitBtn.textContent = "交卷"; alert((data && data.error) || "交卷失败"); }
+    }).catch(function () { submitBtn.disabled = false; submitBtn.textContent = "交卷"; alert("网络错误"); });
+  });
+
+  // ---- keyboard (matches practice page pattern) ----
+  document.addEventListener("keydown", function (e) {
+    if (e.target && /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+    // skip when submit modal is open
+    if (modal && !modal.classList.contains("hidden")) return;
+
+    var q = questions[idx], st = exam[idx];
+    if (e.key === "ArrowRight") { next(); e.preventDefault(); }
+    else if (e.key === "ArrowLeft") { prev(); e.preventDefault(); }
+    else if (e.key === "Enter") {
+      if (st.answered) next();
+      else if (q.type !== "judge" && st.sel.size) grade();
+      e.preventDefault();
+    } else if (/^[1-9]$/.test(e.key) && !st.answered) {
+      if (q.type === "judge") { var v = e.key === "1" ? "正确" : (e.key === "2" ? "错误" : null); if (v) { st.sel = new Set([v]); grade(); } }
+      else { var i = parseInt(e.key, 10) - 1; if (i < q.options.length) { var el = sheet.querySelectorAll(".option")[i]; if (el) toggleOption(el); } }
+    }
+  });
+
+  render();
+})();
+</script>
+{% endblock %}

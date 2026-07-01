@@ -30,6 +30,7 @@
   <nav class="nav">
     <div class="nav-scroll">
       <a href="/" class="{{ 'active' if path == '/' }}">题库</a>
+      <a href="/exam" class="{{ 'active' if path.startswith('/exam') }}">考试</a>
       <a href="/practice/wrong" class="{{ 'active' if path == '/practice/wrong' }}">错题本</a>
       <a href="/search" class="{{ 'active' if path == '/search' }}">搜索</a>
       {% if user.role == 'admin' %}<a href="/admin" class="{{ 'active' if path.startswith('/admin') }}">后台</a>{% endif %}
